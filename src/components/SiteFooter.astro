@@ -1,0 +1,31 @@
+---
+import { navigation } from '../data/navigation';
+import { site } from '../data/site';
+
+const year = new Date().getFullYear();
+---
+
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <a class="footer-logo" href="/">
+        <span class="footer-mark" aria-hidden="true">五</span>
+        <span>{site.name}</span>
+      </a>
+      <p>{site.description}</p>
+      <p class="footer-status">{site.status}</p>
+    </div>
+
+    <nav class="footer-nav" aria-label="页脚导航">
+      {navigation.map((item) => (
+        <a href={item.href}>{item.label}</a>
+      ))}
+    </nav>
+
+    <div class="footer-meta">
+      <p>传统知识学习项目</p>
+      <p>不提供医疗诊断、算命或风水服务</p>
+      <p>© {year} {site.name}</p>
+    </div>
+  </div>
+</footer>

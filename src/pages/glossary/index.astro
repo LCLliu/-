@@ -1,0 +1,65 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageIntro from '../../components/PageIntro.astro';
+import PlaceholderGrid from '../../components/PlaceholderGrid.astro';
+
+const items = [
+  {
+    title: '阴阳',
+    description: '五术最基础的关系语言，连接属性、运动、对立与转化。',
+    meta: '术语占位',
+  },
+  {
+    title: '五行',
+    description: '木火土金水的分类、生克与配属体系，跨门类复用。',
+    meta: '术语占位',
+  },
+  {
+    title: '藏象',
+    description: '中医以五脏为中心理解人体功能与外在表现的系统。',
+    meta: '医 · 首期',
+  },
+  {
+    title: '经络',
+    description: '气血运行与脏腑联系的通道系统，配合经络图阅读。',
+    meta: '医 · 首期',
+  },
+  {
+    title: '天干地支',
+    description: '时间、方位与推演的共同坐标，命、相、卜、医都会用到。',
+    meta: '共用基础',
+  },
+  {
+    title: '八卦',
+    description: '阴阳爻组成的基本象数单位，六十四卦与风水罗盘的基础。',
+    meta: '共用基础',
+  },
+];
+---
+
+<BaseLayout
+  title="术语词典"
+  description="五术术语的跨门类词典，先做医的四十条核心术语。"
+>
+  <PageIntro
+    eyebrow="Glossary"
+    title="术语词典"
+    lead="术语是五术之间真正的连接点。每个词条会标注所属门类、相关概念、出处与在知识页中的使用位置。"
+    status="内容筹备中"
+    note="首期先做医的 40 条核心术语；词条之间互相链接，避免五门各说各话。"
+  />
+
+  <section class="section section--page">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">互链结构</p>
+          <h2>一个词条，多个入口</h2>
+        </div>
+        <p>同一个概念可能在医、命、相里含义不同；词条会把这些差异并列说明，而不是强行合并。</p>
+      </div>
+
+      <PlaceholderGrid items={items} columns={3} />
+    </div>
+  </section>
+</BaseLayout>

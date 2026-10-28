@@ -1,0 +1,55 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageIntro from '../../components/PageIntro.astro';
+import PlaceholderGrid from '../../components/PlaceholderGrid.astro';
+
+const items = [
+  {
+    title: '12 周通识',
+    description: '基础 2 周，医与卜各 2 周，相与命各 2 周，山与横向比较 2 周。',
+    meta: '路径大纲',
+  },
+  {
+    title: '医 · 6 周专修',
+    description: '概念 2 周、原典 2 周、方法与案例 2 周，首期优先建设。',
+    meta: '首期',
+  },
+  {
+    title: '卜 · 6 周专修',
+    description: '周易结构、卦爻、六爻与梅花入门，配合六十四卦浏览器。',
+    meta: '路径大纲',
+  },
+  {
+    title: '其他三门路径',
+    description: '山、命、相在医与卜的模板稳定后接入，统一课时与产出标准。',
+    meta: '规划中',
+  },
+];
+---
+
+<BaseLayout
+  title="学习路径"
+  description="五术通识与专修路径，从概念、原典到方法与案例。"
+>
+  <PageIntro
+    eyebrow="Learning paths"
+    title="学习路径"
+    lead="先通识，再专修。每门路径都按“概念 → 原典 → 方法 → 案例”组织，并配测验、练习和可公开展示的结课产出。"
+    status="大纲规划中"
+    note="课程页会包含目标、前置、课时、练习、测验和产出，不是文章列表。"
+  />
+
+  <section class="section section--page">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">课程结构</p>
+          <h2>先通识，再专修</h2>
+        </div>
+        <p>首期只上线医的路径；其余路径先保留结构，等模板和内容稳定后再补。</p>
+      </div>
+
+      <PlaceholderGrid items={items} columns={4} />
+    </div>
+  </section>
+</BaseLayout>

@@ -1,0 +1,57 @@
+---
+import { navigation } from '../data/navigation';
+import { site } from '../data/site';
+
+const currentPath = Astro.url.pathname;
+const disciplinePrefixes = ['/shan/', '/yi/', '/ming/', '/xiang/', '/bu/'];
+
+function isActive(href: string) {
+  if (href === '/') {
+    return currentPath === '/' || disciplinePrefixes.some((prefix) => currentPath.startsWith(prefix));
+  }
+
+  return currentPath.startsWith(href);
+}
+---
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="/" aria-label={`${site.name}首页`}>
+      <span class="brand-mark" aria-hidden="true">五</span>
+      <span class="brand-copy">
+        <strong>{site.name}</strong>
+        <small>{site.tagline}</small>
+      </span>
+    </a>
+
+    <nav class="main-nav" aria-label="主导航">
+      {navigation.map((item) => (
+        <a
+          class="nav-link"
+          href={item.href}
+          aria-current={isActive(item.href) ? 'page' : undefined}
+        >
+          {item.label}
+        </a>
+      ))}
+    </nav>
+
+    <a class="header-cta" href="/yi/">首期：医</a>
+
+    <details class="mobile-nav">
+      <summary>目录</summary>
+      <nav aria-label="移动端导航">
+        {navigation.map((item) => (
+          <a
+            class="mobile-nav-link"
+            href={item.href}
+            aria-current={isActive(item.href) ? 'page' : undefined}
+          >
+            {item.label}
+          </a>
+        ))}
+        <a class="mobile-nav-link mobile-nav-link--cta" href="/yi/">首期：医</a>
+      </nav>
+    </details>
+  </div>
+</header>

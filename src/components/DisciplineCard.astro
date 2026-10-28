@@ -1,0 +1,33 @@
+---
+import type { Discipline } from '../data/disciplines';
+import StatusBadge from './StatusBadge.astro';
+
+interface Props {
+  discipline: Discipline;
+}
+
+const { discipline } = Astro.props;
+---
+
+<a
+  class={`discipline-card discipline-card--${discipline.slug}`}
+  href={`/${discipline.slug}/`}
+  aria-label={`进入${discipline.name}：${discipline.tagline}`}
+>
+  <div class="card-head">
+    <span class="card-pinyin">{discipline.pinyin}</span>
+    <StatusBadge status={discipline.status} />
+  </div>
+
+  <h3 class="card-title">
+    {discipline.name}
+    <span>{discipline.tagline}</span>
+  </h3>
+
+  <p class="card-summary">{discipline.summary}</p>
+
+  <div class="card-foot">
+    <span>进入门类</span>
+    <span class="card-arrow" aria-hidden="true">→</span>
+  </div>
+</a>

@@ -1,0 +1,25 @@
+---
+import StatusBadge from './StatusBadge.astro';
+
+interface Props {
+  eyebrow: string;
+  title: string;
+  lead: string;
+  status?: string;
+  note?: string;
+}
+
+const { eyebrow, title, lead, status, note } = Astro.props;
+---
+
+<section class="page-hero">
+  <div class="container">
+    <p class="eyebrow">{eyebrow}</p>
+    <div class="page-hero-row">
+      <h1 class="page-title">{title}</h1>
+      {status && <StatusBadge status={status} />}
+    </div>
+    <p class="page-lead">{lead}</p>
+    {note && <p class="page-note">{note}</p>}
+  </div>
+</section>

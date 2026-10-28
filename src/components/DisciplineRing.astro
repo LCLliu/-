@@ -1,0 +1,91 @@
+---
+import { disciplines } from '../data/disciplines';
+
+const angles = [-90, -18, 54, 126, 198];
+const radius = 190;
+
+const nodes = disciplines.map((discipline, index) => {
+  const angle = (angles[index] * Math.PI) / 180;
+
+  return {
+    ...discipline,
+    x: 280 + Math.cos(angle) * radius,
+    y: 280 + Math.sin(angle) * radius,
+  };
+});
+
+const polygon = nodes.map((node) => `${node.x},${node.y}`).join(' ');
+---
+
+<div class="ring-card">
+  <div class="ring-head">
+    <span class="ring-kicker">五术关系示意</span>
+    <span class="ring-hint">点击节点进入</span>
+  </div>
+
+  <svg
+    class="ring-svg"
+    viewBox="0 0 560 560"
+    role="navigation"
+    aria-label="五术门类图"
+  >
+    <title id="ring-title">山医命相卜五术关系图</title>
+    <desc id="ring-desc">
+      五个门类围绕中心的阴阳五行与气排列，可选择任一节点进入对应门类。
+    </desc>
+
+    <circle class="ring-orbit ring-orbit--outer" cx="280" cy="280" r="248"></circle>
+    <circle class="ring-orbit" cx="280" cy="280" r="238"></circle>
+    <polygon class="ring-polygon" points={polygon}></polygon>
+
+    {nodes.map((node) => (
+      <line
+        class="ring-spoke"
+        x1="280"
+        y1="280"
+        x2={node.x}
+        y2={node.y}
+      ></line>
+    ))}
+
+    <circle class="ring-center-halo" cx="280" cy="280" r="94"></circle>
+    <circle class="ring-center" cx="280" cy="280" r="68"></circle>
+    <text
+      class="ring-center-char"
+      x="280"
+      y="278"
+      text-anchor="middle"
+      dominant-baseline="middle"
+    >
+      气
+    </text>
+    <text class="ring-center-sub" x="280" y="314" text-anchor="middle">
+      阴阳 · 五行
+    </text>
+
+    {nodes.map((node) => (
+      <a
+        class={`ring-link ring-link--${node.slug}`}
+        href={`/${node.slug}/`}
+        style={`--node: var(--accent-${node.slug})`}
+        aria-label={`${node.name}：${node.tagline}`}
+      >
+        <circle class="ring-node" cx={node.x} cy={node.y} r="46"></circle>
+        <text
+          class="ring-char"
+          x={node.x}
+          y={node.y - 4}
+          text-anchor="middle"
+          dominant-baseline="middle"
+        >
+          {node.name}
+        </text>
+        <text class="ring-pinyin" x={node.x} y={node.y + 21} text-anchor="middle">
+          {node.pinyin}
+        </text>
+      </a>
+    ))}
+  </svg>
+
+  <p class="ring-caption">导航按传统顺序排列 · 中心为五术共享的概念底座</p>
+</div>

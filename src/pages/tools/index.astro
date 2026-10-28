@@ -1,0 +1,55 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageIntro from '../../components/PageIntro.astro';
+import PlaceholderGrid from '../../components/PlaceholderGrid.astro';
+
+const items = [
+  {
+    title: '脏腑关系图',
+    description: '以交互图解展示五脏六腑的功能关系与表里配对，作为医门类的首个工具。',
+    meta: '首期计划',
+  },
+  {
+    title: '干支万年历',
+    description: '公历、农历、干支与节气的对照，服务医、命、山三门的时间系统。',
+    meta: '工具占位',
+  },
+  {
+    title: '六十四卦浏览器',
+    description: '按卦序、卦象与主题浏览卦爻结构，附原文与注释入口。',
+    meta: '工具占位',
+  },
+  {
+    title: '罗盘方位图',
+    description: '二十四山、八卦与方位关系的交互演示，用于相类学习。',
+    meta: '工具占位',
+  },
+];
+---
+
+<BaseLayout
+  title="工具坊"
+  description="五术学习工具：脏腑关系图、干支万年历、六十四卦与罗盘。"
+>
+  <PageIntro
+    eyebrow="Tools"
+    title="工具坊"
+    lead="工具不只是给结果，更要解释结果是怎么来的。每个工具都会展示输入、规则、符号含义与流派差异。"
+    status="规划中"
+    note="首期只做一个工具：脏腑关系图。工具算法测试通过后再上线。"
+  />
+
+  <section class="section section--page">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">交互原则</p>
+          <h2>工具是学习界面，不是结果机器</h2>
+        </div>
+        <p>不做“输入生日就出结论”的黑箱；每个结果都要能追溯到规则和文本。</p>
+      </div>
+
+      <PlaceholderGrid items={items} columns={4} />
+    </div>
+  </section>
+</BaseLayout>

@@ -1,0 +1,64 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PageIntro from '../components/PageIntro.astro';
+---
+
+<BaseLayout
+  title="关于本站"
+  description="五术研习的项目定位、当前阶段、技术骨架与内容边界。"
+>
+  <PageIntro
+    eyebrow="About"
+    title="关于本站"
+    lead="五术研习是一个以原典、图解和知识关联为核心的传统术数文化学习项目。当前版本只搭了界面骨架，知识内容尚未接入。"
+    status="界面骨架"
+    note="当前为本地开发版本，尚未部署到服务器。"
+  />
+
+  <section class="section section--page about-content">
+    <div class="container">
+      <div class="info-grid">
+        <article class="info-card">
+          <h2>项目定位</h2>
+          <p>
+            以原典、图解和知识关联为核心的五术学习站。展示与学习并重，不做在线算命、问诊或风水勘测。
+          </p>
+        </article>
+
+        <article class="info-card">
+          <h2>当前阶段</h2>
+          <p>
+            界面骨架已完成：首页五术关系图、五门占位页、共通基础、学习路径、典籍、工具、词典和关于页均可访问。
+          </p>
+        </article>
+
+        <article class="info-card">
+          <h2>技术骨架</h2>
+          <p>
+            Astro + TypeScript + Tailwind。首版为纯静态站点，没有后端；学习进度后续用 localStorage，等内容与交互稳定后再评估是否需要薄后端。
+          </p>
+        </article>
+
+        <article class="info-card">
+          <h2>内容原则</h2>
+          <ul class="info-list">
+            <li>原文、出处、注释与个人观点分层展示。</li>
+            <li>医类内容不提供诊断、处方和疗效承诺。</li>
+            <li>命、相、卜不做确定性预测与恐惧营销。</li>
+            <li>图片、图表优先原创；现代译注确认版权。</li>
+          </ul>
+        </article>
+      </div>
+
+      <div class="disclaimer">
+        <h2>使用边界</h2>
+        <p>
+          本站是传统文化学习与展示项目，不提供医疗诊断、处方建议、算命、风水勘测或投资决策服务。涉及健康问题时，请咨询合格的医疗专业人员。
+        </p>
+        <p>
+          当前页面为结构占位；正式内容上线前需要逐条核对来源、版本与适用范围。
+        </p>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

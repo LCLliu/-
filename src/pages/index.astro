@@ -1,0 +1,146 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import DisciplineCard from '../components/DisciplineCard.astro';
+import DisciplineRing from '../components/DisciplineRing.astro';
+import StatusBadge from '../components/StatusBadge.astro';
+import { disciplines } from '../data/disciplines';
+import { site } from '../data/site';
+---
+
+<BaseLayout title={`${site.name}｜${site.tagline}`} description={site.description}>
+  <section class="hero">
+    <div class="container hero-grid">
+      <div class="hero-copy">
+        <p class="eyebrow">中国传统术数文化 · 学习与展示</p>
+        <h1 class="hero-title">山医命相卜</h1>
+        <p class="hero-lede">
+          从原典出发，先理解五术共享的阴阳五行、干支与八卦，再沿一条可执行的学习路径进入各门。当前先把框架搭稳，首期建设「医」。
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn--primary" href="/yi/">
+            从「医」开始 <span aria-hidden="true">→</span>
+          </a>
+          <a class="btn btn--ghost" href="#roadmap">查看建设路线</a>
+        </div>
+        <p class="hero-note">当前为界面骨架演示，知识内容尚未接入。</p>
+      </div>
+
+      <DisciplineRing />
+    </div>
+  </section>
+
+  <section class="section section--ruled" id="disciplines">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">五术</p>
+          <h2>五个入口，一套学习地图</h2>
+        </div>
+        <p>
+          导航按传统顺序排列。首期先做「医」的纵向切片，验证页面模板后再复制到其余四门。
+        </p>
+      </div>
+
+      <div class="discipline-grid">
+        {disciplines.map((discipline) => (
+          <DisciplineCard discipline={discipline} />
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="start-band">
+        <div class="band-grid">
+          <div class="band-copy">
+            <p class="eyebrow">当前策略</p>
+            <h2 class="band-title">先做一条完整的纵向切片</h2>
+            <p class="band-lede">
+              不先铺满五门内容，而是把「医」从门类首页、知识页、课程、测验到学习进度全部跑通。模板稳定后，其他四门只需要换内容和换工具。
+            </p>
+            <a class="band-link" href="/yi/">
+              查看「医」的占位页 <span aria-hidden="true">→</span>
+            </a>
+          </div>
+
+          <ol class="steps">
+            <li class="step">
+              <span class="step-num">01</span>
+              <div>
+                <h3>结构</h3>
+                <p>门类配置、路由、页面模板、内容 schema。</p>
+              </div>
+            </li>
+            <li class="step">
+              <span class="step-num">02</span>
+              <div>
+                <h3>内容</h3>
+                <p>医的总览、6–8 个知识页、5 段经典、40 条术语。</p>
+              </div>
+            </li>
+            <li class="step">
+              <span class="step-num">03</span>
+              <div>
+                <h3>交互</h3>
+                <p>脏腑关系图、测验、学习进度、搜索。</p>
+              </div>
+            </li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--ruled" id="roadmap">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">建设路线</p>
+          <h2>先把骨架跑通，再堆内容</h2>
+        </div>
+        <p>
+          当前只完成界面与信息架构，所有知识页都保留为占位状态，避免在没有模板时先写散内容。
+        </p>
+      </div>
+
+      <div class="roadmap">
+        <article class="roadmap-item roadmap-item--active">
+          <div class="roadmap-top">
+            <span class="roadmap-index">01</span>
+            <StatusBadge status="进行中" />
+          </div>
+          <h3 class="roadmap-title">界面骨架</h3>
+          <p class="roadmap-text">全站导航、视觉系统、五门占位页与建设状态说明。</p>
+        </article>
+
+        <article class="roadmap-item">
+          <div class="roadmap-top">
+            <span class="roadmap-index">02</span>
+            <StatusBadge status="下一步" />
+          </div>
+          <h3 class="roadmap-title">医的纵向切片</h3>
+          <p class="roadmap-text">总览、基础理论、诊法、经典选读、术语、6 周路径与测验。</p>
+        </article>
+
+        <article class="roadmap-item">
+          <div class="roadmap-top">
+            <span class="roadmap-index">03</span>
+            <StatusBadge status="规划中" />
+          </div>
+          <h3 class="roadmap-title">四门复制</h3>
+          <p class="roadmap-text">山、命、相、卜接入同一套模板，补齐各自的学习路径与工具。</p>
+        </article>
+
+        <article class="roadmap-item">
+          <div class="roadmap-top">
+            <span class="roadmap-index">04</span>
+            <StatusBadge status="规划中" />
+          </div>
+          <h3 class="roadmap-title">工具与上线</h3>
+          <p class="roadmap-text">脏腑图、六十四卦、搜索与静态部署；上线时间另行确定。</p>
+        </article>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

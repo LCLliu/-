@@ -1,0 +1,60 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageIntro from '../../components/PageIntro.astro';
+import PlaceholderGrid from '../../components/PlaceholderGrid.astro';
+
+const items = [
+  {
+    title: '阴阳五行',
+    description: '五术共享的分类与关系语言，先讲清基本对应，再讨论各门如何使用。',
+    meta: '共用基础',
+  },
+  {
+    title: '天干地支',
+    description: '历法、纪年与术数推演的共同坐标，连接命、相、卜与医的时间观。',
+    meta: '共用基础',
+  },
+  {
+    title: '八卦与象数',
+    description: '从阴阳爻到六十四卦，建立象、数、辞之间的基本阅读方法。',
+    meta: '共用基础',
+  },
+  {
+    title: '气与天人相应',
+    description: '理解古代身体观、自然观与“人与天地相参”的基本假设。',
+    meta: '共用基础',
+  },
+  {
+    title: '历法与节气',
+    description: '二十四节气、朔望与干支纪日，作为五术时间系统的入口。',
+    meta: '共用基础',
+  },
+];
+---
+
+<BaseLayout
+  title="共通基础"
+  description="五术共享的概念底座：阴阳五行、干支、八卦、气与历法。"
+>
+  <PageIntro
+    eyebrow="Foundations"
+    title="共通基础"
+    lead="五术不是五个互不相干的栏目。它们共享阴阳五行、天干地支、八卦与气的语言；先把这层底座搭好，后面的门类才不会各讲各的。"
+    status="内容筹备中"
+    note="下一步：先做阴阳五行与藏象的图解，作为医门类的基础页。"
+  />
+
+  <section class="section section--page">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">知识底座</p>
+          <h2>先建立共用语言</h2>
+        </div>
+        <p>这些页面会被五门反复引用，适合先做图解和术语，不堆长文。</p>
+      </div>
+
+      <PlaceholderGrid items={items} columns={5} />
+    </div>
+  </section>
+</BaseLayout>

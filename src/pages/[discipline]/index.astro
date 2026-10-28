@@ -1,0 +1,123 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import StatusBadge from '../../components/StatusBadge.astro';
+import { disciplines, type Discipline } from '../../data/disciplines';
+
+export function getStaticPaths() {
+  return disciplines.map((discipline) => ({
+    params: { discipline: discipline.slug },
+    props: { discipline },
+  }));
+}
+
+interface Props {
+  discipline: Discipline;
+}
+
+const { discipline } = Astro.props;
+const isYi = discipline.slug === 'yi';
+---
+
+<BaseLayout
+  title={`${discipline.name}｜${discipline.tagline}`}
+  description={discipline.summary}
+>
+  <section class={`discipline-hero discipline-hero--${discipline.slug}`}>
+    <div class="discipline-watermark" aria-hidden="true">{discipline.name}</div>
+
+    <div class="container discipline-hero-inner">
+      <div>
+        <nav class="breadcrumb" aria-label="面包屑">
+          <a href="/">五术总览</a>
+          <span>/</span>
+          <span aria-current="page">{discipline.name}</span>
+        </nav>
+
+        <div class="discipline-title-row">
+          <h1 class="discipline-name">{discipline.name}</h1>
+          <div class="discipline-meta">
+            <span class="discipline-pinyin">{discipline.pinyin}</span>
+            <span class="discipline-tagline">{discipline.tagline}</span>
+          </div>
+        </div>
+
+        <p class="discipline-summary">{discipline.summary}</p>
+        <p class="discipline-focus">{discipline.focus}</p>
+      </div>
+
+      <div class="discipline-side">
+        <span class="discipline-side-label">当前状态</span>
+        <StatusBadge status={discipline.status} />
+        <p>界面骨架已建立<br />知识内容尚未接入</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="discipline-body container">
+    <div class="panel">
+      <div class="panel-head">
+        <div>
+          <p class="panel-kicker">页面模板</p>
+          <h2 class="panel-title">
+            {isYi ? '首期建设：医的纵向切片' : '等待模板复制'}
+          </h2>
+          <p class="panel-lede">
+            {isYi
+              ? '先把知识页的阅读层级、术语互链、经典引用与测验结构定下来，再开始填内容。'
+              : '医的门类模板稳定后，这一门会按同样的页面结构接入，避免五套不同的实现。'}
+          </p>
+        </div>
+        <StatusBadge status={isYi ? '首期建设' : '规划中'} />
+      </div>
+
+      <div class="callout">
+        <p class="callout-title">首期边界</p>
+        <p>
+          {isYi
+            ? '只做传统理论、历史与文献展示，不提供诊断、处方或疗效建议。'
+            : '当前只保留结构占位，不提前编写缺乏来源核对的内容。'}
+        </p>
+      </div>
+
+      <div class="template-stack">
+        <div class="template-layer">
+          <strong>一句话结论</strong>
+          <span>每页先给出可直接理解的核心判断，再展开细节。</span>
+          <em>待接入</em>
+        </div>
+        <div class="template-layer">
+          <strong>图解</strong>
+          <span>用原创 SVG 或示意图解释概念关系，避免大段堆字。</span>
+          <em>待接入</em>
+        </div>
+        <div class="template-layer">
+          <strong>原文选读</strong>
+          <span>原文、出处、注释与白话分层展示，标明版本。</span>
+          <em>待接入</em>
+        </div>
+      </div>
+
+      <div class="skeleton-board" aria-hidden="true">
+        <div class="skeleton-card"><span></span><span></span><span></span></div>
+        <div class="skeleton-card"><span></span><span></span><span></span></div>
+        <div class="skeleton-card"><span></span><span></span><span></span></div>
+      </div>
+    </div>
+
+    <aside class="side-card">
+      <h2 class="side-title">本门规划</h2>
+      <p class="side-note">按页面结构排列，不代表最终顺序</p>
+      <ol class="side-list">
+        {discipline.sections.map((section, index) => (
+          <li class="side-item">
+            <span class="side-num">{String(index + 1).padStart(2, '0')}</span>
+            <span>{section}</span>
+          </li>
+        ))}
+      </ol>
+      <div class="side-foot">
+        <a class="back-link" href="/">← 返回五术总览</a>
+      </div>
+    </aside>
+  </section>
+</BaseLayout>

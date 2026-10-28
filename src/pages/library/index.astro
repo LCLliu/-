@@ -1,0 +1,60 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageIntro from '../../components/PageIntro.astro';
+import PlaceholderGrid from '../../components/PlaceholderGrid.astro';
+
+const items = [
+  {
+    title: '医家经典',
+    description: '《黄帝内经》《难经》《伤寒论》《金匮要略》《神农本草经》的选读与版本信息。',
+    meta: '首期分类',
+  },
+  {
+    title: '易家经典',
+    description: '《周易》经传结构与历代注本，作为卜类与共通基础的原典入口。',
+    meta: '分类占位',
+  },
+  {
+    title: '术数典籍',
+    description: '命理、六壬、奇门、太乙等文献的目录与阅读提示。',
+    meta: '分类占位',
+  },
+  {
+    title: '地理与相术',
+    description: '风水、葬书、相人文献的分类与版本说明。',
+    meta: '分类占位',
+  },
+  {
+    title: '养生与内丹',
+    description: '山类文献的目录、源流与安全边界说明。',
+    meta: '分类占位',
+  },
+];
+---
+
+<BaseLayout
+  title="典籍馆"
+  description="五术原典的原文、注释、白话与版本信息。"
+>
+  <PageIntro
+    eyebrow="Library"
+    title="典籍馆"
+    lead="典籍馆不是把古文堆在一起，而是把原文、注释、白话、版本与相关概念分层组织，方便不同深度的读者进入。"
+    status="内容筹备中"
+    note="古籍原文用公版；现代译注、图片与图表需确认版权或自行绘制。"
+  />
+
+  <section class="section section--page">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">原典分层</p>
+          <h2>原文、注释、白话各就各位</h2>
+        </div>
+        <p>首期从医家经典开始，先跑通“原文 + 出处 + 注释 + 白话 + 关联词条”的阅读模板。</p>
+      </div>
+
+      <PlaceholderGrid items={items} columns={5} />
+    </div>
+  </section>
+</BaseLayout>

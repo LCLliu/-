@@ -1,0 +1,15 @@
+---
+interface Props {
+  status: string;
+}
+
+const { status } = Astro.props;
+
+const activeStatuses = ['首期建设', '进行中', '骨架完成', '界面骨架'];
+const tone = activeStatuses.includes(status) ? 'active' : 'planned';
+---
+
+<span class={`status status--${tone}`}>
+  <span class="status-dot" aria-hidden="true"></span>
+  {status}
+</span>
