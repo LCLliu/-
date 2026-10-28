@@ -1,0 +1,250 @@
+---
+import KnowledgeLayout from '../../layouts/KnowledgeLayout.astro';
+
+const toc = [
+  { id: 'zhenfa', label: '诊法是什么' },
+  { id: 'sizhen', label: '四诊' },
+  { id: 'hecan', label: '四诊合参' },
+  { id: 'bianzheng', label: '诊法与辨证' },
+  { id: 'wuqu', label: '常见误区' },
+  { id: 'jixu', label: '继续学习' },
+  { id: 'sources', label: '参考原典' },
+];
+---
+
+<KnowledgeLayout
+  title="诊法"
+  eyebrow="Medical · 医 · 诊法"
+  lead="望、闻、问、切四诊合参：先收集证据，再回到藏象、经络、气血津液的整体里理解。"
+  status="初稿"
+  readingTime="第一部分 · 阅读约 10 分钟"
+  updated="2026-10-28"
+  toc={toc}
+  mark="四诊"
+  parentLabel="医"
+  parentHref="/yi/"
+  asideNote="这一篇是诊法总览；望、闻、问、切各有深页，本页只做合参与边界。"
+>
+  <div class="article-prose">
+    <div class="summary-grid" aria-label="核心提要">
+      <article class="summary-card">
+        <span>01</span>
+        <h3>四诊</h3>
+        <p>望、闻、问、切各有分工，但都是收集证据的入口。</p>
+      </article>
+      <article class="summary-card">
+        <span>02</span>
+        <h3>合参</h3>
+        <p>一个面色、一个脉象、一个症状，都不能单独定论。</p>
+      </article>
+      <article class="summary-card">
+        <span>03</span>
+        <h3>边界</h3>
+        <p>诊法不等于现代检查，也不等于在线自我诊断。</p>
+      </article>
+    </div>
+
+    <section class="content-section" id="zhenfa">
+      <p class="section-label">01 · 总览</p>
+      <h2>诊法是收集证据的方法</h2>
+      <p class="lead-paragraph">
+        诊法不是四个独立的检查项目，而是一套收集身体信息的方法：把看到的、听到的、问到的、切到的线索放在一起，再回到藏象、经络、气血津液的整体里理解。
+      </p>
+
+      <blockquote class="quote-block">
+        <p>望而知之谓之神，闻而知之谓之圣，问而知之谓之工，切而知之谓之巧。</p>
+        <footer class="quote-source">《难经·六十一难》</footer>
+      </blockquote>
+
+      <p>
+        传统上说“司外揣内”：通过外在表现推知内在功能。这里的“外”不只是脸色，还包括声音、气味、问答、脉象、按诊反应与整体状态。
+      </p>
+
+      <div class="note-card">
+        <strong>诊法不是“看相”。</strong>
+        望诊看的是神、色、形、态与舌象；它不判断一个人的性格、命运或价值。把诊法变成标签化判断，已经偏离了医学语境。
+      </div>
+    </section>
+
+    <section class="content-section" id="sizhen">
+      <p class="section-label">02 · 四诊</p>
+      <h2>望、闻、问、切</h2>
+      <p class="lead-paragraph">
+        四诊各有分工，但没有高低顺序。它们互相校验，最后服务于同一个判断过程。
+      </p>
+
+      <div class="concept-grid">
+        <a class="concept-card concept-card--link" href="/yi/wangzhen/">
+          <span class="concept-num">望</span>
+          <h3>看整体与局部</h3>
+          <p>神、色、形、态、舌、分泌物。望诊先看整体，再看局部。</p>
+        </a>
+        <a class="concept-card concept-card--link" href="/yi/wenzhen/">
+          <span class="concept-num">闻</span>
+          <h3>听声息、闻气味</h3>
+          <p>声音、语言、呼吸、咳嗽、呕吐、呃逆，以及口气与排出物气味。</p>
+        </a>
+        <a class="concept-card concept-card--link" href="/yi/wenzhen-ask/">
+          <span class="concept-num">问</span>
+          <h3>问生活与病史</h3>
+          <p>寒热、汗、饮食、二便、睡眠、情志、月经、既往史与用药。</p>
+        </a>
+        <a class="concept-card concept-card--link" href="/yi/qiezhen/">
+          <span class="concept-num">切</span>
+          <h3>脉诊与按诊</h3>
+          <p>脉象的浮沉、迟数、虚实等，以及肌肤、手足、胸腹与穴位反应。</p>
+        </a>
+      </div>
+
+      <div class="note-card">
+        <strong>四诊不是四项体检。</strong>
+        每一项都只是线索。比如望色能提示方向，但不能替代问诊、闻诊与切诊；脉象也要结合整体状态与动态变化。
+      </div>
+    </section>
+
+    <section class="content-section" id="hecan">
+      <p class="section-label">03 · 合参</p>
+      <h2>四诊合参，才谈得上判断</h2>
+      <p class="lead-paragraph">
+        同一组线索，在不同人、不同季节、不同病程里意义不同。诊法真正难的地方不是背清单，而是合参与取舍。
+      </p>
+
+      <div class="logic-flow" aria-label="诊法到辨证的流程">
+        <span>望闻问切</span>
+        <span aria-hidden="true">→</span>
+        <span>证据</span>
+        <span aria-hidden="true">→</span>
+        <span>辨证</span>
+        <span aria-hidden="true">→</span>
+        <span>治法方向</span>
+      </div>
+
+      <div class="note-card">
+        <strong>一个示意：</strong>
+        面色偏淡、容易乏力、舌色偏淡，这些线索可能指向某种传统证候，也可能受睡眠、饮食、环境与药物影响。没有问诊、脉诊与整体状态，不能凭这几句话下结论。
+      </div>
+    </section>
+
+    <section class="content-section" id="bianzheng">
+      <p class="section-label">04 · 辨证</p>
+      <h2>诊法、辨证、治法不是同一件事</h2>
+      <p class="lead-paragraph">
+        诊法负责收集证据，辨证负责解释证据，治法再决定方向。把三者混在一起，就会变成“看到一个症状就开一个方”。
+      </p>
+
+      <div class="cycle-steps">
+        <article class="cycle-card">
+          <h3>诊法</h3>
+          <p class="cycle-sequence">收集</p>
+          <p>望闻问切，尽量完整地收集信息，并记录变化。</p>
+        </article>
+        <article class="cycle-card">
+          <h3>辨证</h3>
+          <p class="cycle-sequence">解释</p>
+          <p>把线索放回藏象、经络、气血津液与病程中，形成证候判断。</p>
+        </article>
+      </div>
+
+      <div class="note-card note-card--warn">
+        <strong>本页不提供诊断。</strong>
+        诊法展示的是传统医学的观察框架，不是在线问诊工具。身体不适请咨询合格的医疗专业人员。
+      </div>
+    </section>
+
+    <section class="content-section" id="wuqu">
+      <p class="section-label">05 · 辨析</p>
+      <h2>四个常见误区</h2>
+      <div class="pitfall-grid">
+        <article class="pitfall-card">
+          <span>01</span>
+          <h3>四诊不是体检套餐</h3>
+          <p>四诊是互补的观察方法，不是四个可以单独打分的项目。</p>
+        </article>
+        <article class="pitfall-card">
+          <span>02</span>
+          <h3>脉诊不是算命</h3>
+          <p>脉象需要长期训练与合参，不是神秘的“一摸就知道”。</p>
+        </article>
+        <article class="pitfall-card">
+          <span>03</span>
+          <h3>舌照不能诊断</h3>
+          <p>光线、饮食、药物、拍摄角度都会影响舌象；照片不能代替面诊。</p>
+        </article>
+        <article class="pitfall-card">
+          <span>04</span>
+          <h3>不替代现代检查</h3>
+          <p>传统诊法与现代医学检查是不同语言，不能互相替代。</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="content-section" id="jixu">
+      <p class="section-label">06 · 继续</p>
+      <h2>四诊已齐，下一步是合参</h2>
+      <p class="lead-paragraph">
+        望、闻、问、切四个深页已经拆开。可以按望 → 闻 → 问 → 切的顺序阅读，再回到本页练习四诊合参；辨证与治法继续往后放。
+      </p>
+
+      <div class="progress-panel">
+        <div>
+          <h3>本篇已完成</h3>
+          <ul class="progress-list progress-list--done">
+            <li>诊法的定位与边界</li>
+            <li>望、闻、问、切四诊总表</li>
+            <li>四诊合参的流程</li>
+            <li>望、闻、问、切四个深页</li>
+            <li>诊法与辨证、治法的区别</li>
+            <li>常见误区</li>
+          </ul>
+        </div>
+        <div>
+          <h3>下一步待补</h3>
+          <ul class="progress-list progress-list--next">
+            <li>四诊合参案例</li>
+            <li>辨证与治法</li>
+            <li>问诊与脉诊练习</li>
+            <li>现代检查与中医语言的边界</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="article-actions">
+        <a class="btn btn--primary" href="/yi/sizhen-hecan/">四诊合参案例</a>
+        <a class="btn btn--ghost" href="/yi/">返回医的门类页</a>
+      </div>
+    </section>
+
+    <section class="content-section" id="sources">
+      <p class="section-label">附 · 原典</p>
+      <h2>参考原典</h2>
+      <p>
+        以下引文据通行本，标点从简；正文中的解释为学习整理，不等于原典的全部含义。
+      </p>
+
+      <ol class="source-list">
+        <li>
+          <span class="source-work">《难经·六十一难》</span>
+          <p class="source-quote">
+            望而知之谓之神，闻而知之谓之圣，问而知之谓之工，切而知之谓之巧。
+          </p>
+        </li>
+        <li>
+          <span class="source-work">《黄帝内经·素问·脉要精微论》</span>
+          <p class="source-quote">
+            诊法常以平旦，阴气未动，阳气未散，饮食未进，经脉未盛，络脉调匀，气血未乱，故乃可诊有过之脉。
+          </p>
+        </li>
+        <li>
+          <span class="source-work">人纪·黄帝内经上册 p.121–143、p.144–154</span>
+          <p class="source-quote">
+            脉要精微论、三部九候与平人气象论的讲读；本页只做四诊框架与学习边界整理。
+          </p>
+        </li>
+      </ol>
+
+      <p class="article-end">
+        本页为传统理论展示与学习整理，不构成医疗诊断、处方建议或疗效承诺。最后更新：2026-10-28。
+      </p>
+    </section>
+  </div>
+</KnowledgeLayout>

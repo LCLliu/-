@@ -1,0 +1,281 @@
+---
+import KnowledgeLayout from '../../layouts/KnowledgeLayout.astro';
+
+const toc = [
+  { id: 'bianzheng', label: '辨证是什么' },
+  { id: 'kuangjia', label: '常用框架' },
+  { id: 'buzhou', label: '辨证步骤' },
+  { id: 'zhifa', label: '治法与八法' },
+  { id: 'fangyao', label: '方药与针灸的位置' },
+  { id: 'wuqu', label: '常见误区' },
+  { id: 'jixu', label: '继续学习' },
+  { id: 'sources', label: '参考原典' },
+];
+---
+
+<KnowledgeLayout
+  title="辨证与治法"
+  eyebrow="Medical · 医 · 辨证"
+  lead="诊法收集证据，辨证解释证据，治法决定方向，方药与针灸才是具体执行。四者不能混在一起，更不能跳步。"
+  status="初稿"
+  readingTime="第一部分 · 阅读约 10 分钟"
+  updated="2026-10-28"
+  toc={toc}
+  mark="辨证"
+  parentLabel="医"
+  parentHref="/yi/"
+  asideNote="这一篇讲框架与边界；不列方剂、剂量或针灸方案，也不把证候等同于现代疾病诊断。"
+>
+  <div class="article-prose">
+    <div class="summary-grid" aria-label="核心提要">
+      <article class="summary-card">
+        <span>01</span>
+        <h3>症 · 证 · 病</h3>
+        <p>症状是单点，证候是综合判断，病是相对独立的疾病框架。</p>
+      </article>
+      <article class="summary-card">
+        <span>02</span>
+        <h3>先选主线</h3>
+        <p>八纲、脏腑、六经、卫气营血/三焦，一次选一个主线，其他用于鉴别。</p>
+      </article>
+      <article class="summary-card">
+        <span>03</span>
+        <h3>治法是方向</h3>
+        <p>治法不是方剂；方从法出，法随证立，具体执行需要专业判断。</p>
+      </article>
+    </div>
+
+    <section class="content-section" id="bianzheng">
+      <p class="section-label">01 · 辨证</p>
+      <h2>辨证不是给症状换个名字</h2>
+      <p class="lead-paragraph">
+        症是单点，证是对病位、病性、病势与正邪关系的综合判断，病则是一个相对独立的疾病框架。辨证要解释“这些线索为什么同时出现”。
+      </p>
+
+      <blockquote class="quote-block">
+        <p>观其脉证，知犯何逆，随证治之。</p>
+        <footer class="quote-source">《伤寒论》</footer>
+      </blockquote>
+
+      <div class="note-card">
+        <ul class="reading-list">
+          <li><strong>症：</strong>头晕、乏力、口苦、失眠等单个表现。</li>
+          <li><strong>证：</strong>把病位、病性、病势与正邪关系放在一起的综合判断。</li>
+          <li><strong>病：</strong>一个相对独立的疾病框架；辨证与辨病可以并行，不必互相替代。</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="content-section" id="kuangjia">
+      <p class="section-label">02 · 框架</p>
+      <h2>一次选一个主线</h2>
+      <p class="lead-paragraph">
+        辨证框架很多，不是每次都要全部用上。先选一个能解释主要线索的主线，再用其他框架做鉴别。
+      </p>
+
+      <p class="table-scroll-hint">左右滑动查看完整表格 →</p>
+
+      <div class="table-wrap">
+        <table>
+          <caption>常用辨证框架；八纲是后世常用总纲。</caption>
+          <thead>
+            <tr>
+              <th scope="col">框架</th>
+              <th scope="col">看什么</th>
+              <th scope="col">备注</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>八纲</td><td>阴阳、表里、寒热、虚实</td><td>阴阳为总纲，其余六纲可归阴阳</td></tr>
+            <tr><td>脏腑辨证</td><td>脏腑功能与关系</td><td>适合与藏象页联动</td></tr>
+            <tr><td>六经辨证</td><td>太阳、阳明、少阳、太阴、少阴、厥阴</td><td>《伤寒论》的框架</td></tr>
+            <tr><td>卫气营血 / 三焦</td><td>温病的层次与传变</td><td>温病学框架</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="note-card">
+        <strong>八纲是总纲，不是八个标签。</strong>
+        表里看位置，寒热看性质，虚看正不足、实看邪有余；阴阳再把它们收拢成总方向。
+      </div>
+    </section>
+
+    <section class="content-section" id="buzhou">
+      <p class="section-label">03 · 步骤</p>
+      <h2>从证据到证候假设</h2>
+      <p class="lead-paragraph">
+        辨证不是一步跳到位，而是一个可以复核的过程：收集、归纳、鉴别、保留修正空间。
+      </p>
+
+      <div class="logic-flow" aria-label="辨证步骤">
+        <span>四诊</span>
+        <span aria-hidden="true">→</span>
+        <span>病位 / 病性</span>
+        <span aria-hidden="true">→</span>
+        <span>主证 / 兼证</span>
+        <span aria-hidden="true">→</span>
+        <span>鉴别 / 反证</span>
+        <span aria-hidden="true">→</span>
+        <span>证候假设</span>
+      </div>
+
+      <div class="note-card">
+        <ul class="reading-list">
+          <li>先把四诊信息写成时间线与线索表。</li>
+          <li>归纳病位（表里、脏腑、经络）与病性（寒热、虚实）。</li>
+          <li>区分主证与兼证，列出支持和反对的证据。</li>
+          <li>与相似证候鉴别，标出待补信息。</li>
+          <li>形成可修正的证候假设，而不是终审判决。</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="content-section" id="zhifa">
+      <p class="section-label">04 · 治法</p>
+      <h2>治法决定方向，不决定方子</h2>
+      <p class="lead-paragraph">
+        治法是治疗方向：治病求本、调整阴阳、扶正祛邪、因人因时因地制宜。传统八法是方向的分类，不是可以自行套用的操作清单。
+      </p>
+
+      <blockquote class="quote-block">
+        <p>谨守病机，各司其属，有者求之，无者求之，盛者责之，虚者责之。</p>
+        <footer class="quote-source">《黄帝内经·素问·至真要大论》</footer>
+      </blockquote>
+
+      <div class="point-groups">
+        <article class="point-group">
+          <h3>传统八法</h3>
+          <ul class="point-list">
+            <li class="point-chip">汗</li>
+            <li class="point-chip">吐</li>
+            <li class="point-chip">下</li>
+            <li class="point-chip">和</li>
+            <li class="point-chip">温</li>
+            <li class="point-chip">清</li>
+            <li class="point-chip">消</li>
+            <li class="point-chip">补</li>
+          </ul>
+        </article>
+      </div>
+
+      <div class="note-card note-card--warn">
+        <strong>八法不是“八种可以自己试”的方法。</strong>
+        吐法、下法等风险尤其高；治法需要专业辨证与执行。本站只做概念分类，不提供操作指导。
+      </div>
+    </section>
+
+    <section class="content-section" id="fangyao">
+      <p class="section-label">05 · 执行</p>
+      <h2>方药与针灸在治法之后</h2>
+      <p class="lead-paragraph">
+        证候确定方向，治法确定原则，方药与针灸才是具体执行。本站止步于治法概念，不进入处方与操作。
+      </p>
+
+      <div class="logic-flow" aria-label="证治流程">
+        <span>四诊证据</span>
+        <span aria-hidden="true">→</span>
+        <span>证候</span>
+        <span aria-hidden="true">→</span>
+        <span>治法</span>
+        <span aria-hidden="true">→</span>
+        <span>方药 / 针灸</span>
+      </div>
+
+      <div class="note-card">
+        <strong>方从法出，法随证立。</strong>
+        没有证候与治法，直接套方、套穴，都是跳步。具体方药、剂量、煎服法与针灸操作需专业判断。
+      </div>
+    </section>
+
+    <section class="content-section" id="wuqu">
+      <p class="section-label">06 · 辨析</p>
+      <h2>四个常见误区</h2>
+      <div class="pitfall-grid">
+        <article class="pitfall-card">
+          <span>01</span>
+          <h3>辨证不是辨病</h3>
+          <p>证候解释当前状态，疾病框架看整体病程；两者可以并行。</p>
+        </article>
+        <article class="pitfall-card">
+          <span>02</span>
+          <h3>证候不是症状</h3>
+          <p>把几个症状拼在一起，不等于完成辨证。</p>
+        </article>
+        <article class="pitfall-card">
+          <span>03</span>
+          <h3>治法不是方剂</h3>
+          <p>治法是方向；方药与针灸是执行层，需要专业判断。</p>
+        </article>
+        <article class="pitfall-card">
+          <span>04</span>
+          <h3>不要照方抓药</h3>
+          <p>同一个证候在不同人身上可能有不同处理，不能照网络方子自服。</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="content-section" id="jixu">
+      <p class="section-label">07 · 继续</p>
+      <h2>下一步：八纲与脏腑辨证</h2>
+      <p class="lead-paragraph">
+        这一页只做“从证据到方向”的总览。后面可以继续深入八纲、脏腑辨证与方药，但都要在专业语境中学习。
+      </p>
+
+      <div class="progress-panel">
+        <div>
+          <h3>本篇已完成</h3>
+          <ul class="progress-list progress-list--done">
+            <li>症、证、病的区别</li>
+            <li>常用辨证框架</li>
+            <li>辨证步骤与反证</li>
+            <li>治法原则与八法</li>
+            <li>方药/针灸的位置与边界</li>
+          </ul>
+        </div>
+        <div>
+          <h3>下一步待补</h3>
+          <ul class="progress-list progress-list--next">
+            <li>八纲辨证</li>
+            <li>脏腑辨证</li>
+            <li>四诊合参案例扩展</li>
+            <li>方药与针灸（专业语境）</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="article-actions">
+        <a class="btn btn--primary" href="/yi/sizhen-hecan/">复习四诊合参案例</a>
+        <a class="btn btn--ghost" href="/yi/">返回医的门类页</a>
+      </div>
+    </section>
+
+    <section class="content-section" id="sources">
+      <p class="section-label">附 · 原典</p>
+      <h2>参考原典</h2>
+      <p>
+        以下引文据通行本，标点从简；正文中的解释为学习整理，不等于原典的全部含义。
+      </p>
+
+      <ol class="source-list">
+        <li>
+          <span class="source-work">《黄帝内经·素问·阴阳应象大论》</span>
+          <p class="source-quote">治病必求于本。</p>
+        </li>
+        <li>
+          <span class="source-work">《黄帝内经·素问·至真要大论》</span>
+          <p class="source-quote">
+            谨守病机，各司其属，有者求之，无者求之，盛者责之，虚者责之。
+          </p>
+        </li>
+        <li>
+          <span class="source-work">《伤寒论》</span>
+          <p class="source-quote">观其脉证，知犯何逆，随证治之。</p>
+        </li>
+      </ol>
+
+      <p class="article-end">
+        本页为传统理论展示与学习整理，不构成医疗诊断、处方建议或疗效承诺。最后更新：2026-10-28。
+      </p>
+    </section>
+  </div>
+</KnowledgeLayout>

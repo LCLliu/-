@@ -1,0 +1,306 @@
+---
+import KnowledgeLayout from '../../layouts/KnowledgeLayout.astro';
+import TongueMapDiagram from '../../components/diagrams/TongueMapDiagram.astro';
+
+const toc = [
+  { id: 'wangzhen', label: '望诊是什么' },
+  { id: 'shense', label: '望神与望色' },
+  { id: 'xingtai', label: '望形与望态' },
+  { id: 'shezhen', label: '舌诊' },
+  { id: 'dufa', label: '望诊怎么读' },
+  { id: 'wuqu', label: '常见误区' },
+  { id: 'jixu', label: '继续学习' },
+  { id: 'sources', label: '参考原典' },
+];
+---
+
+<KnowledgeLayout
+  title="望诊与舌诊"
+  eyebrow="Medical · 医 · 诊法"
+  lead="望诊看神、色、形、态与舌象；舌诊是望诊的一部分。它的价值在于提供线索，不在于凭一张脸或一张舌照下诊断。"
+  status="初稿"
+  readingTime="第一部分 · 阅读约 12 分钟"
+  updated="2026-10-28"
+  toc={toc}
+  mark="望诊"
+  parentLabel="医"
+  parentHref="/yi/"
+  asideNote="这一篇先做望诊总览与舌面分区；闻诊、问诊、切诊后续再拆。"
+>
+  <div class="article-prose">
+    <div class="summary-grid" aria-label="核心提要">
+      <article class="summary-card">
+        <span>01</span>
+        <h3>望神与望色</h3>
+        <p>先看整体状态，再看五色；色要结合光泽、部位与整体。</p>
+      </article>
+      <article class="summary-card">
+        <span>02</span>
+        <h3>望形与望态</h3>
+        <p>胖瘦、强弱、姿势、步态与反应，都要放回年龄和病程。</p>
+      </article>
+      <article class="summary-card">
+        <span>03</span>
+        <h3>舌诊</h3>
+        <p>舌质、舌苔、舌形、舌下络脉；舌尖中根边是传统分区。</p>
+      </article>
+    </div>
+
+    <section class="content-section" id="wangzhen">
+      <p class="section-label">01 · 总览</p>
+      <h2>望诊不是看相</h2>
+      <p class="lead-paragraph">
+        望诊是四诊之一，看的是神、色、形、态、舌与局部表现。它提供线索，不判断性格、命运或价值，也不能凭一张照片下诊断。
+      </p>
+
+      <blockquote class="quote-block">
+        <p>精明五色者，气之华也。</p>
+        <footer class="quote-source">《黄帝内经·素问·脉要精微论》</footer>
+      </blockquote>
+
+      <p>
+        “精明五色”提示望色的重点不只是颜色，还有光泽与神气。先看整体精神与气色，再看局部；先看常色与病色的差别，再看具体部位。
+      </p>
+
+      <div class="note-card">
+        <strong>望诊的顺序：</strong>
+        整体 → 局部 → 舌象 → 合参。不要一上来就盯着某个部位或某种颜色，把望诊缩成“看脸断病”。
+      </div>
+    </section>
+
+    <section class="content-section" id="shense">
+      <p class="section-label">02 · 神色</p>
+      <h2>先看神，再看色</h2>
+      <p class="lead-paragraph">
+        望神看精神、目光、反应与整体状态；望色看五色与光泽。两者都比“单点颜色”更接近望诊的原意。
+      </p>
+
+      <div class="cycle-steps">
+        <article class="cycle-card">
+          <h3>望神</h3>
+          <p class="cycle-sequence">得神 · 失神 · 假神</p>
+          <p>传统上看得神、失神与假神；重点在精神、目光、反应和整体生命力。</p>
+        </article>
+        <article class="cycle-card">
+          <h3>望色</h3>
+          <p class="cycle-sequence">青 · 赤 · 黄 · 白 · 黑</p>
+          <p>五色只是分类，必须结合光泽、部位、季节、体质与整体状态。</p>
+        </article>
+      </div>
+
+      <p class="table-scroll-hint">左右滑动查看完整表格 →</p>
+
+      <div class="table-wrap">
+        <table>
+          <caption>五色的传统归类；色诊需结合光泽、部位与整体。</caption>
+          <thead>
+            <tr>
+              <th scope="col">色</th>
+              <th scope="col">传统所属</th>
+              <th scope="col">阅读提示</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>青</td><td>肝</td><td>青而润与青而晦不同；不能只看颜色</td></tr>
+            <tr><td>赤</td><td>心</td><td>红也要分荣润与枯暗</td></tr>
+            <tr><td>黄</td><td>脾</td><td>黄而润与黄而晦要分开看</td></tr>
+            <tr><td>白</td><td>肺</td><td>白而光泽与苍白无华不同</td></tr>
+            <tr><td>黑</td><td>肾</td><td>黑而润与晦暗不同</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p class="small-note">
+        “青属肝、赤属心”是传统归类，不是看到某种颜色就能判断某个脏腑生病。
+      </p>
+    </section>
+
+    <section class="content-section" id="xingtai">
+      <p class="section-label">03 · 形态</p>
+      <h2>形与态，也要放回整体</h2>
+      <p class="lead-paragraph">
+        望形看胖瘦、强弱、形体与局部变化；望态看姿势、步态、动静与反应。二者都要结合年龄、体质、病程与情志。
+      </p>
+
+      <div class="note-card">
+        <ul class="reading-list">
+          <li><strong>形：</strong>胖瘦、强弱、水肿、消瘦、局部形态变化。</li>
+          <li><strong>态：</strong>坐卧姿势、步态、动作、反应速度与动静偏好。</li>
+          <li><strong>合：</strong>形与态不是孤立的“外观评分”，要和问诊、脉诊、舌象一起看。</li>
+        </ul>
+      </div>
+
+      <div class="note-card note-card--warn">
+        <strong>不要用外形评价人。</strong>
+        望形不是身材评判，也不是性格判断。传统望诊关心的是功能与状态，不是美丑或价值。
+      </div>
+    </section>
+
+    <section class="content-section" id="shezhen">
+      <p class="section-label">04 · 舌诊</p>
+      <h2>舌质、舌苔、舌形、舌下络脉</h2>
+      <p class="lead-paragraph">
+        舌诊是望诊的局部深化。先看舌质（底色），再看舌苔（表面），再看舌形与舌下络脉；传统上还按舌尖、舌中、舌根、舌边分区。
+      </p>
+
+      <figure class="figure-card">
+        <TongueMapDiagram />
+        <figcaption>
+          舌面传统分区：舌尖心肺、舌中脾胃、舌根肾、舌边肝胆。分区为传统示意，不是诊断定位。
+        </figcaption>
+      </figure>
+
+      <div class="concept-grid">
+        <article class="concept-card">
+          <span class="concept-num">舌质</span>
+          <h3>看底色</h3>
+          <p>淡红、淡白、红、绛、紫；结合荣润与晦暗。</p>
+        </article>
+        <article class="concept-card">
+          <span class="concept-num">舌苔</span>
+          <h3>看表面</h3>
+          <p>薄白、白腻、黄腻、剥落；注意厚薄、润燥与分布。</p>
+        </article>
+        <article class="concept-card">
+          <span class="concept-num">舌形</span>
+          <h3>看形状</h3>
+          <p>胖大、瘦薄、齿痕、裂纹；也要看舌体活动与紧张度。</p>
+        </article>
+        <article class="concept-card">
+          <span class="concept-num">舌下</span>
+          <h3>看络脉</h3>
+          <p>舌下络脉的颜色、粗细与怒张程度；需在自然光下观察。</p>
+        </article>
+      </div>
+
+      <div class="note-card">
+        <strong>看舌的条件很重要。</strong>
+        光线、饮食染色、药物、晨起状态、拍摄角度都会影响舌象。照片不能代替面诊，更不能只凭一张舌照判断体质或疾病。
+      </div>
+    </section>
+
+    <section class="content-section" id="dufa">
+      <p class="section-label">05 · 读法</p>
+      <h2>自然光下，先整体后局部</h2>
+      <p class="lead-paragraph">
+        望诊不是“找异常”，而是把整体状态、局部表现和舌象放在一起看。四诊合参，才能进入辨证。
+      </p>
+
+      <div class="logic-flow" aria-label="望诊阅读顺序">
+        <span>自然光</span>
+        <span aria-hidden="true">→</span>
+        <span>整体神色</span>
+        <span aria-hidden="true">→</span>
+        <span>形与态</span>
+        <span aria-hidden="true">→</span>
+        <span>舌象</span>
+        <span aria-hidden="true">→</span>
+        <span>四诊合参</span>
+      </div>
+
+      <div class="note-card">
+        <strong>三个不要：</strong>
+        不要用望诊给人贴性格标签；不要凭一个颜色或一张舌照下诊断；不要把望诊替代现代医学检查。
+      </div>
+    </section>
+
+    <section class="content-section" id="wuqu">
+      <p class="section-label">06 · 辨析</p>
+      <h2>四个常见误区</h2>
+      <div class="pitfall-grid">
+        <article class="pitfall-card">
+          <span>01</span>
+          <h3>望诊不是看相</h3>
+          <p>望诊看的是功能与状态，不判断性格、命运或人的价值。</p>
+        </article>
+        <article class="pitfall-card">
+          <span>02</span>
+          <h3>五色不是病名</h3>
+          <p>青赤黄白黑是传统归类，不能直接对应某个脏腑疾病。</p>
+        </article>
+        <article class="pitfall-card">
+          <span>03</span>
+          <h3>舌照不能诊断</h3>
+          <p>光线、饮食、药物和角度都会影响舌象，照片不能代替面诊。</p>
+        </article>
+        <article class="pitfall-card">
+          <span>04</span>
+          <h3>望诊不能替代检查</h3>
+          <p>传统望诊与现代医学检查是不同语言，不能互相替代。</p>
+        </article>
+      </div>
+
+      <div class="note-card note-card--warn">
+        <strong>使用边界：</strong>
+        本站只做传统望诊理论展示，不提供面诊、舌照诊断或用药建议。身体不适请咨询合格的医疗专业人员。
+      </div>
+    </section>
+
+    <section class="content-section" id="jixu">
+      <p class="section-label">07 · 继续</p>
+      <h2>下一步：闻、问、切</h2>
+      <p class="lead-paragraph">
+        望诊是四诊的入口。后面可以接闻诊、问诊与切诊，再回到完整的四诊合参与辨证。
+      </p>
+
+      <div class="progress-panel">
+        <div>
+          <h3>本篇已完成</h3>
+          <ul class="progress-list progress-list--done">
+            <li>望诊的定位与边界</li>
+            <li>望神、望色、望形、望态</li>
+            <li>五色传统归类</li>
+            <li>舌面分区与舌诊四层</li>
+            <li>常见误区与读法</li>
+          </ul>
+        </div>
+        <div>
+          <h3>下一步待补</h3>
+          <ul class="progress-list progress-list--next">
+            <li>闻诊</li>
+            <li>问诊与十问</li>
+            <li>脉诊与按诊</li>
+            <li>四诊合参案例</li>
+            <li>辨证与治法</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="article-actions">
+        <a class="btn btn--primary" href="/yi/zhenfa/">返回诊法总览</a>
+        <a class="btn btn--ghost" href="/yi/">返回医的门类页</a>
+      </div>
+    </section>
+
+    <section class="content-section" id="sources">
+      <p class="section-label">附 · 原典</p>
+      <h2>参考原典</h2>
+      <p>
+        以下引文据通行本，标点从简；正文中的解释为学习整理，不等于原典的全部含义。
+      </p>
+
+      <ol class="source-list">
+        <li>
+          <span class="source-work">《黄帝内经·素问·脉要精微论》</span>
+          <p class="source-quote">精明五色者，气之华也。</p>
+        </li>
+        <li>
+          <span class="source-work">人纪·黄帝内经上册 p.121–124、p.143</span>
+          <p class="source-quote">
+            脉要精微论的五色与气色讲读、望闻问切之道；本页只做望诊与舌诊的基础框架。
+          </p>
+        </li>
+        <li>
+          <span class="source-work">舌面分区</span>
+          <p class="source-quote">
+            舌尖心肺、舌中脾胃、舌根肾、舌边肝胆，属传统舌诊分区；图示为示意，不作诊断定位。
+          </p>
+        </li>
+      </ol>
+
+      <p class="article-end">
+        本页为传统理论展示与学习整理，不构成医疗诊断、处方建议或疗效承诺。最后更新：2026-10-28。
+      </p>
+    </section>
+  </div>
+</KnowledgeLayout>

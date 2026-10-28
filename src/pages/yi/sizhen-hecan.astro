@@ -1,0 +1,229 @@
+---
+import KnowledgeLayout from '../../layouts/KnowledgeLayout.astro';
+
+const toc = [
+  { id: 'fangfa', label: '练习方法' },
+  { id: 'case1', label: '案例一：头晕与乏力' },
+  { id: 'case2', label: '案例二：胸闷与叹气' },
+  { id: 'case3', label: '案例三：畏寒与手足冷' },
+  { id: 'fupan', label: '复盘清单' },
+  { id: 'jixu', label: '继续学习' },
+  { id: 'sources', label: '参考原典' },
+];
+---
+
+<KnowledgeLayout
+  title="四诊合参案例"
+  eyebrow="Medical · 医 · 诊法"
+  lead="用三个虚构案例练习记录，不练习下诊断。目标是把望、闻、问、切放在一起，找出交集、反证与待补信息。"
+  status="初稿"
+  readingTime="第一部分 · 阅读约 10 分钟"
+  updated="2026-10-28"
+  toc={toc}
+  mark="合参"
+  parentLabel="医"
+  parentHref="/yi/"
+  asideNote="所有案例均为虚构教学材料；不提供证候结论、处方或针灸方案。"
+>
+  <div class="article-prose">
+    <div class="summary-grid" aria-label="核心提要">
+      <article class="summary-card">
+        <span>01</span>
+        <h3>先记录</h3>
+        <p>望、闻、问、切分别写下线索，再讨论意义；不要先猜证候。</p>
+      </article>
+      <article class="summary-card">
+        <span>02</span>
+        <h3>找交集与反证</h3>
+        <p>哪些线索相互支持？哪些互相矛盾？矛盾往往比“像什么”更重要。</p>
+      </article>
+      <article class="summary-card">
+        <span>03</span>
+        <h3>标注待补</h3>
+        <p>缺什么信息、要排除哪些现代医学因素，比给出答案更重要。</p>
+      </article>
+    </div>
+
+    <section class="content-section" id="fangfa">
+      <p class="section-label">01 · 方法</p>
+      <h2>案例练习的目标不是“猜中”</h2>
+      <p class="lead-paragraph">
+        四诊合参是一种记录与推理训练：先把四类线索分开写清楚，再看它们如何相互支持或冲突，最后标出还需要补什么。
+      </p>
+
+      <p class="table-scroll-hint">左右滑动查看完整表格 →</p>
+
+      <div class="table-wrap">
+        <table>
+          <caption>四诊记录模板；每个案例都按这个结构练习。</caption>
+          <thead>
+            <tr>
+              <th scope="col">望</th>
+              <th scope="col">闻</th>
+              <th scope="col">问</th>
+              <th scope="col">切</th>
+              <th scope="col">待补</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>神色、面色、舌象</td>
+              <td>声息、气味</td>
+              <td>寒热、汗、饮食、二便、睡眠</td>
+              <td>脉象、按诊</td>
+              <td>缺失信息、需要排除的因素</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="note-card">
+        <strong>先写线索，再写解释。</strong>
+        如果一开始就写“某某证”，后面的观察会被答案带着走。案例练习要刻意把“记录”和“解释”分开。
+      </div>
+    </section>
+
+    <section class="content-section" id="case1">
+      <p class="section-label">02 · 案例一</p>
+      <h2>头晕与乏力（虚构）</h2>
+
+      <div class="note-card">
+        <ul class="reading-list">
+          <li><strong>望：</strong>面色偏淡，舌色偏淡。</li>
+          <li><strong>闻：</strong>语声偏低，无特殊气味。</li>
+          <li><strong>问：</strong>近期熬夜多，睡眠浅；食欲一般；饮水偏少。</li>
+          <li><strong>切：</strong>脉细，手足偏凉。</li>
+          <li><strong>待补：</strong>起病时间、二便、月经、既往贫血/甲状腺病史、用药。</li>
+        </ul>
+      </div>
+
+      <p>
+        <strong>合参提示：</strong>
+        线索都指向“偏不足”的方向，但“偏不足”不是证候诊断。还需要补问饮食、二便、月经与病程，排除睡眠、营养、药物和现代医学因素。
+      </p>
+
+      <p class="small-note">虚构教学案例，不作诊断。</p>
+    </section>
+
+    <section class="content-section" id="case2">
+      <p class="section-label">03 · 案例二</p>
+      <h2>胸闷与叹气（虚构）</h2>
+
+      <div class="note-card">
+        <ul class="reading-list">
+          <li><strong>望：</strong>舌边偏红，神情偏紧。</li>
+          <li><strong>闻：</strong>语声偏急，呼吸尚匀。</li>
+          <li><strong>问：</strong>近期压力大，睡眠浅，口苦，喜欢叹气。</li>
+          <li><strong>切：</strong>脉弦。</li>
+          <li><strong>待补：</strong>胸痛性质、活动关系、心悸、既往心肺病史、咖啡/烟酒/用药。</li>
+        </ul>
+      </div>
+
+      <p>
+        <strong>合参提示：</strong>
+        情志、口苦、脉弦可以放在一起讨论，但胸痛与心肺问题必须先排除。传统辨证不能替代必要的现代检查。
+      </p>
+
+      <p class="small-note">虚构教学案例，不作诊断。</p>
+    </section>
+
+    <section class="content-section" id="case3">
+      <p class="section-label">04 · 案例三</p>
+      <h2>畏寒与手足冷（虚构）</h2>
+
+      <div class="note-card">
+        <ul class="reading-list">
+          <li><strong>望：</strong>舌淡胖，面色偏白。</li>
+          <li><strong>闻：</strong>语声低，无特殊气味。</li>
+          <li><strong>问：</strong>怕冷，大便偏稀，小便清长，精神一般。</li>
+          <li><strong>切：</strong>脉沉迟，手足冷。</li>
+          <li><strong>待补：</strong>年龄、起病、体重变化、甲状腺病史、贫血相关检查、用药。</li>
+        </ul>
+      </div>
+
+      <p>
+        <strong>合参提示：</strong>
+        寒象线索较多，但仍需排除环境、体质、药物与现代医学原因；不能只凭“怕冷”就给自己贴“阳虚”。
+      </p>
+
+      <p class="small-note">虚构教学案例，不作诊断。</p>
+    </section>
+
+    <section class="content-section" id="fupan">
+      <p class="section-label">05 · 复盘</p>
+      <h2>每次练习都问五个问题</h2>
+
+      <div class="note-card">
+        <ul class="reading-list">
+          <li>四诊是否都记录了？有没有只抓一个症状？</li>
+          <li>哪些线索互相支持，哪些互相矛盾？</li>
+          <li>还缺哪些信息？先补问，还是先做检查？</li>
+          <li>有没有把传统证候当成现代疾病诊断？</li>
+          <li>有没有跳过专业评估，直接给出方药或针灸建议？</li>
+        </ul>
+      </div>
+
+      <div class="note-card note-card--warn">
+        <strong>案例不是诊断题。</strong>
+        本站不公布“标准答案”，也不提供处方。真实问题需要专业问诊、检查与动态观察。
+      </div>
+    </section>
+
+    <section class="content-section" id="jixu">
+      <p class="section-label">06 · 继续</p>
+      <h2>下一步：辨证与治法</h2>
+      <p class="lead-paragraph">
+        案例练习之后，才进入辨证与治法的框架。这里讲的是“如何从证据走到方向”，不是“如何开方”。
+      </p>
+
+      <div class="progress-panel">
+        <div>
+          <h3>本篇已完成</h3>
+          <ul class="progress-list progress-list--done">
+            <li>四诊记录模板</li>
+            <li>三个虚构案例的四诊线索</li>
+            <li>交集、反证与待补信息</li>
+            <li>复盘五问与边界</li>
+          </ul>
+        </div>
+        <div>
+          <h3>下一步待补</h3>
+          <ul class="progress-list progress-list--next">
+            <li>辨证与治法</li>
+            <li>八纲与脏腑辨证</li>
+            <li>方药与针灸（专业语境）</li>
+            <li>更多案例练习</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="article-actions">
+        <a class="btn btn--primary" href="/yi/bianzheng-zhifa/">继续读辨证与治法</a>
+        <a class="btn btn--ghost" href="/yi/zhenfa/">返回诊法总览</a>
+      </div>
+    </section>
+
+    <section class="content-section" id="sources">
+      <p class="section-label">附 · 参考</p>
+      <h2>参考说明</h2>
+      <p>
+        案例为虚构教学材料，参考前文的望、闻、问、切四页与《黄帝内经》相关篇章整理；不指向真实患者。
+      </p>
+
+      <ol class="source-list">
+        <li>
+          <span class="source-work">人纪·黄帝内经上册 p.121–154</span>
+          <p class="source-quote">脉要精微论、三部九候与平人气象论的四诊讲读。</p>
+        </li>
+        <li>
+          <span class="source-work">本页案例</span>
+          <p class="source-quote">全部为虚构教学案例；不提供证候结论或治疗建议。</p>
+        </li>
+      </ol>
+
+      <p class="article-end">
+        本页为传统理论展示与学习整理，不构成医疗诊断、处方建议或疗效承诺。最后更新：2026-10-28。
+      </p>
+    </section>
+  </div>
+</KnowledgeLayout>

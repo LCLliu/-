@@ -1,0 +1,281 @@
+---
+import KnowledgeLayout from '../../layouts/KnowledgeLayout.astro';
+
+const toc = [
+  { id: 'qiezhen', label: '切诊是什么' },
+  { id: 'maizhen', label: '脉诊基础' },
+  { id: 'maixiang', label: '常见脉象' },
+  { id: 'anzhen', label: '按诊' },
+  { id: 'dufa', label: '怎么读' },
+  { id: 'wuqu', label: '常见误区' },
+  { id: 'jixu', label: '继续学习' },
+  { id: 'sources', label: '参考原典' },
+];
+---
+
+<KnowledgeLayout
+  title="切诊"
+  eyebrow="Medical · 医 · 诊法"
+  lead="切诊包括脉诊与按诊。脉象是线索，不是算命；脉诊需要长期训练与四诊合参，按诊则看肌肤、手足、胸腹与穴位反应。"
+  status="初稿"
+  readingTime="第一部分 · 阅读约 9 分钟"
+  updated="2026-10-28"
+  toc={toc}
+  mark="切"
+  parentLabel="医"
+  parentHref="/yi/"
+  asideNote="这一篇只做脉诊与按诊的基础框架；不做在线摸脉、脉象识别或自我诊断。"
+>
+  <div class="article-prose">
+    <div class="summary-grid" aria-label="核心提要">
+      <article class="summary-card">
+        <span>01</span>
+        <h3>脉诊 + 按诊</h3>
+        <p>切诊不只是摸脉；肌肤、手足、胸腹与穴位反应也在其中。</p>
+      </article>
+      <article class="summary-card">
+        <span>02</span>
+        <h3>常脉有胃气</h3>
+        <p>传统上常脉要有胃气、有神、有根，不是单纯的数字正常。</p>
+      </article>
+      <article class="summary-card">
+        <span>03</span>
+        <h3>合参</h3>
+        <p>一个脉象不能定论；脉诊必须与望、闻、问一起看。</p>
+      </article>
+    </div>
+
+    <section class="content-section" id="qiezhen">
+      <p class="section-label">01 · 总览</p>
+      <h2>切诊不只是摸脉</h2>
+      <p class="lead-paragraph">
+        切诊包括脉诊与按诊。脉诊看脉象，按诊看肌肤、手足、胸腹与穴位反应；两者都是收集线索，不是给人下结论。
+      </p>
+
+      <blockquote class="quote-block">
+        <p>人一呼脉再动，一吸脉亦再动，呼吸定息脉五动，闰以太息，命曰平人。</p>
+        <footer class="quote-source">《黄帝内经·素问·平人气象论》</footer>
+      </blockquote>
+
+      <div class="note-card">
+        <strong>脉诊不是“一摸就知道”。</strong>
+        脉象受年龄、体质、情绪、运动、饮食、睡眠与药物影响。摸到某个脉，只能提供一个方向，不能替代问诊、望诊和现代检查。
+      </div>
+    </section>
+
+    <section class="content-section" id="maizhen">
+      <p class="section-label">02 · 脉诊</p>
+      <h2>寸口、常脉与三部九候</h2>
+      <p class="lead-paragraph">
+        脉诊最常见的部位是寸口。传统上分寸、关、尺三部；左右手与脏腑的配对说法有流派差异，本页不展开。
+      </p>
+
+      <div class="cycle-steps">
+        <article class="cycle-card">
+          <h3>寸口</h3>
+          <p class="cycle-sequence">寸 · 关 · 尺</p>
+          <p>腕部桡动脉处的传统诊脉位置，分寸、关、尺三部。</p>
+        </article>
+        <article class="cycle-card">
+          <h3>常脉</h3>
+          <p class="cycle-sequence">胃气 · 神 · 根</p>
+          <p>传统上以有胃气、有神、有根为常；不是单纯追求某个数字。</p>
+        </article>
+      </div>
+
+      <div class="note-card">
+        <strong>三部九候是另一套传统遍诊法。</strong>
+        它通过多个部位诊察，不等同于现代医学的血管检查。本页只把“寸口”作为入门入口，不展开全部遍诊细节。
+      </div>
+    </section>
+
+    <section class="content-section" id="maixiang">
+      <p class="section-label">03 · 脉象</p>
+      <h2>先记八组常见脉象</h2>
+      <p class="lead-paragraph">
+        脉象的分类很多，入门先记位置、频率、力量与流利度四组对比，比一上来背二十几种脉更稳。
+      </p>
+
+      <p class="table-scroll-hint">左右滑动查看完整表格 →</p>
+
+      <div class="table-wrap">
+        <table>
+          <caption>常见脉象的入门对照；具体意义需专业训练与四诊合参。</caption>
+          <thead>
+            <tr>
+              <th scope="col">脉象</th>
+              <th scope="col">观察点</th>
+              <th scope="col">方向</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>浮</td><td>轻取即得</td><td>偏表</td></tr>
+            <tr><td>沉</td><td>重按始得</td><td>偏里</td></tr>
+            <tr><td>迟</td><td>频率偏慢</td><td>偏寒/偏慢</td></tr>
+            <tr><td>数</td><td>频率偏快</td><td>偏热/偏快</td></tr>
+            <tr><td>虚</td><td>力量不足</td><td>偏不足</td></tr>
+            <tr><td>实</td><td>力量偏盛</td><td>偏有余</td></tr>
+            <tr><td>滑</td><td>往来流利</td><td>流利度偏高</td></tr>
+            <tr><td>涩</td><td>往来不畅</td><td>流利度偏低</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p class="small-note">
+        表中的“偏表/偏里/偏寒/偏热”是传统方向词，不是现代疾病诊断。脉象必须放回整体与动态中理解。
+      </p>
+    </section>
+
+    <section class="content-section" id="anzhen">
+      <p class="section-label">04 · 按诊</p>
+      <h2>按肌肤、手足、胸腹与穴位</h2>
+      <p class="lead-paragraph">
+        按诊通过触摸了解体表的温度、润燥、紧张度、压痛与反应。它和脉诊一起，构成切诊的两部分。
+      </p>
+
+      <div class="concept-grid">
+        <article class="concept-card">
+          <span class="concept-num">肌肤</span>
+          <h3>温度与润燥</h3>
+          <p>寒热、干湿、肿胀与局部反应。</p>
+        </article>
+        <article class="concept-card">
+          <span class="concept-num">手足</span>
+          <h3>寒热与强弱</h3>
+          <p>手足温度、力量与触感，需结合整体状态。</p>
+        </article>
+        <article class="concept-card">
+          <span class="concept-num">胸腹</span>
+          <h3>胀满与压痛</h3>
+          <p>胸腹的紧张度、压痛与包块感；不自行用力按压。</p>
+        </article>
+        <article class="concept-card">
+          <span class="concept-num">穴位</span>
+          <h3>压痛与反应</h3>
+          <p>穴位压痛只是线索，不能凭一个压痛点诊断。</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="content-section" id="dufa">
+      <p class="section-label">05 · 读法</p>
+      <h2>切诊不是算命</h2>
+      <p class="lead-paragraph">
+        切诊要结合望、闻、问，先看整体，再看局部；先看常脉，再看变化。没有“摸一下就知道”的捷径。
+      </p>
+
+      <div class="logic-flow" aria-label="切诊阅读顺序">
+        <span>望闻问</span>
+        <span aria-hidden="true">→</span>
+        <span>脉诊</span>
+        <span aria-hidden="true">→</span>
+        <span>按诊</span>
+        <span aria-hidden="true">→</span>
+        <span>四诊合参</span>
+      </div>
+
+      <div class="note-card">
+        <strong>三个不要：</strong>
+        不要把脉诊神秘化；不要凭一个脉象自我诊断；不要照着网络教程给自己或别人摸脉下结论。
+      </div>
+    </section>
+
+    <section class="content-section" id="wuqu">
+      <p class="section-label">06 · 辨析</p>
+      <h2>四个常见误区</h2>
+      <div class="pitfall-grid">
+        <article class="pitfall-card">
+          <span>01</span>
+          <h3>切诊不只是摸脉</h3>
+          <p>按诊看肌肤、手足、胸腹与穴位反应；切诊不等于脉诊。</p>
+        </article>
+        <article class="pitfall-card">
+          <span>02</span>
+          <h3>脉象不是算命</h3>
+          <p>脉象受多种因素影响，不能直接对应疾病或命运。</p>
+        </article>
+        <article class="pitfall-card">
+          <span>03</span>
+          <h3>一个脉象不能定论</h3>
+          <p>脉诊必须与望、闻、问合参，并放回病程与整体状态。</p>
+        </article>
+        <article class="pitfall-card">
+          <span>04</span>
+          <h3>不替代现代检查</h3>
+          <p>传统切诊与现代医学检查是不同语言，不能互相替代。</p>
+        </article>
+      </div>
+
+      <div class="note-card note-card--warn">
+        <strong>使用边界：</strong>
+        本站只做传统脉诊与按诊理论展示，不提供在线摸脉、脉象识别或诊断服务。身体不适请咨询合格的医疗专业人员。
+      </div>
+    </section>
+
+    <section class="content-section" id="jixu">
+      <p class="section-label">07 · 继续</p>
+      <h2>四诊已齐，下一步是合参</h2>
+      <p class="lead-paragraph">
+        望、闻、问、切四页已经拆开；下一步不是继续背术语，而是练习把四类线索放在一起，再进入辨证与治法。
+      </p>
+
+      <div class="progress-panel">
+        <div>
+          <h3>本篇已完成</h3>
+          <ul class="progress-list progress-list--done">
+            <li>切诊的两部分：脉诊与按诊</li>
+            <li>寸口、常脉与三部九候</li>
+            <li>八组常见脉象</li>
+            <li>按诊的观察范围</li>
+            <li>切诊的边界与误区</li>
+          </ul>
+        </div>
+        <div>
+          <h3>下一步待补</h3>
+          <ul class="progress-list progress-list--next">
+            <li>四诊合参案例</li>
+            <li>辨证与治法</li>
+            <li>脉诊的实践训练</li>
+            <li>现代检查与中医语言的边界</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="article-actions">
+        <a class="btn btn--primary" href="/yi/sizhen-hecan/">四诊合参案例</a>
+        <a class="btn btn--ghost" href="/yi/zhenfa/">返回诊法总览</a>
+      </div>
+    </section>
+
+    <section class="content-section" id="sources">
+      <p class="section-label">附 · 原典</p>
+      <h2>参考原典</h2>
+      <p>
+        以下引文据通行本，标点从简；正文中的解释为学习整理，不等于原典的全部含义。
+      </p>
+
+      <ol class="source-list">
+        <li>
+          <span class="source-work">《黄帝内经·素问·平人气象论》</span>
+          <p class="source-quote">
+            人一呼脉再动，一吸脉亦再动，呼吸定息脉五动，闰以太息，命曰平人。平人之常气禀于胃，胃者平人之常气也。
+          </p>
+        </li>
+        <li>
+          <span class="source-work">《黄帝内经·素问·脉要精微论》</span>
+          <p class="source-quote">
+            夫脉者，血之府也。长则气治，短则气病，数则烦心，大则病进。
+          </p>
+        </li>
+        <li>
+          <span class="source-work">人纪·黄帝内经上册 p.121–145</span>
+          <p class="source-quote">脉要精微论、三部九候与平人气象论的讲读；本页只做切诊基础与边界整理。</p>
+        </li>
+      </ol>
+
+      <p class="article-end">
+        本页为传统理论展示与学习整理，不构成医疗诊断、处方建议或疗效承诺。最后更新：2026-10-28。
+      </p>
+    </section>
+  </div>
+</KnowledgeLayout>

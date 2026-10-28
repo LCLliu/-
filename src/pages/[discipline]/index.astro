@@ -49,9 +49,9 @@ const isYi = discipline.slug === 'yi';
         <span class="discipline-side-label">当前状态</span>
         <StatusBadge status={discipline.status} />
         <p>
-          {isYi ? '藏象、十二经络、奇经八脉、络脉、任督穴位、井荥俞、气血津液初稿已开放' : '界面骨架已建立'}
+          {isYi ? '藏象到气血津液、四诊与辨证初稿已开放' : '界面骨架已建立'}
           <br />
-          {isYi ? '其余内容陆续接入' : '知识内容尚未接入'}
+          {isYi ? '方药与经典选读待补' : '知识内容尚未接入'}
         </p>
       </div>
     </div>
@@ -67,7 +67,7 @@ const isYi = discipline.slug === 'yi';
           </h2>
           <p class="panel-lede">
             {isYi
-              ? '藏象、十二经络、奇经八脉、络脉、任督穴位、井荥俞、气血津液初稿已开放；诊法另起，经典选读待补。'
+              ? '藏象、经络、气血津液、四诊与辨证初稿已开放；方药与经典选读待补。'
               : '医的门类模板稳定后，这一门会按同样的页面结构接入，避免五套不同的实现。'}
           </p>
         </div>
@@ -131,6 +131,34 @@ const isYi = discipline.slug === 'yi';
             <span>
               <strong>气血津液 · 初稿</strong>
               <small>同源、互根、同行</small>
+            </span>
+            <span>开始阅读 →</span>
+          </a>
+          <a class="opened-card" href="/yi/zhenfa/">
+            <span>
+              <strong>诊法 · 初稿</strong>
+              <small>望闻问切与四诊合参</small>
+            </span>
+            <span>开始阅读 →</span>
+          </a>
+          <a class="opened-card" href="/yi/wangzhen/">
+            <span>
+              <strong>望诊与舌诊 · 初稿</strong>
+              <small>神色形态、五色与舌面分区</small>
+            </span>
+            <span>开始阅读 →</span>
+          </a>
+          <a class="opened-card" href="/yi/sizhen-hecan/">
+            <span>
+              <strong>四诊合参案例 · 初稿</strong>
+              <small>三个虚构案例与复盘清单</small>
+            </span>
+            <span>开始阅读 →</span>
+          </a>
+          <a class="opened-card" href="/yi/bianzheng-zhifa/">
+            <span>
+              <strong>辨证与治法 · 初稿</strong>
+              <small>从证据到方向，不写方剂</small>
             </span>
             <span>开始阅读 →</span>
           </a>

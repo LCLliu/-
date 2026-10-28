@@ -723,6 +723,49 @@
   letter-spacing: 0.1em;
 }
 
+.tongue-svg {
+  width: 100%;
+  max-width: 520px;
+  height: auto;
+  margin-inline: auto;
+}
+
+.tongue-outline {
+  fill: var(--paper-light);
+  stroke: var(--line-strong);
+  stroke-width: 1.5;
+}
+
+.tongue-divider {
+  stroke: var(--line-strong);
+  stroke-width: 1;
+  stroke-dasharray: 4 6;
+}
+
+.tongue-title {
+  fill: var(--cinnabar);
+  font-family: var(--font-serif);
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.tongue-label {
+  fill: var(--ink-soft);
+  font-family: var(--font-sans);
+  font-size: 11px;
+}
+
+.tongue-label--edge {
+  fill: var(--muted);
+}
+
+.tongue-note {
+  fill: var(--muted);
+  font-family: var(--font-sans);
+  font-size: 8.5px;
+  letter-spacing: 0.04em;
+}
+
 .wuxing-orbit {
   fill: none;
   stroke: var(--line);
@@ -835,10 +878,24 @@
 }
 
 .concept-card {
+  display: block;
   padding: 18px;
   border: 1px solid var(--line);
   border-radius: 14px;
   background: var(--paper-light);
+}
+
+.concept-card--link {
+  transition:
+    border-color 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.concept-card--link:hover {
+  border-color: rgba(163, 59, 43, 0.35);
+  box-shadow: 0 12px 24px rgba(61, 48, 29, 0.06);
+  transform: translateY(-2px);
 }
 
 .concept-num {

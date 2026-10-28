@@ -1,0 +1,242 @@
+---
+import KnowledgeLayout from '../../layouts/KnowledgeLayout.astro';
+
+const toc = [
+  { id: 'wenzhen', label: '问诊是什么' },
+  { id: 'qingdan', label: '问诊清单' },
+  { id: 'shunxu', label: '问诊顺序' },
+  { id: 'dufa', label: '怎么问' },
+  { id: 'wuqu', label: '常见误区' },
+  { id: 'jixu', label: '继续学习' },
+  { id: 'sources', label: '参考原典' },
+];
+---
+
+<KnowledgeLayout
+  title="问诊"
+  eyebrow="Medical · 医 · 诊法"
+  lead="问诊不是症状搜索，而是通过寒热、汗、头身、饮食、二便、睡眠、情志、月经、既往史与用药，把一个人的生活史放回整体。"
+  status="初稿"
+  readingTime="第一部分 · 阅读约 9 分钟"
+  updated="2026-10-28"
+  toc={toc}
+  mark="问"
+  parentLabel="医"
+  parentHref="/yi/"
+  asideNote="这一篇先做问诊清单与顺序；不把问诊写成症状匹配或在线诊断树。"
+>
+  <div class="article-prose">
+    <div class="summary-grid" aria-label="核心提要">
+      <article class="summary-card">
+        <span>01</span>
+        <h3>问生活史</h3>
+        <p>寒热、汗、头身、饮食、二便、睡眠、情志、月经、既往与用药。</p>
+      </article>
+      <article class="summary-card">
+        <span>02</span>
+        <h3>先开放后聚焦</h3>
+        <p>先让病人讲主诉，再逐步追问；少用带答案的诱导问题。</p>
+      </article>
+      <article class="summary-card">
+        <span>03</span>
+        <h3>不是自测表</h3>
+        <p>问诊清单是收集信息的框架，不是“打勾就出病名”的工具。</p>
+      </article>
+    </div>
+
+    <section class="content-section" id="wenzhen">
+      <p class="section-label">01 · 总览</p>
+      <h2>问得全，才有合参的基础</h2>
+      <p class="lead-paragraph">
+        问诊是四诊中信息量最大的一环。它不只问“哪里不舒服”，还要问起病、变化、生活、情志、既往史与用药。
+      </p>
+
+      <blockquote class="quote-block">
+        <p>诊病不问其始，忧患饮食之失节，起居之过度，或伤于毒，不先言此，卒持寸口，何病能中？</p>
+        <footer class="quote-source">《黄帝内经·素问·征四失论》</footer>
+      </blockquote>
+
+      <p>
+        这段话的重点不是否定脉诊，而是提醒：如果不问起病、生活与用药，直接去摸脉，收集到的信息是不完整的。问诊不是寒暄，是诊法的一部分。
+      </p>
+
+      <div class="note-card">
+        <strong>问诊不是“症状搜索”。</strong>
+        同一个症状可能来自不同原因。问诊要问出时间、诱因、变化和伴随状态，而不是只收集几个关键词。
+      </div>
+    </section>
+
+    <section class="content-section" id="qingdan">
+      <p class="section-label">02 · 清单</p>
+      <h2>九类问诊</h2>
+      <p class="lead-paragraph">
+        传统有“十问”的说法，现代可以把它改写成更容易回答的生活化清单。以下九类是一个入门框架，不是固定问卷。
+      </p>
+
+      <p class="table-scroll-hint">左右滑动查看完整表格 →</p>
+
+      <div class="table-wrap">
+        <table>
+          <caption>问诊清单；具体问题要随主诉与场景调整。</caption>
+          <thead>
+            <tr>
+              <th scope="col">类别</th>
+              <th scope="col">问什么</th>
+              <th scope="col">想了解</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>寒热</td><td>怕冷、怕热、寒热往来、手足温度</td><td>寒热倾向与表里</td></tr>
+            <tr><td>汗</td><td>有无汗、盗汗、自汗、局部汗</td><td>津液与表里</td></tr>
+            <tr><td>头身</td><td>头痛、头晕、身痛、腰背不适</td><td>部位与性质线索</td></tr>
+            <tr><td>饮食</td><td>食欲、口味、饮水、冷热偏好</td><td>脾胃与津液</td></tr>
+            <tr><td>二便</td><td>大便次数/性状、小便颜色/频次</td><td>传化与水液</td></tr>
+            <tr><td>睡眠</td><td>入睡、易醒、多梦、嗜睡</td><td>阴阳与神志</td></tr>
+            <tr><td>情志</td><td>压力、情绪、思虑、惊恐</td><td>气机与脏腑关系</td></tr>
+            <tr><td>月经</td><td>周期、量、色、痛经、带下</td><td>女性问诊的重点</td></tr>
+            <tr><td>既往/用药</td><td>旧病、手术、长期用药、过敏</td><td>避免遗漏与冲突</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="content-section" id="shunxu">
+      <p class="section-label">03 · 顺序</p>
+      <h2>主诉 → 现病史 → 生活史 → 既往</h2>
+      <p class="lead-paragraph">
+        问诊要有一个顺序，但不必机械。先让病人把最困扰的事讲完，再逐步聚焦到时间、诱因、变化与伴随状态。
+      </p>
+
+      <div class="logic-flow" aria-label="问诊顺序">
+        <span>主诉</span>
+        <span aria-hidden="true">→</span>
+        <span>现病史</span>
+        <span aria-hidden="true">→</span>
+        <span>生活史</span>
+        <span aria-hidden="true">→</span>
+        <span>既往与用药</span>
+        <span aria-hidden="true">→</span>
+        <span>特殊问诊</span>
+      </div>
+
+      <div class="note-card">
+        <ul class="reading-list">
+          <li><strong>主诉：</strong>最困扰的是什么，持续多久。</li>
+          <li><strong>现病史：</strong>起病、变化、加重/缓解因素、伴随症状。</li>
+          <li><strong>生活史：</strong>饮食、睡眠、二便、情志、劳逸。</li>
+          <li><strong>既往与用药：</strong>旧病、手术、长期药物、过敏。</li>
+          <li><strong>特殊问诊：</strong>女性月经、儿童生长发育。</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="content-section" id="dufa">
+      <p class="section-label">04 · 怎么问</p>
+      <h2>先开放，后聚焦</h2>
+      <p class="lead-paragraph">
+        好的问诊不是连珠炮式提问，而是让信息自己展开，再用更具体的问题补齐细节。
+      </p>
+
+      <div class="note-card">
+        <ul class="reading-list">
+          <li><strong>开放式：</strong>“最近最不舒服的是什么？”“能具体说说吗？”</li>
+          <li><strong>聚焦式：</strong>“什么时候开始的？”“什么情况下加重或缓解？”</li>
+          <li><strong>避免诱导：</strong>少问“是不是因为上火”，多问“你当时怎么感觉”。</li>
+          <li><strong>记录变化：</strong>时间线比一堆静态标签更有用。</li>
+        </ul>
+      </div>
+
+      <div class="note-card note-card--warn">
+        <strong>问诊不是审问。</strong>
+        涉及隐私的问题要说明目的、尊重边界；不愿意回答的，先跳过，不要逼问。
+      </div>
+    </section>
+
+    <section class="content-section" id="wuqu">
+      <p class="section-label">05 · 辨析</p>
+      <h2>四个常见误区</h2>
+      <div class="pitfall-grid">
+        <article class="pitfall-card">
+          <span>01</span>
+          <h3>问诊不是症状搜索</h3>
+          <p>收集关键词不等于理解病情；时间、诱因与变化同样重要。</p>
+        </article>
+        <article class="pitfall-card">
+          <span>02</span>
+          <h3>一个症状不等于一个病</h3>
+          <p>乏力、失眠、口干等都可能有多条线索，需要四诊合参。</p>
+        </article>
+        <article class="pitfall-card">
+          <span>03</span>
+          <h3>问诊不能替代检查</h3>
+          <p>传统问诊与现代医学检查是不同语言，不能互相替代。</p>
+        </article>
+        <article class="pitfall-card">
+          <span>04</span>
+          <h3>不做在线诊断</h3>
+          <p>问诊清单不是自测工具，不能根据几个答案给自己贴病名。</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="content-section" id="jixu">
+      <p class="section-label">06 · 继续</p>
+      <h2>下一步：切诊</h2>
+      <p class="lead-paragraph">
+        问诊之后是切诊。脉诊与按诊只是四诊的一部分，不能脱离望、闻、问单独成立。
+      </p>
+
+      <div class="progress-panel">
+        <div>
+          <h3>本篇已完成</h3>
+          <ul class="progress-list progress-list--done">
+            <li>问诊的定位与边界</li>
+            <li>九类问诊清单</li>
+            <li>问诊顺序</li>
+            <li>开放式与聚焦式提问</li>
+            <li>常见误区</li>
+          </ul>
+        </div>
+        <div>
+          <h3>下一步待补</h3>
+          <ul class="progress-list progress-list--next">
+            <li>切诊</li>
+            <li>四诊合参案例</li>
+            <li>辨证与治法</li>
+            <li>问诊练习</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="article-actions">
+        <a class="btn btn--primary" href="/yi/qiezhen/">继续读切诊</a>
+        <a class="btn btn--ghost" href="/yi/zhenfa/">返回诊法总览</a>
+      </div>
+    </section>
+
+    <section class="content-section" id="sources">
+      <p class="section-label">附 · 原典</p>
+      <h2>参考原典</h2>
+      <p>
+        以下引文据通行本，标点从简；正文中的解释为学习整理，不等于原典的全部含义。
+      </p>
+
+      <ol class="source-list">
+        <li>
+          <span class="source-work">《黄帝内经·素问·征四失论》</span>
+          <p class="source-quote">
+            诊病不问其始，忧患饮食之失节，起居之过度，或伤于毒，不先言此，卒持寸口，何病能中？
+          </p>
+        </li>
+        <li>
+          <span class="source-work">人纪·黄帝内经下册 p.100–101；上册 p.143</span>
+          <p class="source-quote">征四失论与望闻问切之道的讲读；本页只做问诊清单与顺序整理。</p>
+        </li>
+      </ol>
+
+      <p class="article-end">
+        本页为传统理论展示与学习整理，不构成医疗诊断、处方建议或疗效承诺。最后更新：2026-10-28。
+      </p>
+    </section>
+  </div>
+</KnowledgeLayout>

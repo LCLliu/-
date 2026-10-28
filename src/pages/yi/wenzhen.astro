@@ -1,0 +1,230 @@
+---
+import KnowledgeLayout from '../../layouts/KnowledgeLayout.astro';
+
+const toc = [
+  { id: 'wenzhen', label: '闻诊是什么' },
+  { id: 'shengxi', label: '声息' },
+  { id: 'qiwei', label: '气味' },
+  { id: 'dufa', label: '怎么读' },
+  { id: 'wuqu', label: '常见误区' },
+  { id: 'jixu', label: '继续学习' },
+  { id: 'sources', label: '参考原典' },
+];
+---
+
+<KnowledgeLayout
+  title="闻诊"
+  eyebrow="Medical · 医 · 诊法"
+  lead="闻诊听声音、语言、呼吸、咳嗽、呕吐、呃逆与叹息，也闻口气、体气与排出物气味。它收集线索，不判断性格，也不凭一种声音下诊断。"
+  status="初稿"
+  readingTime="第一部分 · 阅读约 8 分钟"
+  updated="2026-10-28"
+  toc={toc}
+  mark="闻"
+  parentLabel="医"
+  parentHref="/yi/"
+  asideNote="这一篇先做声息与气味清单；不把声音当作性格或疾病标签。"
+>
+  <div class="article-prose">
+    <div class="summary-grid" aria-label="核心提要">
+      <article class="summary-card">
+        <span>01</span>
+        <h3>听声息</h3>
+        <p>声音、语言、呼吸、咳嗽、呕吐、呃逆、嗳气与叹息。</p>
+      </article>
+      <article class="summary-card">
+        <span>02</span>
+        <h3>闻气味</h3>
+        <p>口气、体气与排出物气味；先排除饮食、环境与卫生影响。</p>
+      </article>
+      <article class="summary-card">
+        <span>03</span>
+        <h3>合参</h3>
+        <p>在自然状态下听，和望、问、切一起看，不凭一种声音定论。</p>
+      </article>
+    </div>
+
+    <section class="content-section" id="wenzhen">
+      <p class="section-label">01 · 总览</p>
+      <h2>闻诊：耳朵和鼻子都在收集信息</h2>
+      <p class="lead-paragraph">
+        闻诊不是“听声辨性格”，也不是“闻到味道就知道病”。它收集的是声息与气味两类线索，最后仍要回到四诊合参。
+      </p>
+
+      <blockquote class="quote-block">
+        <p>言而微，终日乃复言者，此夺气也。衣被不敛，言语善恶，不避亲疏者，此神明之乱也。</p>
+        <footer class="quote-source">《黄帝内经·素问·脉要精微论》</footer>
+      </blockquote>
+
+      <p>
+        传统上，声音的高低、强弱、清浊、断续，语言是否低微、重复、错乱，呼吸是否粗急费力，都是闻诊会留意的线索。它们帮助理解气机与神志状态，但不能单独构成诊断。
+      </p>
+
+      <div class="note-card">
+        <strong>声音不是性格测试。</strong>
+        低沉、洪亮、急促或缓慢，可能和情绪、环境、疲劳、职业用嗓有关。先把这些因素排除，再谈传统理论中的意义。
+      </div>
+    </section>
+
+    <section class="content-section" id="shengxi">
+      <p class="section-label">02 · 声息</p>
+      <h2>听什么</h2>
+      <p class="lead-paragraph">
+        声息的范围比“说话声音”更广：语言、呼吸、咳嗽、呕吐、呃逆、嗳气与叹息都在其中。
+      </p>
+
+      <p class="table-scroll-hint">左右滑动查看完整表格 →</p>
+
+      <div class="table-wrap">
+        <table>
+          <caption>闻诊的声息观察清单；具体意义需与四诊合参。</caption>
+          <thead>
+            <tr>
+              <th scope="col">类别</th>
+              <th scope="col">传统观察点</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>声音</td><td>高低、强弱、清浊、断续、是否费力</td></tr>
+            <tr><td>语言</td><td>声低、重复、错乱、是否有力、是否连贯</td></tr>
+            <tr><td>呼吸</td><td>粗细、快慢、深浅、是否费力</td></tr>
+            <tr><td>咳嗽</td><td>声音、痰声、发作时间、是否连续</td></tr>
+            <tr><td>呕吐 / 呃逆</td><td>声音、频率、与饮食和情志的关系</td></tr>
+            <tr><td>嗳气 / 叹息</td><td>频率、声音、伴随的胸腹感受</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="content-section" id="qiwei">
+      <p class="section-label">03 · 气味</p>
+      <h2>气味也要先排除干扰</h2>
+      <p class="lead-paragraph">
+        闻诊还包括气味：口气、体气与排出物气味。气味容易受饮食、环境、卫生、药物与职业影响，必须先排除这些因素。
+      </p>
+
+      <div class="note-card">
+        <ul class="reading-list">
+          <li><strong>口气：</strong>饮食、口腔卫生、吸烟、药物都可能影响，不能一闻就归到某个脏腑。</li>
+          <li><strong>体气：</strong>汗液、衣物、环境与清洁习惯都会干扰判断。</li>
+          <li><strong>排出物：</strong>需要在合适的隐私与卫生条件下观察，不能作为公开讨论的标签。</li>
+        </ul>
+      </div>
+
+      <div class="note-card note-card--warn">
+        <strong>不要把气味变成羞耻标签。</strong>
+        闻诊是医学观察，不是对人的评价。气味异常先考虑环境、卫生、饮食与药物，再考虑专业评估。
+      </div>
+    </section>
+
+    <section class="content-section" id="dufa">
+      <p class="section-label">04 · 读法</p>
+      <h2>自然状态，先声息后气味</h2>
+      <p class="lead-paragraph">
+        闻诊要在自然状态下进行，不要刻意要求病人“表演”一种声音；听到的线索要和望、问、切一起看。
+      </p>
+
+      <div class="logic-flow" aria-label="闻诊阅读顺序">
+        <span>自然状态</span>
+        <span aria-hidden="true">→</span>
+        <span>声息</span>
+        <span aria-hidden="true">→</span>
+        <span>气味</span>
+        <span aria-hidden="true">→</span>
+        <span>四诊合参</span>
+      </div>
+
+      <div class="note-card">
+        <strong>三个不要：</strong>
+        不要用声音判断性格；不要凭一种气味诊断；不要把闻诊替代现代医学检查。
+      </div>
+    </section>
+
+    <section class="content-section" id="wuqu">
+      <p class="section-label">05 · 辨析</p>
+      <h2>四个常见误区</h2>
+      <div class="pitfall-grid">
+        <article class="pitfall-card">
+          <span>01</span>
+          <h3>闻诊不是听声辨人</h3>
+          <p>声音受情绪、职业、环境和疲劳影响，不能用来判断性格或价值。</p>
+        </article>
+        <article class="pitfall-card">
+          <span>02</span>
+          <h3>气味不是病名</h3>
+          <p>口气、体气先排除饮食、卫生、药物与环境因素，再谈传统意义。</p>
+        </article>
+        <article class="pitfall-card">
+          <span>03</span>
+          <h3>一种声音不能定论</h3>
+          <p>声音、语言与呼吸都要结合神志、病程与望闻问切。</p>
+        </article>
+        <article class="pitfall-card">
+          <span>04</span>
+          <h3>不替代检查</h3>
+          <p>闻诊是传统观察方法，不是现代医学检查的替代品。</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="content-section" id="jixu">
+      <p class="section-label">06 · 继续</p>
+      <h2>下一步：问诊与切诊</h2>
+      <p class="lead-paragraph">
+        闻诊之后是问诊与切诊。四诊各有深页，最后回到“四诊合参”的完整流程。
+      </p>
+
+      <div class="progress-panel">
+        <div>
+          <h3>本篇已完成</h3>
+          <ul class="progress-list progress-list--done">
+            <li>闻诊的两类：声息与气味</li>
+            <li>声音、语言、呼吸、咳嗽的观察清单</li>
+            <li>呕吐、呃逆、嗳气、叹息</li>
+            <li>气味观察与干扰因素</li>
+            <li>闻诊的边界与误区</li>
+          </ul>
+        </div>
+        <div>
+          <h3>下一步待补</h3>
+          <ul class="progress-list progress-list--next">
+            <li>问诊</li>
+            <li>切诊</li>
+            <li>四诊合参案例</li>
+            <li>辨证与治法</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="article-actions">
+        <a class="btn btn--primary" href="/yi/wenzhen-ask/">继续读问诊</a>
+        <a class="btn btn--ghost" href="/yi/zhenfa/">返回诊法总览</a>
+      </div>
+    </section>
+
+    <section class="content-section" id="sources">
+      <p class="section-label">附 · 原典</p>
+      <h2>参考原典</h2>
+      <p>
+        以下引文据通行本，标点从简；正文中的解释为学习整理，不等于原典的全部含义。
+      </p>
+
+      <ol class="source-list">
+        <li>
+          <span class="source-work">《黄帝内经·素问·脉要精微论》</span>
+          <p class="source-quote">
+            言而微，终日乃复言者，此夺气也。衣被不敛，言语善恶，不避亲疏者，此神明之乱也。声如从室中言，是中气之湿也。
+          </p>
+        </li>
+        <li>
+          <span class="source-work">人纪·黄帝内经上册 p.121–124、p.143</span>
+          <p class="source-quote">脉要精微论的声音、语言段落与望闻问切之道；本页只做闻诊清单与边界整理。</p>
+        </li>
+      </ol>
+
+      <p class="article-end">
+        本页为传统理论展示与学习整理，不构成医疗诊断、处方建议或疗效承诺。最后更新：2026-10-28。
+      </p>
+    </section>
+  </div>
+</KnowledgeLayout>
