@@ -366,6 +366,363 @@
   letter-spacing: 0.02em;
 }
 
+.meridian-clock-svg {
+  width: 100%;
+  max-width: 560px;
+  height: auto;
+  margin-inline: auto;
+}
+
+.mc-orbit {
+  fill: none;
+  stroke: var(--line);
+  stroke-dasharray: 2 8;
+}
+
+.mc-center {
+  fill: var(--paper-light);
+  stroke: var(--line-strong);
+}
+
+.mc-center-title {
+  fill: var(--cinnabar);
+  font-family: var(--font-serif);
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.mc-center-sub {
+  fill: var(--muted);
+  font-family: var(--font-sans);
+  font-size: 9px;
+  letter-spacing: 0.08em;
+}
+
+.mc-node circle {
+  fill: var(--paper-light);
+  stroke-width: 1.5;
+}
+
+.mc-node--yin circle {
+  stroke: var(--accent-shan);
+}
+
+.mc-node--yang circle {
+  stroke: var(--cinnabar);
+}
+
+.mc-branch {
+  fill: var(--ink);
+  font-family: var(--font-serif);
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.mc-name {
+  fill: var(--muted);
+  font-family: var(--font-sans);
+  font-size: 9.5px;
+  letter-spacing: 0.02em;
+}
+
+.qijing-svg {
+  width: 100%;
+  max-width: 560px;
+  height: auto;
+  margin-inline: auto;
+}
+
+.qj-orbit {
+  fill: none;
+  stroke: var(--line);
+  stroke-dasharray: 2 8;
+}
+
+.qj-spoke {
+  stroke: var(--line);
+  stroke-dasharray: 3 7;
+}
+
+.qj-center {
+  fill: var(--paper-light);
+  stroke: var(--line-strong);
+}
+
+.qj-center-title {
+  fill: var(--cinnabar);
+  font-family: var(--font-serif);
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.qj-center-sub {
+  fill: var(--muted);
+  font-family: var(--font-sans);
+  font-size: 9px;
+  letter-spacing: 0.1em;
+}
+
+.qj-node circle {
+  fill: var(--paper-light);
+  stroke: var(--line-strong);
+  stroke-width: 1.2;
+}
+
+.qj-node-title {
+  fill: var(--ink);
+  font-family: var(--font-serif);
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.qj-node-note {
+  fill: var(--muted);
+  font-family: var(--font-sans);
+  font-size: 8.5px;
+  letter-spacing: 0.02em;
+}
+
+.luo-svg {
+  width: 100%;
+  max-width: 520px;
+  height: auto;
+  margin-inline: auto;
+}
+
+.luo-orbit {
+  fill: none;
+  stroke: var(--line);
+  stroke-dasharray: 2 8;
+}
+
+.luo-center {
+  fill: var(--paper-light);
+  stroke: var(--line-strong);
+}
+
+.luo-center-title {
+  fill: var(--cinnabar);
+  font-family: var(--font-serif);
+  font-size: 26px;
+  font-weight: 600;
+}
+
+.luo-center-sub {
+  fill: var(--muted);
+  font-family: var(--font-sans);
+  font-size: 9px;
+  letter-spacing: 0.1em;
+}
+
+.luo-major circle {
+  fill: var(--cinnabar);
+  opacity: 0.78;
+}
+
+.luo-fine circle {
+  fill: var(--accent-shan);
+  opacity: 0.55;
+}
+
+.rendu-svg {
+  width: 100%;
+  max-width: 520px;
+  height: auto;
+  margin-inline: auto;
+}
+
+.rd-line {
+  stroke: var(--line-strong);
+  stroke-width: 1.5;
+  stroke-dasharray: 4 6;
+}
+
+.rd-dot {
+  fill: var(--line-strong);
+  opacity: 0.5;
+}
+
+.rd-key {
+  fill: var(--cinnabar);
+}
+
+.rd-tick {
+  stroke: var(--line-strong);
+  stroke-width: 1;
+}
+
+.rd-title {
+  fill: var(--cinnabar);
+  font-family: var(--font-serif);
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.rd-count {
+  fill: var(--muted);
+  font-family: var(--font-sans);
+  font-size: 9px;
+}
+
+.rd-label {
+  fill: var(--ink-soft);
+  font-family: var(--font-sans);
+  font-size: 10px;
+}
+
+.rd-note {
+  fill: var(--muted);
+  font-family: var(--font-sans);
+  font-size: 9px;
+  letter-spacing: 0.06em;
+}
+
+.point-groups {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.point-group {
+  padding: 16px 18px;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: var(--paper-light);
+}
+
+.point-group h3 {
+  margin-top: 0;
+  font-size: 16px;
+}
+
+.point-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  margin-top: 12px;
+}
+
+.point-chip {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 6px;
+  padding: 5px 9px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.35);
+  color: var(--ink-soft);
+  font-size: 12px;
+  line-height: 1.4;
+}
+
+.point-chip span {
+  color: var(--muted);
+  font-size: 9px;
+  letter-spacing: 0.04em;
+}
+
+.point-chip--key {
+  border-color: rgba(163, 59, 43, 0.28);
+  color: var(--cinnabar);
+}
+
+.fiveshu-svg {
+  width: 100%;
+  max-width: 640px;
+  height: auto;
+  margin-inline: auto;
+}
+
+.fs-line {
+  stroke: var(--line-strong);
+  stroke-width: 1.5;
+  stroke-dasharray: 4 6;
+}
+
+.fs-node {
+  fill: var(--paper-light);
+  stroke: var(--cinnabar);
+  stroke-width: 1.2;
+}
+
+.fs-title {
+  fill: var(--ink);
+  font-family: var(--font-serif);
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.fs-note {
+  fill: var(--muted);
+  font-family: var(--font-sans);
+  font-size: 8.5px;
+}
+
+.fs-arrow {
+  fill: var(--muted);
+  font-family: var(--font-sans);
+  font-size: 9px;
+  letter-spacing: 0.06em;
+}
+
+.qbj-svg {
+  width: 100%;
+  max-width: 540px;
+  height: auto;
+  margin-inline: auto;
+}
+
+.qbj-line {
+  stroke: var(--line-strong);
+  stroke-width: 1.5;
+  stroke-dasharray: 5 7;
+}
+
+.qbj-node circle {
+  fill: var(--paper-light);
+  stroke-width: 1.6;
+}
+
+.qbj-node--qi circle {
+  stroke: var(--cinnabar);
+}
+
+.qbj-node--blood circle {
+  stroke: var(--accent-ming);
+}
+
+.qbj-node--fluid circle {
+  stroke: var(--accent-bu);
+}
+
+.qbj-title {
+  fill: var(--ink);
+  font-family: var(--font-serif);
+  font-size: 30px;
+  font-weight: 600;
+}
+
+.qbj-note {
+  fill: var(--muted);
+  font-family: var(--font-sans);
+  font-size: 9.5px;
+  letter-spacing: 0.04em;
+}
+
+.qbj-label {
+  fill: var(--ink-soft);
+  font-family: var(--font-sans);
+  font-size: 11px;
+}
+
+.qbj-center {
+  fill: var(--muted);
+  font-family: var(--font-sans);
+  font-size: 9px;
+  letter-spacing: 0.1em;
+}
+
 .wuxing-orbit {
   fill: none;
   stroke: var(--line);
@@ -449,6 +806,25 @@
   height: 0;
   border-top: 2px dashed var(--cinnabar);
   background: none;
+}
+
+.legend-line--yang {
+  background: var(--cinnabar);
+}
+
+.legend-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--cinnabar);
+  opacity: 0.78;
+}
+
+.legend-dot--fine {
+  width: 4px;
+  height: 4px;
+  background: var(--accent-shan);
+  opacity: 0.55;
 }
 
 .concept-grid {
@@ -665,6 +1041,22 @@
 
 .table-wrap .zang-table {
   min-width: 720px;
+}
+
+.table-wrap .meridian-table {
+  min-width: 700px;
+}
+
+.table-wrap .qijing-table {
+  min-width: 680px;
+}
+
+.table-wrap .luo-table {
+  min-width: 620px;
+}
+
+.table-wrap .wushu-table {
+  min-width: 760px;
 }
 
 .table-wrap caption {

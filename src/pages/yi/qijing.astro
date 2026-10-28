@@ -1,0 +1,310 @@
+---
+import KnowledgeLayout from '../../layouts/KnowledgeLayout.astro';
+import QijingDiagram from '../../components/diagrams/QijingDiagram.astro';
+
+const toc = [
+  { id: 'qijing', label: '奇经八脉是什么' },
+  { id: 'table', label: '八脉总表' },
+  { id: 'rendu', label: '任督与一源三岐' },
+  { id: 'chongdai', label: '冲、带、跷、维' },
+  { id: 'dufa', label: '八脉怎么读' },
+  { id: 'wuqu', label: '常见误区' },
+  { id: 'jixu', label: '继续学习' },
+  { id: 'sources', label: '参考原典' },
+];
+---
+
+<KnowledgeLayout
+  title="奇经八脉"
+  eyebrow="Medical · 医 · 经络"
+  lead="十二正经之外，还有八条“别道奇行”的经脉：任、督、冲、带、阴跷、阳跷、阴维、阳维。它们不直接配表里，却负责调节、蓄溢、约束和维系。"
+  status="初稿"
+  readingTime="第一部分 · 阅读约 12 分钟"
+  updated="2026-10-28"
+  toc={toc}
+  mark="奇经"
+  parentLabel="医"
+  parentHref="/yi/"
+  asideNote="这一篇先做八脉总览与关系图；任督穴位、冲带跷维的原文细节和十五络脉后续再补。"
+>
+  <div class="article-prose">
+    <div class="summary-grid" aria-label="核心提要">
+      <article class="summary-card">
+        <span>01</span>
+        <h3>八条别脉</h3>
+        <p>任、督、冲、带、阴跷、阳跷、阴维、阳维；不直接与脏腑形成表里配对。</p>
+      </article>
+      <article class="summary-card">
+        <span>02</span>
+        <h3>一源三岐</h3>
+        <p>任、督、冲同起胞中；任为阴脉之海，督为阳脉之海，冲为血海。</p>
+      </article>
+      <article class="summary-card">
+        <span>03</span>
+        <h3>约束与维系</h3>
+        <p>带脉环腰，跷脉主动静，维脉维系阴阳诸经；是调节层，不是十二经的编号。</p>
+      </article>
+    </div>
+
+    <section class="content-section" id="qijing">
+      <p class="section-label">01 · 总览</p>
+      <h2>十二经之外的调节层</h2>
+      <p class="lead-paragraph">
+        十二正经是主干，奇经八脉是另一层调节系统。传统上把它们比作湖泽：十二经气血有余时蓄溢，不足时补充。
+      </p>
+      <p>
+        八脉不直接与脏腑形成表里配对，但并不是“多余”的经脉。它们把十二经、躯干前后、腰腹、下肢运动与阴阳表里联系起来，形成更上一层的调节网络。
+      </p>
+
+      <blockquote class="quote-block">
+        <p>脉有奇经八脉者，不拘于十二经，何也？</p>
+        <footer class="quote-source">《难经·二十七难》</footer>
+      </blockquote>
+
+      <figure class="figure-card">
+        <QijingDiagram />
+        <figcaption>
+          任督上下相对，冲带左右相对，阴阳跷与阴阳维交叉相对。位置是关系示意，不是解剖定位。
+        </figcaption>
+      </figure>
+
+      <div class="note-card">
+        <strong>奇经八脉不是十二经的“附加编号”。</strong>
+        十二经像江河，奇经八脉像湖泽，负责蓄溢、调节、约束和维系。先把这层关系记住，再去看每一条脉的循行。
+      </div>
+    </section>
+
+    <section class="content-section" id="table">
+      <p class="section-label">02 · 总表</p>
+      <h2>八脉各管什么</h2>
+      <p class="lead-paragraph">
+        先记八脉的名称和功能关键词，再记循行。书内页码来自《针灸篇》目录，仅作阅读定位。
+      </p>
+
+      <p class="table-scroll-hint">左右滑动查看完整表格 →</p>
+
+      <div class="table-wrap">
+        <table class="qijing-table">
+          <caption>八脉总表；任、督、冲的“同起胞中”见下一节。</caption>
+          <thead>
+            <tr>
+              <th scope="col">八脉</th>
+              <th scope="col">别称 / 功能</th>
+              <th scope="col">循行要点</th>
+              <th scope="col">针灸篇页</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>任脉</td><td>阴脉之海</td><td>起于中极之下，沿腹正中线上行至咽喉、面部</td><td>28–38</td></tr>
+            <tr><td>督脉</td><td>阳脉之海</td><td>起于下极之俞，沿脊柱上行，上头面</td><td>39–45</td></tr>
+            <tr><td>冲脉</td><td>十二经之海 / 血海</td><td>起于气街，挟脐上行，至胸中而散</td><td>183–186</td></tr>
+            <tr><td>带脉</td><td>约束诸经</td><td>起于季胁，环腰一周</td><td>183–186</td></tr>
+            <tr><td>阴跷</td><td>主内、主静</td><td>起于跟中，沿内踝上行，至咽喉</td><td>183–186</td></tr>
+            <tr><td>阳跷</td><td>主外、主动</td><td>起于跟中，沿外踝上行，入风池</td><td>183–186</td></tr>
+            <tr><td>阴维</td><td>维络诸阴</td><td>起于诸阴交</td><td>183–186</td></tr>
+            <tr><td>阳维</td><td>维络诸阳</td><td>起于诸阳会</td><td>183–186</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p class="small-note">
+        任、督、冲的“同起胞中”是传统概括，具体循行在不同文本中表述略有差异。
+      </p>
+    </section>
+
+    <section class="content-section" id="rendu">
+      <p class="section-label">03 · 任督</p>
+      <h2>任督与“一源三岐”</h2>
+      <p class="lead-paragraph">
+        八脉中最常被单独讲的是任督二脉：任脉行于前正中，督脉行于后正中；传统上合称“阴脉之海”和“阳脉之海”。
+      </p>
+
+      <div class="cycle-steps">
+        <article class="cycle-card">
+          <h3>任脉</h3>
+          <p class="cycle-sequence">阴脉之海 · 前正中</p>
+          <p>总任诸阴，传统上与胞宫、月经、生殖相关；书内页 p.28–38。</p>
+        </article>
+        <article class="cycle-card">
+          <h3>督脉</h3>
+          <p class="cycle-sequence">阳脉之海 · 后正中</p>
+          <p>总督诸阳，沿脊柱上行，传统上与脑髓相关；书内页 p.39–45。</p>
+        </article>
+      </div>
+
+      <div class="note-card">
+        <strong>“一源三岐”：</strong>
+        传统上把任、督、冲同起于胞中概括为“一源三岐”。任主前、督主后、冲主血海。这里的“胞中”是传统理论中的部位概念，不等同于现代解剖学的一个器官。
+      </div>
+
+      <blockquote class="quote-block">
+        <p>任脉者，起于中极之下，以上毛际，循腹里，上关元，至咽喉，上颐循面入目。</p>
+        <footer class="quote-source">《黄帝内经·素问·骨空论》</footer>
+      </blockquote>
+
+      <div class="note-card note-card--warn">
+        <strong>“打通任督”不是医学结论。</strong>
+        这是养生、修炼或商业话语中常见的说法。本页只讲传统经络理论，不提供功法、针刺或艾灸操作，也不承诺疗效。
+      </div>
+    </section>
+
+    <section class="content-section" id="chongdai">
+      <p class="section-label">04 · 冲带跷维</p>
+      <h2>冲、带、跷、维各管一层</h2>
+
+      <div class="concept-grid">
+        <article class="concept-card">
+          <span class="concept-num">冲脉</span>
+          <h3>血海</h3>
+          <p>又称十二经之海，传统上与气血、月经、生殖相关；与任督同起胞中。</p>
+        </article>
+        <article class="concept-card">
+          <span class="concept-num">带脉</span>
+          <h3>约束诸经</h3>
+          <p>环腰一周，像腰带一样约束纵行诸经，把上下经脉联系起来。</p>
+        </article>
+        <article class="concept-card">
+          <span class="concept-num">跷脉</span>
+          <h3>主内静 / 外动</h3>
+          <p>阴跷主内、主静，阳跷主外、主动；传统上与下肢运动、眼睑开合、睡眠相关。</p>
+        </article>
+        <article class="concept-card">
+          <span class="concept-num">维脉</span>
+          <h3>维系阴阳</h3>
+          <p>阴维维络诸阴，阳维维络诸阳；像网一样维系阴阳诸经与表里上下。</p>
+        </article>
+      </div>
+
+      <div class="note-card">
+        <strong>功能关键词是传统概括。</strong>
+        冲、带、跷、维的具体作用在不同文本中有不同侧重；这些关键词帮助建立地图，不代替原典，也不构成诊断依据。
+      </div>
+    </section>
+
+    <section class="content-section" id="dufa">
+      <p class="section-label">05 · 读法</p>
+      <h2>八脉怎么读</h2>
+      <p class="lead-paragraph">
+        先分八脉，再看任督冲带，再看跷维，最后回到十二经和具体原文。
+      </p>
+
+      <div class="logic-flow" aria-label="奇经八脉阅读顺序">
+        <span>八脉名称</span>
+        <span aria-hidden="true">→</span>
+        <span>任督冲带</span>
+        <span aria-hidden="true">→</span>
+        <span>跷维</span>
+        <span aria-hidden="true">→</span>
+        <span>回到十二经与原文</span>
+      </div>
+
+      <div class="note-card">
+        <strong>三个不要：</strong>
+        不要把奇经八脉当成十二经的补充编号；不要凭一张八脉图自我诊断；不要把“通任督”“调跷维”当成可以自行操作的疗法。
+      </div>
+    </section>
+
+    <section class="content-section" id="wuqu">
+      <p class="section-label">06 · 辨析</p>
+      <h2>四个常见误区</h2>
+      <div class="pitfall-grid">
+        <article class="pitfall-card">
+          <span>01</span>
+          <h3>八脉不是十二经的补充</h3>
+          <p>它们是另一层调节网络，不是把十二经再编八条号码。</p>
+        </article>
+        <article class="pitfall-card">
+          <span>02</span>
+          <h3>任督不是“打通”就治病</h3>
+          <p>“通任督”是养生话语，不等于医学治疗或疗效承诺。</p>
+        </article>
+        <article class="pitfall-card">
+          <span>03</span>
+          <h3>八脉图不是诊断书</h3>
+          <p>图上的位置是关系示意，不能凭它判断疾病或选择穴位。</p>
+        </article>
+        <article class="pitfall-card">
+          <span>04</span>
+          <h3>经络不是现代解剖</h3>
+          <p>奇经八脉是传统功能网络，不是血管、神经或淋巴管的同义词。</p>
+        </article>
+      </div>
+
+      <div class="note-card note-card--warn">
+        <strong>使用边界：</strong>
+        本站只做传统经络理论展示，不提供针刺、艾灸、点穴或“通任督”的操作指导。身体不适请咨询合格的医疗专业人员。
+      </div>
+    </section>
+
+    <section class="content-section" id="jixu">
+      <p class="section-label">07 · 继续</p>
+      <h2>下一步：十五络脉与任督穴位</h2>
+      <p class="lead-paragraph">
+        八脉总览之后，可以继续读十五络脉、任督二脉的穴位与循行，再把奇经八脉放回十二经与藏象的整体网络。
+      </p>
+
+      <div class="progress-panel">
+        <div>
+          <h3>本篇已完成</h3>
+          <ul class="progress-list progress-list--done">
+            <li>奇经八脉与十二经的边界</li>
+            <li>八脉总表与关系图</li>
+            <li>任督二脉与“一源三岐”</li>
+            <li>冲、带、跷、维的功能关键词</li>
+            <li>常见误区与操作边界</li>
+          </ul>
+        </div>
+        <div>
+          <h3>下一步待补</h3>
+          <ul class="progress-list progress-list--next">
+            <li>冲带跷维的原文注读</li>
+            <li>奇经八脉与十二经的综合图</li>
+            <li>络脉病候与十五络脉歌</li>
+            <li>单经穴位与井荥俞</li>
+            <li>诊法与专业针灸</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="article-actions">
+        <a class="btn btn--primary" href="/yi/luomai/">继续读络脉</a>
+        <a class="btn btn--ghost" href="/yi/">返回医的门类页</a>
+      </div>
+    </section>
+
+    <section class="content-section" id="sources">
+      <p class="section-label">附 · 原典</p>
+      <h2>参考原典</h2>
+      <p>
+        以下引文据通行本，标点从简；正文中的解释为学习整理，不等于原典的全部含义。
+      </p>
+
+      <ol class="source-list">
+        <li>
+          <span class="source-work">《难经·二十七难》</span>
+          <p class="source-quote">脉有奇经八脉者，不拘于十二经，何也？</p>
+        </li>
+        <li>
+          <span class="source-work">《黄帝内经·素问·骨空论》</span>
+          <p class="source-quote">
+            任脉者，起于中极之下，以上毛际，循腹里，上关元，至咽喉，上颐循面入目。冲脉者，起于气街，并少阴之经，挟脐上行，至胸中而散。
+          </p>
+        </li>
+        <li>
+          <span class="source-work">《难经·二十八难》</span>
+          <p class="source-quote">
+            督脉者，起于下极之俞，并于脊里，上至风府，入属于脑。带脉者，起于季胁，回身一周。阴跷脉者，起于跟中，循内踝上行，至咽喉，交贯冲脉。阳跷脉者，起于跟中，循外踝上行，入风池。阳维起于诸阳会，阴维起于诸阴交。
+          </p>
+        </li>
+        <li>
+          <span class="source-work">人纪·针灸篇 p.182–186</span>
+          <p class="source-quote">奇经八脉总论、任督冲带与阴阳跷维的讲读。</p>
+        </li>
+      </ol>
+
+      <p class="article-end">
+        本页为传统理论展示与学习整理，不构成医疗诊断、处方建议或针灸操作指南。最后更新：2026-10-28。
+      </p>
+    </section>
+  </div>
+</KnowledgeLayout>

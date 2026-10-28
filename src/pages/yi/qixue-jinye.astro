@@ -1,0 +1,304 @@
+---
+import KnowledgeLayout from '../../layouts/KnowledgeLayout.astro';
+import QiBloodFluidDiagram from '../../components/diagrams/QiBloodFluidDiagram.astro';
+
+const toc = [
+  { id: 'qixue', label: '气血津液是什么' },
+  { id: 'qi', label: '气' },
+  { id: 'xue', label: '血' },
+  { id: 'jinye', label: '津液' },
+  { id: 'guanxi', label: '三者关系' },
+  { id: 'wuqu', label: '常见误区' },
+  { id: 'jixu', label: '继续学习' },
+  { id: 'sources', label: '参考原典' },
+];
+---
+
+<KnowledgeLayout
+  title="气血津液"
+  eyebrow="Medical · 医 · 基础"
+  lead="气、血、津液是脏腑功能的产物，也是脏腑功能的物质基础；三者同源、互根、同行。"
+  status="初稿"
+  readingTime="第一部分 · 阅读约 12 分钟"
+  updated="2026-10-28"
+  toc={toc}
+  mark="气血"
+  parentLabel="医"
+  parentHref="/yi/"
+  asideNote="这一篇先做概念与关系；诊法会单独成页，方药与病例只作边界提示。"
+>
+  <div class="article-prose">
+    <div class="summary-grid" aria-label="核心提要">
+      <article class="summary-card">
+        <span>01</span>
+        <h3>气</h3>
+        <p>推动、温煦、防御、固摄、气化；以升降出入为运动形式。</p>
+      </article>
+      <article class="summary-card">
+        <span>02</span>
+        <h3>血</h3>
+        <p>濡养全身、化神；心主血脉，肝藏血，脾统血。</p>
+      </article>
+      <article class="summary-card">
+        <span>03</span>
+        <h3>津液</h3>
+        <p>津清稀、液稠厚；润泽、充养；气能生津行津，津能载气。</p>
+      </article>
+    </div>
+
+    <section class="content-section" id="qixue">
+      <p class="section-label">01 · 总览</p>
+      <h2>同一套生命活动里的三种形态</h2>
+      <p class="lead-paragraph">
+        气、血、津液不是三个孤立的名词，而是同一套生命活动中的三种形态与功能。它们都来源于水谷精微，依赖脏腑气化与经络运行。
+      </p>
+      <p>
+        气是动力与功能态势，血是濡养与化神的物质基础，津液是润泽与充养。三者同源、互根、同行：任何一方长期失调，都会牵动另外两方。
+      </p>
+
+      <blockquote class="quote-block">
+        <p>五脏之道，皆出于经隧，以行血气，血气不和，百病乃变化而生。</p>
+        <footer class="quote-source">《黄帝内经·素问·调经论》</footer>
+      </blockquote>
+
+      <div class="note-card">
+        <strong>不是现代医学的血液、体液或能量。</strong>
+        气血津液是传统理论中的功能与物质模型。用它们做学习框架可以，但不能直接等同于现代生理学指标。
+      </div>
+    </section>
+
+    <section class="content-section" id="qi">
+      <p class="section-label">02 · 气</p>
+      <h2>气是不断运动的功能态势</h2>
+      <p class="lead-paragraph">
+        气不是一团静止的“能量”，而是推动、温煦、防御、固摄与气化的功能总称；它的运动形式是升降出入。
+      </p>
+
+      <div class="concept-grid">
+        <article class="concept-card">
+          <span class="concept-num">元气</span>
+          <h3>根于肾</h3>
+          <p>传统上视为生命活动的根本动力，推动生长发育与温煦。</p>
+        </article>
+        <article class="concept-card">
+          <span class="concept-num">宗气</span>
+          <h3>聚于胸中</h3>
+          <p>行呼吸、贯心脉，与肺、心关系密切。</p>
+        </article>
+        <article class="concept-card">
+          <span class="concept-num">营气</span>
+          <h3>行于脉中</h3>
+          <p>化生血液、营养全身，偏向内在与濡养。</p>
+        </article>
+        <article class="concept-card">
+          <span class="concept-num">卫气</span>
+          <h3>行于脉外</h3>
+          <p>护卫肌表、温养脏腑，偏向在外与防御。</p>
+        </article>
+      </div>
+
+      <blockquote class="quote-block">
+        <p>人受气于谷，谷入于胃，以传与肺，五脏六腑，皆以受气，其清者为营，浊者为卫，营在脉中，卫在脉外。</p>
+        <footer class="quote-source">《黄帝内经·灵枢·营卫生会》</footer>
+      </blockquote>
+
+      <div class="note-card">
+        <strong>气的五组关键词：</strong>
+        推动、温煦、防御、固摄、气化。气机则是升降出入；读气时，不只看“多不多”，还要看“走得顺不顺、方向对不对”。
+      </div>
+    </section>
+
+    <section class="content-section" id="xue">
+      <p class="section-label">03 · 血</p>
+      <h2>血主濡养，也是化神的物质基础</h2>
+      <p class="lead-paragraph">
+        血的生成离不开水谷精微、营气与津液；血的功能以濡养全身、化生神志活动的物质基础为核心。
+      </p>
+      <p>
+        传统上与血关系最密切的三组脏腑是：心主血脉，肝藏血，脾统血。三者分别对应血的运行、储藏与统摄，不能只盯一个“补血”标签。
+      </p>
+
+      <blockquote class="quote-block">
+        <p>肝受血而能视，足受血而能步，掌受血而能握，指受血而能摄。</p>
+        <footer class="quote-source">《黄帝内经·素问·五脏生成》</footer>
+      </blockquote>
+
+      <div class="note-card">
+        <strong>血不是“越多越好”。</strong>
+        传统理论同时关心血的生成、运行、储藏与统摄。只谈“补血”而不看气、津液、脏腑与运行状态，容易把模型简化成口号。
+      </div>
+    </section>
+
+    <section class="content-section" id="jinye">
+      <p class="section-label">04 · 津液</p>
+      <h2>津清稀，液稠厚</h2>
+      <p class="lead-paragraph">
+        津与液不是两种互不相干的水，而是同一类津液在不同稠厚度与分布上的区分：津偏清稀、布散体表；液偏稠厚、灌注关节与脏腑。
+      </p>
+
+      <div class="cycle-steps">
+        <article class="cycle-card">
+          <h3>津</h3>
+          <p class="cycle-sequence">清稀 · 布散</p>
+          <p>滋润体表、孔窍与血脉，汗、涎等可视为津的外在表现。</p>
+        </article>
+        <article class="cycle-card">
+          <h3>液</h3>
+          <p class="cycle-sequence">稠厚 · 充养</p>
+          <p>灌注关节、脏腑、脑髓，起濡润与充养作用。</p>
+        </article>
+      </div>
+
+      <blockquote class="quote-block">
+        <p>饮入于胃，游溢精气，上输于脾，脾气散精，上归于肺，通调水道，下输膀胱，水精四布，五经并行。</p>
+        <footer class="quote-source">《黄帝内经·素问·经脉别论》</footer>
+      </blockquote>
+
+      <div class="note-card">
+        <strong>水液代谢是一条合作链。</strong>
+        胃受纳、脾运化、肺宣降、肾气化、三焦通调、膀胱排泄。任何一个环节失调，都可能影响津液的生成、输布或排泄。
+      </div>
+    </section>
+
+    <section class="content-section" id="guanxi">
+      <p class="section-label">05 · 关系</p>
+      <h2>同源、互根、同行</h2>
+      <p class="lead-paragraph">
+        气血津液的关系，可以用三句话先记住：气为血之帅，血为气之母；气能生津行津，津能载气；津血同源。
+      </p>
+
+      <figure class="figure-card">
+        <QiBloodFluidDiagram />
+        <figcaption>
+          气、血、津液三者关系示意：气为血帅、血为气母；气能生津行津、津能载气；津血同源。位置为概念示意，不是解剖定位。
+        </figcaption>
+      </figure>
+
+      <div class="note-card">
+        <ul class="reading-list">
+          <li><strong>气与血：</strong>气能生血、行血、摄血；血能载气、养气。</li>
+          <li><strong>气与津液：</strong>气能生津、行津、摄津；津液能载气。</li>
+          <li><strong>血与津液：</strong>津血同源，津液不足可影响血，血虚也可影响津液。</li>
+        </ul>
+      </div>
+
+      <div class="note-card note-card--warn">
+        <strong>模型有边界：</strong>
+        “气血不足”“津液亏虚”是传统理论语言，不是可以凭几个症状自行下的诊断，更不是自行购买补品的理由。
+      </div>
+    </section>
+
+    <section class="content-section" id="wuqu">
+      <p class="section-label">06 · 辨析</p>
+      <h2>四个常见误区</h2>
+      <div class="pitfall-grid">
+        <article class="pitfall-card">
+          <span>01</span>
+          <h3>不等于现代血液/体液</h3>
+          <p>气血津液是传统功能模型，不能直接套现代检验指标。</p>
+        </article>
+        <article class="pitfall-card">
+          <span>02</span>
+          <h3>补气补血不是万能</h3>
+          <p>还要看运行、储藏、统摄、津液与脏腑状态，不能只贴“虚”标签。</p>
+        </article>
+        <article class="pitfall-card">
+          <span>03</span>
+          <h3>不能凭症状自诊</h3>
+          <p>乏力、面色淡、口干等都可能是多条线索之一，需要专业辨证。</p>
+        </article>
+        <article class="pitfall-card">
+          <span>04</span>
+          <h3>不要照方抓药</h3>
+          <p>方药、剂量与适应证需专业判断；本页不提供处方。</p>
+        </article>
+      </div>
+
+      <div class="note-card note-card--warn">
+        <strong>使用边界：</strong>
+        本站只做传统理论展示与学习整理，不构成医疗诊断、处方建议或疗效承诺。身体不适请咨询合格的医疗专业人员。
+      </div>
+    </section>
+
+    <section class="content-section" id="jixu">
+      <p class="section-label">07 · 继续</p>
+      <h2>下一步：藏象、经络与气血辨证</h2>
+      <p class="lead-paragraph">
+        气血津液是藏象与经络之间的共同语言。下一步可以回看藏象、经络，再进入气血辨证与方药；诊法会单独成页。
+      </p>
+
+      <div class="progress-panel">
+        <div>
+          <h3>本篇已完成</h3>
+          <ul class="progress-list progress-list--done">
+            <li>气、血、津液的定义与功能</li>
+            <li>气的分类与升降出入</li>
+            <li>血的生成、濡养与藏统</li>
+            <li>津液的生成、输布与排泄</li>
+            <li>气血津液关系图与边界</li>
+          </ul>
+        </div>
+        <div>
+          <h3>下一步待补</h3>
+          <ul class="progress-list progress-list--next">
+            <li>气血津液与藏象、经络的连接</li>
+            <li>气血辨证与方药（专业语境）</li>
+            <li>营卫、三焦与水液代谢原文</li>
+            <li>诊法（单独成页）</li>
+            <li>病例与辨证练习</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="article-actions">
+        <a class="btn btn--primary" href="/yi/">返回医的门类页</a>
+        <a class="btn btn--ghost" href="/yi/jingxing-shu/">复习井荥俞</a>
+      </div>
+    </section>
+
+    <section class="content-section" id="sources">
+      <p class="section-label">附 · 原典</p>
+      <h2>参考原典</h2>
+      <p>
+        以下引文据通行本，标点从简；正文中的解释为学习整理，不等于原典的全部含义。
+      </p>
+
+      <ol class="source-list">
+        <li>
+          <span class="source-work">《黄帝内经·素问·经脉别论》</span>
+          <p class="source-quote">
+            食气入胃，散精于肝，淫气于筋……浊气归心，淫精于脉，脉气流经，经气归于肺，肺朝百脉，输精于皮毛。饮入于胃，游溢精气，上输于脾，脾气散精，上归于肺，通调水道，下输膀胱，水精四布，五经并行。
+          </p>
+        </li>
+        <li>
+          <span class="source-work">《黄帝内经·灵枢·决气》</span>
+          <p class="source-quote">
+            上焦开发，宣五谷味，熏肤充身泽毛，若雾露之溉，是谓气。中焦受气取汁，变化而赤，是谓血。腠理发泄，汗出溱溱，是谓津。谷入气满，淖泽注于骨，骨属屈伸，泄泽补益脑髓，皮肤润泽，是谓液。
+          </p>
+        </li>
+        <li>
+          <span class="source-work">《黄帝内经·灵枢·营卫生会》</span>
+          <p class="source-quote">
+            人受气于谷，谷入于胃，以传与肺，五脏六腑，皆以受气，其清者为营，浊者为卫，营在脉中，卫在脉外。
+          </p>
+        </li>
+        <li>
+          <span class="source-work">《黄帝内经·素问·五脏生成》</span>
+          <p class="source-quote">
+            肝受血而能视，足受血而能步，掌受血而能握，指受血而能摄。
+          </p>
+        </li>
+        <li>
+          <span class="source-work">人纪·黄帝内经中册 p.27–31、p.45–46；下册 p.63–66</span>
+          <p class="source-quote">
+            经脉别论、血气形志论与调经论的讲读；本页只做概念、关系与学习边界整理。
+          </p>
+        </li>
+      </ol>
+
+      <p class="article-end">
+        本页为传统理论展示与学习整理，不构成医疗诊断、处方建议或疗效承诺。最后更新：2026-10-28。
+      </p>
+    </section>
+  </div>
+</KnowledgeLayout>

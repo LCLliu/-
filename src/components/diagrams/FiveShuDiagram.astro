@@ -1,0 +1,36 @@
+---
+const nodes = [
+  { name: '井', note: '指 / 趾端', x: 70 },
+  { name: '荥', note: '掌 / 跖', x: 170 },
+  { name: '俞', note: '腕 / 踝', x: 270 },
+  { name: '原', note: '阴经同俞', x: 370 },
+  { name: '经', note: '前臂 / 小腿', x: 470 },
+  { name: '合', note: '肘 / 膝', x: 570 },
+];
+---
+
+<svg
+  class="fiveshu-svg"
+  viewBox="0 0 640 260"
+  role="img"
+  aria-label="井荥俞原经合顺序示意图"
+>
+  <title>井荥俞原经合顺序示意图</title>
+  <desc>
+    从肢体远端向近端依次为井、荥、俞、原、经、合。原穴在阴经与俞穴同穴，阳经另设原穴。位置为顺序示意，不是穴位定位。
+  </desc>
+
+  <line class="fs-line" x1="70" y1="150" x2="570" y2="150"></line>
+
+  {nodes.map((node) => (
+    <g>
+      <circle class="fs-node" cx={node.x} cy="150" r="22"></circle>
+      <text class="fs-title" x={node.x} y="156" text-anchor="middle">{node.name}</text>
+      <text class="fs-note" x={node.x} y="188" text-anchor="middle">{node.note}</text>
+    </g>
+  ))}
+
+  <text class="fs-arrow" x="320" y="225" text-anchor="middle">
+    由远端 → 近端
+  </text>
+</svg>

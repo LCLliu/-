@@ -1,0 +1,69 @@
+---
+interface QijingNode {
+  name: string;
+  note: string;
+  x: number;
+  y: number;
+}
+
+const nodes: QijingNode[] = [
+  { name: '任', note: '阴脉之海', x: 280, y: 90 },
+  { name: '阴跷', note: '主内·静', x: 414.3, y: 145.7 },
+  { name: '冲', note: '血海', x: 470, y: 280 },
+  { name: '阴维', note: '维络诸阴', x: 414.3, y: 414.3 },
+  { name: '督', note: '阳脉之海', x: 280, y: 470 },
+  { name: '阳跷', note: '主外·动', x: 145.7, y: 414.3 },
+  { name: '带', note: '约束诸经', x: 90, y: 280 },
+  { name: '阳维', note: '维络诸阳', x: 145.7, y: 145.7 },
+];
+---
+
+<svg
+  class="qijing-svg"
+  viewBox="0 0 560 560"
+  role="img"
+  aria-label="奇经八脉关系示意图"
+>
+  <title>奇经八脉关系示意图</title>
+  <desc>
+    任、督、冲、带、阴跷、阳跷、阴维、阳维八脉围绕中心排列；任督上下相对，冲带左右相对，阴阳跷与阴阳维交叉相对。
+  </desc>
+
+  <circle class="qj-orbit" cx="280" cy="280" r="190"></circle>
+
+  {nodes.map((node) => (
+    <line class="qj-spoke" x1="280" y1="280" x2={node.x} y2={node.y}></line>
+  ))}
+
+  <circle class="qj-center" cx="280" cy="280" r="76"></circle>
+  <text
+    class="qj-center-title"
+    x="280"
+    y="274"
+    text-anchor="middle"
+    dominant-baseline="middle"
+  >
+    奇经八脉
+  </text>
+  <text class="qj-center-sub" x="280" y="304" text-anchor="middle">
+    别道奇行
+  </text>
+
+  {nodes.map((node) => (
+    <g class="qj-node">
+      <circle cx={node.x} cy={node.y} r="42"></circle>
+      <text
+        class="qj-node-title"
+        x={node.x}
+        y={node.y - 3}
+        text-anchor="middle"
+        dominant-baseline="middle"
+      >
+        {node.name}
+      </text>
+      <text class="qj-node-note" x={node.x} y={node.y + 20} text-anchor="middle">
+        {node.note}
+      </text>
+    </g>
+  ))}
+</svg>

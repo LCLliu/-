@@ -1,0 +1,68 @@
+---
+const renPoints = Array.from({ length: 24 }, (_, index) => 80 + index * (380 / 23));
+const duPoints = Array.from({ length: 28 }, (_, index) => 80 + index * (380 / 27));
+
+const renKeys = [
+  { name: '承浆', y: 85 },
+  { name: '膻中', y: 190 },
+  { name: '中脘', y: 285 },
+  { name: '关元', y: 375 },
+  { name: '会阴', y: 465 },
+];
+
+const duKeys = [
+  { name: '龈交', y: 85 },
+  { name: '百会', y: 145 },
+  { name: '大椎', y: 225 },
+  { name: '命门', y: 335 },
+  { name: '长强', y: 465 },
+];
+---
+
+<svg
+  class="rendu-svg"
+  viewBox="0 0 560 540"
+  role="img"
+  aria-label="任督二脉前后正中线示意图"
+>
+  <title>任督二脉前后正中线示意图</title>
+  <desc>
+    左侧为任脉前正中线，共二十四穴；右侧为督脉后正中线，共二十八穴。标出承浆、膻中、中脘、关元、会阴与龈交、百会、大椎、命门、长强等代表穴位。
+  </desc>
+
+  <text class="rd-title" x="180" y="45" text-anchor="middle">任脉 · 前正中</text>
+  <text class="rd-count" x="180" y="60" text-anchor="middle">24 穴</text>
+  <line class="rd-line" x1="180" y1="80" x2="180" y2="470"></line>
+
+  {renPoints.map((y) => (
+    <circle class="rd-dot" cx="180" cy={y} r="3"></circle>
+  ))}
+
+  {renKeys.map((point) => (
+    <g>
+      <line class="rd-tick" x1="168" y1={point.y} x2="180" y2={point.y}></line>
+      <circle class="rd-key" cx="180" cy={point.y} r="5.5"></circle>
+      <text class="rd-label" x="160" y={point.y + 3} text-anchor="end">{point.name}</text>
+    </g>
+  ))}
+
+  <text class="rd-title" x="380" y="45" text-anchor="middle">督脉 · 后正中</text>
+  <text class="rd-count" x="380" y="60" text-anchor="middle">28 穴</text>
+  <line class="rd-line" x1="380" y1="80" x2="380" y2="470"></line>
+
+  {duPoints.map((y) => (
+    <circle class="rd-dot" cx="380" cy={y} r="3"></circle>
+  ))}
+
+  {duKeys.map((point) => (
+    <g>
+      <line class="rd-tick" x1="380" y1={point.y} x2="392" y2={point.y}></line>
+      <circle class="rd-key" cx="380" cy={point.y} r="5.5"></circle>
+      <text class="rd-label" x="400" y={point.y + 3} text-anchor="start">{point.name}</text>
+    </g>
+  ))}
+
+  <text class="rd-note" x="280" y="510" text-anchor="middle">
+    任督二脉 · 前后正中线示意，不是解剖定位
+  </text>
+</svg>

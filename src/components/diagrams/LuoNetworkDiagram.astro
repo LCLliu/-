@@ -1,0 +1,55 @@
+---
+const majorCount = 15;
+const fineCount = 30;
+
+const majorDots = Array.from({ length: majorCount }, (_, index) => {
+  const angle = (-90 + index * (360 / majorCount)) * (Math.PI / 180);
+  return { x: 280 + Math.cos(angle) * 145, y: 280 + Math.sin(angle) * 145 };
+});
+
+const fineDots = Array.from({ length: fineCount }, (_, index) => {
+  const angle = (-90 + index * (360 / fineCount)) * (Math.PI / 180);
+  return { x: 280 + Math.cos(angle) * 215, y: 280 + Math.sin(angle) * 215 };
+});
+---
+
+<svg
+  class="luo-svg"
+  viewBox="0 0 560 560"
+  role="img"
+  aria-label="络脉层级示意图"
+>
+  <title>络脉层级示意图</title>
+  <desc>
+    中心为经脉主干，中层十五个别络节点，外层细密的孙络与浮络节点，表示由粗到细、由里到表的网络。
+  </desc>
+
+  <circle class="luo-orbit" cx="280" cy="280" r="145"></circle>
+  <circle class="luo-orbit" cx="280" cy="280" r="215"></circle>
+
+  <g class="luo-fine">
+    {fineDots.map((dot) => (
+      <circle cx={dot.x} cy={dot.y} r="3.2"></circle>
+    ))}
+  </g>
+
+  <g class="luo-major">
+    {majorDots.map((dot) => (
+      <circle cx={dot.x} cy={dot.y} r="6.5"></circle>
+    ))}
+  </g>
+
+  <circle class="luo-center" cx="280" cy="280" r="70"></circle>
+  <text
+    class="luo-center-title"
+    x="280"
+    y="274"
+    text-anchor="middle"
+    dominant-baseline="middle"
+  >
+    经脉
+  </text>
+  <text class="luo-center-sub" x="280" y="302" text-anchor="middle">
+    主干
+  </text>
+</svg>

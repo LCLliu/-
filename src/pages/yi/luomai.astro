@@ -1,0 +1,286 @@
+---
+import KnowledgeLayout from '../../layouts/KnowledgeLayout.astro';
+import LuoNetworkDiagram from '../../components/diagrams/LuoNetworkDiagram.astro';
+
+const toc = [
+  { id: 'luo', label: '络脉是什么' },
+  { id: 'table', label: '十五络脉表' },
+  { id: 'special', label: '任督与脾之大络' },
+  { id: 'dufa', label: '络脉怎么读' },
+  { id: 'wuqu', label: '常见误区' },
+  { id: 'jixu', label: '继续学习' },
+  { id: 'sources', label: '参考原典' },
+];
+---
+
+<KnowledgeLayout
+  title="络脉"
+  eyebrow="Medical · 医 · 经络"
+  lead="经脉是主干，络脉是从主干分出的网络。十五别络把十二经、任督二脉与脾之大络连接起来，别络再分出孙络、浮络。"
+  status="初稿"
+  readingTime="第一部分 · 阅读约 10 分钟"
+  updated="2026-10-28"
+  toc={toc}
+  mark="络脉"
+  parentLabel="医"
+  parentHref="/yi/"
+  asideNote="这一篇先做十五络脉总表与络穴索引；穴位定位、针刺操作与络脉病候后续再补。"
+>
+  <div class="article-prose">
+    <div class="summary-grid" aria-label="核心提要">
+      <article class="summary-card">
+        <span>01</span>
+        <h3>经与络</h3>
+        <p>经脉是主干，络脉是分支网络；越分越细，形成孙络与浮络。</p>
+      </article>
+      <article class="summary-card">
+        <span>02</span>
+        <h3>十五别络</h3>
+        <p>十二经各一络，加任脉络、督脉络、脾之大络，共十五。</p>
+      </article>
+      <article class="summary-card">
+        <span>03</span>
+        <h3>沟通表里</h3>
+        <p>络脉把经脉、表里与全身网络连起来；络穴是入口，不是自疗按钮。</p>
+      </article>
+    </div>
+
+    <section class="content-section" id="luo">
+      <p class="section-label">01 · 总览</p>
+      <h2>经脉深，络脉浮</h2>
+      <p class="lead-paragraph">
+        经脉是主干，络脉是从经脉分出的网络。经脉深而在里，络脉浮而在表；十五别络再分出孙络、浮络，形成由粗到细、由里到表的层次。
+      </p>
+      <p>
+        络脉的作用可以概括为：沟通表里、渗灌气血、网络全身。它不是十二经之外的又一套干线，而是把十二经、任督与全身组织连接起来的“网”。
+      </p>
+
+      <blockquote class="quote-block">
+        <p>经脉十二者，伏行分肉之间，深而不见……诸脉之浮而常见者，皆络脉也。</p>
+        <footer class="quote-source">《黄帝内经·灵枢·经脉》</footer>
+      </blockquote>
+
+      <figure class="figure-card">
+        <LuoNetworkDiagram />
+        <div class="cycle-legend" aria-label="图例">
+          <span class="legend-item">
+            <span class="legend-dot" aria-hidden="true"></span>
+            十五别络
+          </span>
+          <span class="legend-item">
+            <span class="legend-dot legend-dot--fine" aria-hidden="true"></span>
+            孙络 / 浮络
+          </span>
+        </div>
+        <figcaption>
+          位置为层级示意，不是解剖定位。中心为经脉主干，向外依次是十五别络与更细的孙络/浮络。
+        </figcaption>
+      </figure>
+
+      <div class="note-card">
+        <strong>络脉不是静脉或毛细血管。</strong>
+        经络是传统功能网络；用现代解剖学去找“十五络脉的实体管道”，会把两套语言混在一起。
+      </div>
+    </section>
+
+    <section class="content-section" id="table">
+      <p class="section-label">02 · 总表</p>
+      <h2>十五络脉与络穴</h2>
+      <p class="lead-paragraph">
+        十五络脉 = 十二经各一络 + 任脉络 + 督脉络 + 脾之大络。下表按十二经流注顺序排列。
+      </p>
+
+      <p class="table-scroll-hint">左右滑动查看完整表格 →</p>
+
+      <div class="table-wrap">
+        <table class="luo-table">
+          <caption>十五络脉与络穴；书内讲解见《针灸篇》p.182–183。</caption>
+          <thead>
+            <tr>
+              <th scope="col">序</th>
+              <th scope="col">经脉 / 络脉</th>
+              <th scope="col">络穴</th>
+              <th scope="col">备注</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>01</td><td>手太阴肺经</td><td>列缺</td><td>肺经络穴</td></tr>
+            <tr><td>02</td><td>手阳明大肠经</td><td>偏历</td><td>大肠经络穴</td></tr>
+            <tr><td>03</td><td>足阳明胃经</td><td>丰隆</td><td>胃经络穴</td></tr>
+            <tr><td>04</td><td>足太阴脾经</td><td>公孙</td><td>脾经络穴；讲义提到公孙也主冲脉</td></tr>
+            <tr><td>05</td><td>手少阴心经</td><td>通里</td><td>心经络穴</td></tr>
+            <tr><td>06</td><td>手太阳小肠经</td><td>支正</td><td>小肠经络穴</td></tr>
+            <tr><td>07</td><td>足太阳膀胱经</td><td>飞扬</td><td>膀胱经络穴</td></tr>
+            <tr><td>08</td><td>足少阴肾经</td><td>大钟</td><td>肾经络穴</td></tr>
+            <tr><td>09</td><td>手厥阴心包经</td><td>内关</td><td>心包经络穴</td></tr>
+            <tr><td>10</td><td>手少阳三焦经</td><td>外关</td><td>三焦经络穴</td></tr>
+            <tr><td>11</td><td>足少阳胆经</td><td>光明</td><td>胆经络穴</td></tr>
+            <tr><td>12</td><td>足厥阴肝经</td><td>蠡沟</td><td>肝经络穴</td></tr>
+            <tr><td>13</td><td>任脉</td><td>鸠尾（尾翳）</td><td>讲义写作“屏翳”，通行本多作“尾翳”</td></tr>
+            <tr><td>14</td><td>督脉</td><td>长强</td><td>督脉络穴</td></tr>
+            <tr><td>15</td><td>脾之大络</td><td>大包</td><td>布胸胁，传统上称其包绕诸络</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p class="small-note">
+        络穴是别络从经脉别出处的常用名；十五络脉本身是网络，不等同于十五个孤立的点。
+      </p>
+    </section>
+
+    <section class="content-section" id="special">
+      <p class="section-label">03 · 特殊三络</p>
+      <h2>任督与脾之大络</h2>
+      <p class="lead-paragraph">
+        十二经之外，任脉、督脉和脾各有一个特殊的络。它们让十五络脉不只属于十二经。
+      </p>
+
+      <div class="cycle-steps">
+        <article class="cycle-card">
+          <h3>任脉络</h3>
+          <p class="cycle-sequence">鸠尾（尾翳）</p>
+          <p>任脉之别，下鸠尾，散于腹；把任脉与腹部网络连起来。</p>
+        </article>
+        <article class="cycle-card">
+          <h3>督脉络</h3>
+          <p class="cycle-sequence">长强</p>
+          <p>督脉之别，从尾骨附近分出；把督脉与背部、头部网络连起来。</p>
+        </article>
+      </div>
+
+      <div class="note-card">
+        <strong>脾之大络：大包。</strong>
+        “脾之大络，名曰大包，出渊腋下三寸，布胸胁。”传统上称其包绕诸络，是十五络中特殊的一条。
+      </div>
+
+      <blockquote class="quote-block">
+        <p>脾之大络，名曰大包，出渊腋下三寸，布胸胁。</p>
+        <footer class="quote-source">《黄帝内经·灵枢·经脉》</footer>
+      </blockquote>
+    </section>
+
+    <section class="content-section" id="dufa">
+      <p class="section-label">04 · 读法</p>
+      <h2>先分层，再看络穴</h2>
+      <p class="lead-paragraph">
+        读络脉，先看“经脉 → 十五别络 → 孙络/浮络”的层级，再看十五络穴，最后回到具体经脉与原文。
+      </p>
+
+      <div class="logic-flow" aria-label="络脉阅读顺序">
+        <span>经脉主干</span>
+        <span aria-hidden="true">→</span>
+        <span>十五别络</span>
+        <span aria-hidden="true">→</span>
+        <span>孙络 / 浮络</span>
+        <span aria-hidden="true">→</span>
+        <span>表里与全身</span>
+      </div>
+
+      <div class="note-card">
+        <strong>三个不要：</strong>
+        不要把络脉当成静脉或毛细血管；不要把络穴当成“按一按就能治病”的按钮；不要自行针刺、放血或艾灸。
+      </div>
+    </section>
+
+    <section class="content-section" id="wuqu">
+      <p class="section-label">05 · 辨析</p>
+      <h2>四个常见误区</h2>
+      <div class="pitfall-grid">
+        <article class="pitfall-card">
+          <span>01</span>
+          <h3>络脉不是静脉</h3>
+          <p>络脉是传统经络网络的分支层，不是现代解剖学的静脉或毛细血管。</p>
+        </article>
+        <article class="pitfall-card">
+          <span>02</span>
+          <h3>十五络不是十五个器官</h3>
+          <p>十五是十二经、任督和脾之大络的络脉数量，不是十五个独立器官。</p>
+        </article>
+        <article class="pitfall-card">
+          <span>03</span>
+          <h3>络穴不是自疗按钮</h3>
+          <p>络穴是别络出口的常用名；定位、针刺与手法都需要专业训练。</p>
+        </article>
+        <article class="pitfall-card">
+          <span>04</span>
+          <h3>“通络”不是疗效承诺</h3>
+          <p>“通络”是传统理论语言，不是可以替代诊断和治疗的承诺。</p>
+        </article>
+      </div>
+
+      <div class="note-card note-card--warn">
+        <strong>使用边界：</strong>
+        本站只做传统经络理论展示，不提供针刺、艾灸、放血或点穴操作指南。身体不适请咨询合格的医疗专业人员。
+      </div>
+    </section>
+
+    <section class="content-section" id="jixu">
+      <p class="section-label">06 · 继续</p>
+      <h2>下一步：穴位与病候</h2>
+      <p class="lead-paragraph">
+        十五络脉是经络网络的分支层。后面可以接十五络脉歌、任督穴位、单经穴位与络脉病候，再回到诊法与临床案例。
+      </p>
+
+      <div class="progress-panel">
+        <div>
+          <h3>本篇已完成</h3>
+          <ul class="progress-list progress-list--done">
+            <li>经脉、别络、孙络/浮络的层级</li>
+            <li>十五络脉总表与络穴</li>
+            <li>任督与脾之大络</li>
+            <li>络脉的沟通表里与网络功能</li>
+            <li>常见误区与操作边界</li>
+          </ul>
+        </div>
+        <div>
+          <h3>下一步待补</h3>
+          <ul class="progress-list progress-list--next">
+            <li>十五络脉歌与原文注读</li>
+            <li>络脉病候与穴位定位</li>
+            <li>络脉病候与传统诊法</li>
+            <li>孙络/浮络的原文与图示</li>
+            <li>专业穴位定位校对</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="article-actions">
+        <a class="btn btn--primary" href="/yi/rendu-xuewei/">继续读任督穴位</a>
+        <a class="btn btn--ghost" href="/yi/">返回医的门类页</a>
+      </div>
+    </section>
+
+    <section class="content-section" id="sources">
+      <p class="section-label">附 · 原典</p>
+      <h2>参考原典</h2>
+      <p>
+        以下引文据通行本，标点从简；正文中的解释为学习整理，不等于原典的全部含义。
+      </p>
+
+      <ol class="source-list">
+        <li>
+          <span class="source-work">《黄帝内经·灵枢·经脉》</span>
+          <p class="source-quote">
+            经脉十二者，伏行分肉之间，深而不见……诸脉之浮而常见者，皆络脉也。
+          </p>
+        </li>
+        <li>
+          <span class="source-work">《黄帝内经·灵枢·经脉》</span>
+          <p class="source-quote">任脉之别，名曰尾翳，下鸠尾，散于腹。</p>
+        </li>
+        <li>
+          <span class="source-work">《黄帝内经·灵枢·经脉》</span>
+          <p class="source-quote">脾之大络，名曰大包，出渊腋下三寸，布胸胁。</p>
+        </li>
+        <li>
+          <span class="source-work">人纪·针灸篇 p.182–183</span>
+          <p class="source-quote">十五络脉与络穴的讲读；讲义将任脉络写作“屏翳”，通行本多作“尾翳”。</p>
+        </li>
+      </ol>
+
+      <p class="article-end">
+        本页为传统理论展示与学习整理，不构成医疗诊断、处方建议或针灸操作指南。最后更新：2026-10-28。
+      </p>
+    </section>
+  </div>
+</KnowledgeLayout>

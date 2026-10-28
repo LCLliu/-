@@ -1,0 +1,375 @@
+---
+import KnowledgeLayout from '../../layouts/KnowledgeLayout.astro';
+import RenDuDiagram from '../../components/diagrams/RenDuDiagram.astro';
+
+const toc = [
+  { id: 'rendu', label: '任督二脉' },
+  { id: 'ren', label: '任脉 24 穴' },
+  { id: 'du', label: '督脉 28 穴' },
+  { id: 'key', label: '重点穴位' },
+  { id: 'dufa', label: '怎么读' },
+  { id: 'wuqu', label: '常见误区' },
+  { id: 'jixu', label: '继续学习' },
+  { id: 'sources', label: '参考原典' },
+];
+---
+
+<KnowledgeLayout
+  title="任督穴位"
+  eyebrow="Medical · 医 · 经络"
+  lead="任脉行于前正中，督脉行于后正中；任脉 24 穴、督脉 28 穴，是奇经八脉最具体的一组入口。"
+  status="初稿"
+  readingTime="第一部分 · 阅读约 12 分钟"
+  updated="2026-10-28"
+  toc={toc}
+  mark="任督"
+  parentLabel="医"
+  parentHref="/yi/"
+  asideNote="这一篇先做任督穴位索引与重点穴位；具体定位、进针手法和主治处方后续再补，且只作专业学习参考。"
+>
+  <div class="article-prose">
+    <div class="summary-grid" aria-label="核心提要">
+      <article class="summary-card">
+        <span>01</span>
+        <h3>任脉 24 穴</h3>
+        <p>从前正中线由下而上，从会阴到承浆；任脉为阴脉之海。</p>
+      </article>
+      <article class="summary-card">
+        <span>02</span>
+        <h3>督脉 28 穴</h3>
+        <p>从后正中线由下而上，从长强到龈交；督脉为阳脉之海。</p>
+      </article>
+      <article class="summary-card">
+        <span>03</span>
+        <h3>先线路后穴位</h3>
+        <p>先记线路与分段，再记穴位名和交会/募穴；穴位图不是自疗按钮。</p>
+      </article>
+    </div>
+
+    <section class="content-section" id="rendu">
+      <p class="section-label">01 · 任督</p>
+      <h2>一前一后，两条正中线</h2>
+      <p class="lead-paragraph">
+        任脉行于前正中，督脉行于后正中；传统上分别称“阴脉之海”和“阳脉之海”。任、督、冲又同起于胞中，概括为“一源三岐”。
+      </p>
+
+      <div class="cycle-steps">
+        <article class="cycle-card">
+          <h3>任脉</h3>
+          <p class="cycle-sequence">24 穴 · 前正中</p>
+          <p>从会阴到承浆；总任诸阴，传统上与胞宫、生殖相关。</p>
+        </article>
+        <article class="cycle-card">
+          <h3>督脉</h3>
+          <p class="cycle-sequence">28 穴 · 后正中</p>
+          <p>从长强到龈交；总督诸阳，沿脊柱上行，传统上与脑髓相关。</p>
+        </article>
+      </div>
+
+      <figure class="figure-card">
+        <RenDuDiagram />
+        <figcaption>
+          任督二脉前后正中线示意：左侧任脉，右侧督脉；标出部分代表穴位。位置为线路示意，不是解剖定位。
+        </figcaption>
+      </figure>
+
+      <blockquote class="quote-block">
+        <p>任脉者，起于中极之下，以上毛际，循腹里，上关元，至咽喉，上颐循面入目。</p>
+        <footer class="quote-source">《黄帝内经·素问·骨空论》</footer>
+      </blockquote>
+
+      <div class="note-card">
+        <strong>本页是穴位索引，不是操作手册。</strong>
+        穴位定位、进针角度、深浅、手法与主治都需要专业训练。先记线路和名称，不要照着图自行针刺、艾灸或放血。
+      </div>
+    </section>
+
+    <section class="content-section" id="ren">
+      <p class="section-label">02 · 任脉</p>
+      <h2>任脉 24 穴：从会阴到承浆</h2>
+      <p class="lead-paragraph">
+        任脉穴位沿前正中线排列。按区段记，比从第一个背到最后一个更快；编号是顺序，不是穴位编号。
+      </p>
+
+      <div class="point-groups">
+        <article class="point-group">
+          <h3>会阴 / 下腹 · 01–08</h3>
+          <ul class="point-list">
+            <li class="point-chip"><span>01</span>会阴</li>
+            <li class="point-chip"><span>02</span>曲骨</li>
+            <li class="point-chip"><span>03</span>中极</li>
+            <li class="point-chip point-chip--key"><span>04</span>关元</li>
+            <li class="point-chip"><span>05</span>石门</li>
+            <li class="point-chip"><span>06</span>气海</li>
+            <li class="point-chip"><span>07</span>阴交</li>
+            <li class="point-chip"><span>08</span>神阙</li>
+          </ul>
+        </article>
+
+        <article class="point-group">
+          <h3>上腹 · 09–15</h3>
+          <ul class="point-list">
+            <li class="point-chip"><span>09</span>水分</li>
+            <li class="point-chip"><span>10</span>下脘</li>
+            <li class="point-chip"><span>11</span>建里</li>
+            <li class="point-chip point-chip--key"><span>12</span>中脘</li>
+            <li class="point-chip"><span>13</span>上脘</li>
+            <li class="point-chip"><span>14</span>巨阙</li>
+            <li class="point-chip"><span>15</span>鸠尾</li>
+          </ul>
+        </article>
+
+        <article class="point-group">
+          <h3>胸 · 16–21</h3>
+          <ul class="point-list">
+            <li class="point-chip"><span>16</span>中庭</li>
+            <li class="point-chip point-chip--key"><span>17</span>膻中</li>
+            <li class="point-chip"><span>18</span>玉堂</li>
+            <li class="point-chip"><span>19</span>紫宫</li>
+            <li class="point-chip"><span>20</span>华盖</li>
+            <li class="point-chip"><span>21</span>璇玑</li>
+          </ul>
+        </article>
+
+        <article class="point-group">
+          <h3>颈 / 面 · 22–24</h3>
+          <ul class="point-list">
+            <li class="point-chip"><span>22</span>天突</li>
+            <li class="point-chip"><span>23</span>廉泉</li>
+            <li class="point-chip point-chip--key"><span>24</span>承浆</li>
+          </ul>
+        </article>
+      </div>
+
+      <p class="small-note">
+        任脉穴位顺序据通行经穴表整理；《针灸篇》p.28–38 重点讲解了其中一部分穴位。
+      </p>
+    </section>
+
+    <section class="content-section" id="du">
+      <p class="section-label">03 · 督脉</p>
+      <h2>督脉 28 穴：从长强到龈交</h2>
+      <p class="lead-paragraph">
+        督脉穴位沿后正中线与头面正中排列；从尾骶到头顶，再到上唇系带，分段记忆最稳。
+      </p>
+
+      <div class="point-groups">
+        <article class="point-group">
+          <h3>骶 / 腰 · 01–05</h3>
+          <ul class="point-list">
+            <li class="point-chip point-chip--key"><span>01</span>长强</li>
+            <li class="point-chip"><span>02</span>腰俞</li>
+            <li class="point-chip"><span>03</span>腰阳关</li>
+            <li class="point-chip point-chip--key"><span>04</span>命门</li>
+            <li class="point-chip"><span>05</span>悬枢</li>
+          </ul>
+        </article>
+
+        <article class="point-group">
+          <h3>背 · 06–14</h3>
+          <ul class="point-list">
+            <li class="point-chip"><span>06</span>脊中</li>
+            <li class="point-chip"><span>07</span>中枢</li>
+            <li class="point-chip"><span>08</span>筋缩</li>
+            <li class="point-chip"><span>09</span>至阳</li>
+            <li class="point-chip"><span>10</span>灵台</li>
+            <li class="point-chip"><span>11</span>神道</li>
+            <li class="point-chip"><span>12</span>身柱</li>
+            <li class="point-chip"><span>13</span>陶道</li>
+            <li class="point-chip point-chip--key"><span>14</span>大椎</li>
+          </ul>
+        </article>
+
+        <article class="point-group">
+          <h3>项 / 头 · 15–24</h3>
+          <ul class="point-list">
+            <li class="point-chip"><span>15</span>哑门</li>
+            <li class="point-chip"><span>16</span>风府</li>
+            <li class="point-chip"><span>17</span>脑户</li>
+            <li class="point-chip"><span>18</span>强间</li>
+            <li class="point-chip"><span>19</span>后顶</li>
+            <li class="point-chip point-chip--key"><span>20</span>百会</li>
+            <li class="point-chip"><span>21</span>前顶</li>
+            <li class="point-chip"><span>22</span>囟会</li>
+            <li class="point-chip"><span>23</span>上星</li>
+            <li class="point-chip"><span>24</span>神庭</li>
+          </ul>
+        </article>
+
+        <article class="point-group">
+          <h3>面 / 口 · 25–28</h3>
+          <ul class="point-list">
+            <li class="point-chip"><span>25</span>素髎</li>
+            <li class="point-chip"><span>26</span>水沟</li>
+            <li class="point-chip"><span>27</span>兑端</li>
+            <li class="point-chip"><span>28</span>龈交</li>
+          </ul>
+        </article>
+      </div>
+
+      <p class="small-note">
+        督脉穴位顺序据通行经穴表整理；《针灸篇》p.39–45 重点讲解了其中一部分穴位。
+      </p>
+    </section>
+
+    <section class="content-section" id="key">
+      <p class="section-label">04 · 重点</p>
+      <h2>先记这八个</h2>
+      <p class="lead-paragraph">
+        这八个穴位常出现在任督二脉的入门讲法里。先记它们的位置与分类意义，不要把它们当成主治清单。
+      </p>
+
+      <p class="table-scroll-hint">左右滑动查看完整表格 →</p>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th scope="col">经脉</th>
+              <th scope="col">穴位</th>
+              <th scope="col">传统关键词</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>任脉</td><td>关元</td><td>小肠募穴；下腹要穴</td></tr>
+            <tr><td>任脉</td><td>中脘</td><td>胃募穴；上腹要穴</td></tr>
+            <tr><td>任脉</td><td>膻中</td><td>心包募穴；气会</td></tr>
+            <tr><td>任脉</td><td>承浆</td><td>口面局部要穴</td></tr>
+            <tr><td>督脉</td><td>命门</td><td>腰背部要穴</td></tr>
+            <tr><td>督脉</td><td>大椎</td><td>诸阳之会</td></tr>
+            <tr><td>督脉</td><td>百会</td><td>头顶部要穴</td></tr>
+            <tr><td>督脉</td><td>长强</td><td>督脉络穴</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p class="small-note">
+        “募穴”“气会”“诸阳之会”是传统分类语言，不等于主治承诺；具体应用需专业辨证与操作。
+      </p>
+    </section>
+
+    <section class="content-section" id="dufa">
+      <p class="section-label">05 · 读法</p>
+      <h2>先线路，再分段，最后记穴位</h2>
+      <p class="lead-paragraph">
+        任督二脉不是一条需要死背的清单。先记前后正中线，再按区段分组，最后才看穴位名、交会与募穴。
+      </p>
+
+      <div class="logic-flow" aria-label="任督穴位阅读顺序">
+        <span>线路</span>
+        <span aria-hidden="true">→</span>
+        <span>分段</span>
+        <span aria-hidden="true">→</span>
+        <span>穴位名</span>
+        <span aria-hidden="true">→</span>
+        <span>交会 / 募穴</span>
+        <span aria-hidden="true">→</span>
+        <span>原文与定位</span>
+      </div>
+
+      <div class="note-card">
+        <strong>三个不要：</strong>
+        不要把穴位图当成解剖图；不要把穴位名当成主治；不要自行针刺、艾灸、放血或点穴。定位与操作必须经过专业训练。
+      </div>
+    </section>
+
+    <section class="content-section" id="wuqu">
+      <p class="section-label">06 · 辨析</p>
+      <h2>四个常见误区</h2>
+      <div class="pitfall-grid">
+        <article class="pitfall-card">
+          <span>01</span>
+          <h3>任督穴位不是“通任督”按钮</h3>
+          <p>“打通任督”是养生话语，不等于医学治疗或疗效承诺。</p>
+        </article>
+        <article class="pitfall-card">
+          <span>02</span>
+          <h3>穴位图不是解剖图</h3>
+          <p>任督线路是传统经络描述，不能直接等同于神经或血管走向。</p>
+        </article>
+        <article class="pitfall-card">
+          <span>03</span>
+          <h3>穴位名不是主治</h3>
+          <p>一个穴位的传统分类不等于可以自行治疗某种疾病。</p>
+        </article>
+        <article class="pitfall-card">
+          <span>04</span>
+          <h3>不自行针刺</h3>
+          <p>针刺、艾灸、放血都有风险，需专业训练、消毒与辨证。</p>
+        </article>
+      </div>
+
+      <div class="note-card note-card--warn">
+        <strong>使用边界：</strong>
+        本站只做传统经络理论展示，不提供穴位定位、针刺、艾灸或放血操作指南。身体不适请咨询合格的医疗专业人员。
+      </div>
+    </section>
+
+    <section class="content-section" id="jixu">
+      <p class="section-label">07 · 继续</p>
+      <h2>下一步：单经穴位与井荥俞</h2>
+      <p class="lead-paragraph">
+        任督穴位是奇经八脉的具体入口。后面可以接单经穴位、井荥俞原经合、针灸手法与诊法，把穴位放回完整的经络系统。
+      </p>
+
+      <div class="progress-panel">
+        <div>
+          <h3>本篇已完成</h3>
+          <ul class="progress-list progress-list--done">
+            <li>任脉 24 穴与督脉 28 穴的顺序</li>
+            <li>按区段分组的穴位索引</li>
+            <li>任督前后正中线示意图</li>
+            <li>八个重点穴位的传统关键词</li>
+            <li>穴位学习边界与常见误区</li>
+          </ul>
+        </div>
+        <div>
+          <h3>下一步待补</h3>
+          <ul class="progress-list progress-list--next">
+            <li>原络募郄与穴位定位</li>
+            <li>任督交会穴与募穴的详细分类</li>
+            <li>针灸手法与诊法</li>
+            <li>病例与辨证练习</li>
+            <li>专业穴位图校对</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="article-actions">
+        <a class="btn btn--primary" href="/yi/jingxing-shu/">继续读井荥俞</a>
+        <a class="btn btn--ghost" href="/yi/">返回医的门类页</a>
+      </div>
+    </section>
+
+    <section class="content-section" id="sources">
+      <p class="section-label">附 · 原典</p>
+      <h2>参考原典</h2>
+      <p>
+        以下引文据通行本，标点从简；正文中的解释为学习整理，不等于原典的全部含义。
+      </p>
+
+      <ol class="source-list">
+        <li>
+          <span class="source-work">《黄帝内经·素问·骨空论》</span>
+          <p class="source-quote">
+            任脉者，起于中极之下，以上毛际，循腹里，上关元，至咽喉，上颐循面入目。
+          </p>
+        </li>
+        <li>
+          <span class="source-work">《难经·二十八难》</span>
+          <p class="source-quote">
+            督脉者，起于下极之俞，并于脊里，上至风府，入属于脑。
+          </p>
+        </li>
+        <li>
+          <span class="source-work">人纪·针灸篇 p.28–45</span>
+          <p class="source-quote">任脉经穴与督脉经穴的讲读；本页只做名称、顺序与学习边界整理。</p>
+        </li>
+      </ol>
+
+      <p class="article-end">
+        本页为传统理论展示与学习整理，不构成医疗诊断、处方建议或针灸操作指南。最后更新：2026-10-28。
+      </p>
+    </section>
+  </div>
+</KnowledgeLayout>

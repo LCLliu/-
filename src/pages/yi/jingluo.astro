@@ -1,0 +1,341 @@
+---
+import KnowledgeLayout from '../../layouts/KnowledgeLayout.astro';
+import MeridianClockDiagram from '../../components/diagrams/MeridianClockDiagram.astro';
+
+const toc = [
+  { id: 'jingluo', label: '经络与十二正经' },
+  { id: 'mingming', label: '命名与走向' },
+  { id: 'liuzhu', label: '十二经流注' },
+  { id: 'dufa', label: '经络怎么读' },
+  { id: 'wuqu', label: '常见误区' },
+  { id: 'jixu', label: '继续学习' },
+  { id: 'sources', label: '参考原典' },
+];
+---
+
+<KnowledgeLayout
+  title="十二经络"
+  eyebrow="Medical · 医 · 经络"
+  lead="常说的十二经络，严格说是十二经脉。它们是经络系统的十二条主干，按手足、阴阳、脏腑命名，并以表里关系两两相配，再按十二时辰循环流注。"
+  status="初稿"
+  readingTime="第一部分 · 阅读约 12 分钟"
+  updated="2026-10-28"
+  toc={toc}
+  mark="经络"
+  parentLabel="医"
+  parentHref="/yi/"
+  asideNote="这一篇先做十二正经总览：名称、表里、走向、流注和边界；单经循行、穴位与针灸操作后续再展开。"
+>
+  <div class="article-prose">
+    <div class="summary-grid" aria-label="核心提要">
+      <article class="summary-card">
+        <span>01</span>
+        <h3>十二条主干</h3>
+        <p>手三阴、手三阳、足三阴、足三阳；任督二脉属于奇经八脉，不在十二正经内。</p>
+      </article>
+      <article class="summary-card">
+        <span>02</span>
+        <h3>表里相配</h3>
+        <p>肺—大肠、胃—脾、心—小肠、膀胱—肾、心包—三焦、胆—肝。</p>
+      </article>
+      <article class="summary-card">
+        <span>03</span>
+        <h3>如环无端</h3>
+        <p>十二经按十二时辰流注；这是传统时间框架，不是诊断或治疗指令。</p>
+      </article>
+    </div>
+
+    <section class="content-section" id="jingluo">
+      <p class="section-label">01 · 总览</p>
+      <h2>经络不只有十二条经</h2>
+      <p class="lead-paragraph">
+        经络系统是一个多层次的功能网络：十二正经是主干，奇经八脉、十五络脉、经别、经筋、皮部是另外的层次。
+      </p>
+      <p>
+        所以“十二经络”是一个常用简称。严格说，本页讲的是“十二经脉”；任脉、督脉属于奇经八脉，不在十二正经之内。先把主干认清，再谈奇经与络脉。
+      </p>
+
+      <div class="concept-grid">
+        <article class="concept-card">
+          <span class="concept-num">01</span>
+          <h3>运行气血</h3>
+          <p>传统理论认为经络是气血运行的通道，连接脏腑与体表。</p>
+        </article>
+        <article class="concept-card">
+          <span class="concept-num">02</span>
+          <h3>联络脏腑</h3>
+          <p>十二经分别属络脏腑，并通过表里关系两两相连。</p>
+        </article>
+        <article class="concept-card">
+          <span class="concept-num">03</span>
+          <h3>沟通内外</h3>
+          <p>把体表、四肢、五官与内在脏腑放进同一张关系网。</p>
+        </article>
+        <article class="concept-card">
+          <span class="concept-num">04</span>
+          <h3>传导感应</h3>
+          <p>针灸、推拿等刺激体表部位，传统上通过经络关系理解其作用。</p>
+        </article>
+      </div>
+
+      <blockquote class="quote-block">
+        <p>经脉者，所以行血气而营阴阳，濡筋骨，利关节者也。</p>
+        <footer class="quote-source">《黄帝内经·灵枢·本脏》</footer>
+      </blockquote>
+
+      <div class="note-card">
+        <strong>经络不是血管或神经的同义词。</strong>
+        它是传统医学的功能网络描述。用现代解剖学去找“十二条经络的实体管道”，会把两套语言混在一起。
+      </div>
+    </section>
+
+    <section class="content-section" id="mingming">
+      <p class="section-label">02 · 命名</p>
+      <h2>一条经名，三个坐标</h2>
+      <p class="lead-paragraph">
+        一条经名由“手足 + 三阴三阳 + 脏腑”组成：手 + 太阴 + 肺 = 手太阴肺经。
+      </p>
+
+      <div class="logic-flow" aria-label="十二经命名结构">
+        <span>手 / 足</span>
+        <span aria-hidden="true">+</span>
+        <span>太阴 / 厥阴 / 少阴</span>
+        <span aria-hidden="true">或</span>
+        <span>阳明 / 少阳 / 太阳</span>
+        <span aria-hidden="true">+</span>
+        <span>脏腑</span>
+      </div>
+
+      <p>
+        三阴三阳不是等级，而是分类：太阴、厥阴、少阴属于阴经；阳明、少阳、太阳属于阳经。十二经再按表里关系配成六对：肺—大肠、胃—脾、心—小肠、膀胱—肾、心包—三焦、胆—肝。
+      </p>
+
+      <div class="concept-grid">
+        <article class="concept-card">
+          <span class="concept-num">走向 01</span>
+          <h3>手三阴</h3>
+          <p>从胸走手。肺、心包、心三条阴经，从躯干走向上肢。</p>
+        </article>
+        <article class="concept-card">
+          <span class="concept-num">走向 02</span>
+          <h3>手三阳</h3>
+          <p>从手走头。大肠、三焦、小肠三条阳经，从上肢走向头面。</p>
+        </article>
+        <article class="concept-card">
+          <span class="concept-num">走向 03</span>
+          <h3>足三阳</h3>
+          <p>从头走足。胃、胆、膀胱三条阳经，从头面走向下肢。</p>
+        </article>
+        <article class="concept-card">
+          <span class="concept-num">走向 04</span>
+          <h3>足三阴</h3>
+          <p>从足走腹胸。脾、肝、肾三条阴经，从下肢走向躯干。</p>
+        </article>
+      </div>
+
+      <blockquote class="quote-block">
+        <p>手之三阴，从脏走手；手之三阳，从手走头；足之三阳，从头走足；足之三阴，从足走腹。</p>
+        <footer class="quote-source">《黄帝内经·灵枢·逆顺肥瘦》</footer>
+      </blockquote>
+
+      <p class="small-note">
+        这里的“走向”是传统经络理论的循行描述，不等同于血管或神经的解剖走向。
+      </p>
+    </section>
+
+    <section class="content-section" id="liuzhu">
+      <p class="section-label">03 · 流注</p>
+      <h2>十二经流注：如环无端</h2>
+      <p class="lead-paragraph">
+        十二正经按十二地支的顺序流注：肺 → 大肠 → 胃 → 脾 → 心 → 小肠 → 膀胱 → 肾 → 心包 → 三焦 → 胆 → 肝，再回到肺。
+      </p>
+
+      <p class="table-scroll-hint">左右滑动查看完整表格 →</p>
+
+      <div class="table-wrap">
+        <table class="meridian-table">
+          <caption>十二正经总表；书内页码来自《针灸篇》目录，仅作阅读定位。</caption>
+          <thead>
+            <tr>
+              <th scope="col">流注</th>
+              <th scope="col">时辰</th>
+              <th scope="col">经脉</th>
+              <th scope="col">表里经</th>
+              <th scope="col">五行</th>
+              <th scope="col">针灸篇页</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>01</td><td>寅 3–5</td><td>手太阴肺经</td><td>手阳明大肠经</td><td>金</td><td>46–53</td></tr>
+            <tr><td>02</td><td>卯 5–7</td><td>手阳明大肠经</td><td>手太阴肺经</td><td>金</td><td>54–60</td></tr>
+            <tr><td>03</td><td>辰 7–9</td><td>足阳明胃经</td><td>足太阴脾经</td><td>土</td><td>61–77</td></tr>
+            <tr><td>04</td><td>巳 9–11</td><td>足太阴脾经</td><td>足阳明胃经</td><td>土</td><td>78–91</td></tr>
+            <tr><td>05</td><td>午 11–13</td><td>手少阴心经</td><td>手太阳小肠经</td><td>火</td><td>92–97</td></tr>
+            <tr><td>06</td><td>未 13–15</td><td>手太阳小肠经</td><td>手少阴心经</td><td>火</td><td>98–106</td></tr>
+            <tr><td>07</td><td>申 15–17</td><td>足太阳膀胱经</td><td>足少阴肾经</td><td>水</td><td>107–124</td></tr>
+            <tr><td>08</td><td>酉 17–19</td><td>足少阴肾经</td><td>足太阳膀胱经</td><td>水</td><td>125–144</td></tr>
+            <tr><td>09</td><td>戌 19–21</td><td>手厥阴心包经</td><td>手少阳三焦经</td><td>火</td><td>145–149</td></tr>
+            <tr><td>10</td><td>亥 21–23</td><td>手少阳三焦经</td><td>手厥阴心包经</td><td>火</td><td>150–158</td></tr>
+            <tr><td>11</td><td>子 23–1</td><td>足少阳胆经</td><td>足厥阴肝经</td><td>木</td><td>159–172</td></tr>
+            <tr><td>12</td><td>丑 1–3</td><td>足厥阴肝经</td><td>足少阳胆经</td><td>木</td><td>173–181</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <figure class="figure-card cycle-figure">
+        <MeridianClockDiagram />
+        <div class="cycle-legend" aria-label="图例">
+          <span class="legend-item">
+            <span class="legend-line" aria-hidden="true"></span>
+            阴经
+          </span>
+          <span class="legend-item">
+            <span class="legend-line legend-line--yang" aria-hidden="true"></span>
+            阳经
+          </span>
+        </div>
+        <figcaption>
+          按十二经纳地支顺序排列；顺时针为流注方向。时辰流注是传统时间框架，不是“到了某个时辰就必须治某条经”的指令。
+        </figcaption>
+      </figure>
+
+      <blockquote class="quote-block">
+        <p>肺寅大卯胃辰宫，脾巳心午小未中，申膀酉肾心包戌，亥焦子胆丑肝通。</p>
+        <footer class="quote-source">十二经纳地支歌 · 《针灸篇》p.19</footer>
+      </blockquote>
+
+      <div class="note-card">
+        <strong>五行列是传统配属。</strong>
+        肺与大肠属金，胃与脾属土，心与小肠属火，膀胱与肾属水，心包与三焦属火，胆与肝属木。它用于传统分类，不是现代生理学结论。
+      </div>
+    </section>
+
+    <section class="content-section" id="dufa">
+      <p class="section-label">04 · 读法</p>
+      <h2>先命名，再表里，最后回到具体经脉</h2>
+      <p class="lead-paragraph">
+        十二经络不是一张要求背完的名单。读一条经，可以先看名称，再看它的表里经、走向、流注时辰，最后才进入单经循行与穴位。
+      </p>
+
+      <div class="logic-flow" aria-label="十二经络阅读顺序">
+        <span>经名</span>
+        <span aria-hidden="true">→</span>
+        <span>表里</span>
+        <span aria-hidden="true">→</span>
+        <span>走向</span>
+        <span aria-hidden="true">→</span>
+        <span>流注</span>
+        <span aria-hidden="true">→</span>
+        <span>单经与穴位</span>
+      </div>
+
+      <div class="note-card">
+        <strong>三个不要：</strong>
+        不要把经络当成血管或神经；不要把十二经当成十二个器官；不要凭一个穴位、一个时辰或一张经络图给自己下诊断。
+      </div>
+    </section>
+
+    <section class="content-section" id="wuqu">
+      <p class="section-label">05 · 辨析</p>
+      <h2>四个常见误区</h2>
+      <div class="pitfall-grid">
+        <article class="pitfall-card">
+          <span>01</span>
+          <h3>经络不是血管神经</h3>
+          <p>经络是传统功能网络，不是解剖学上的管道或神经束。</p>
+        </article>
+        <article class="pitfall-card">
+          <span>02</span>
+          <h3>十二经不是十二器官</h3>
+          <p>十二经以脏腑命名，但讲的是功能与关系，不是十二个独立零件。</p>
+        </article>
+        <article class="pitfall-card">
+          <span>03</span>
+          <h3>时辰不是诊断</h3>
+          <p>子午流注是时间框架，不能仅凭“某时不适”就判断某经有病。</p>
+        </article>
+        <article class="pitfall-card">
+          <span>04</span>
+          <h3>穴位图不是自疗说明</h3>
+          <p>针刺、艾灸、放血都有操作风险，需专业训练与消毒规范。</p>
+        </article>
+      </div>
+
+      <div class="note-card note-card--warn">
+        <strong>使用边界：</strong>
+        本站只做传统经络理论展示，不提供针刺、艾灸、放血或点穴操作指南。身体不适请咨询合格的医疗专业人员。
+      </div>
+    </section>
+
+    <section class="content-section" id="jixu">
+      <p class="section-label">06 · 继续</p>
+      <h2>下一步：奇经八脉与单经穴位</h2>
+      <p class="lead-paragraph">
+        十二正经是主干，后面接奇经八脉、十五络脉、井荥俞原经合与单经穴位。先把总表记住，再逐条深入。
+      </p>
+
+      <div class="progress-panel">
+        <div>
+          <h3>本篇已完成</h3>
+          <ul class="progress-list progress-list--done">
+            <li>经络系统与十二正经的边界</li>
+            <li>十二正经总表：表里、五行、流注</li>
+            <li>手足三阴三阳的命名与走向</li>
+            <li>十二经纳地支歌与流注图</li>
+            <li>经络的功能与常见误区</li>
+          </ul>
+        </div>
+        <div>
+          <h3>下一步待补</h3>
+          <ul class="progress-list progress-list--next">
+            <li>单经循行与穴位</li>
+            <li>十五络脉歌与络脉病候</li>
+            <li>井荥俞原经合</li>
+            <li>经络与藏象、诊法的连接</li>
+            <li>专业经络图的校对</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="article-actions">
+        <a class="btn btn--primary" href="/yi/qijing/">继续读奇经八脉</a>
+        <a class="btn btn--ghost" href="/yi/">返回医的门类页</a>
+      </div>
+    </section>
+
+    <section class="content-section" id="sources">
+      <p class="section-label">附 · 原典</p>
+      <h2>参考原典</h2>
+      <p>
+        以下引文据通行本，标点从简；正文中的解释为学习整理，不等于原典的全部含义。
+      </p>
+
+      <ol class="source-list">
+        <li>
+          <span class="source-work">《黄帝内经·灵枢·本脏》</span>
+          <p class="source-quote">经脉者，所以行血气而营阴阳，濡筋骨，利关节者也。</p>
+        </li>
+        <li>
+          <span class="source-work">《黄帝内经·灵枢·经脉》</span>
+          <p class="source-quote">经脉者，所以能决死生，处百病，调虚实，不可不通。</p>
+        </li>
+        <li>
+          <span class="source-work">《黄帝内经·灵枢·逆顺肥瘦》</span>
+          <p class="source-quote">
+            手之三阴，从脏走手；手之三阳，从手走头；足之三阳，从头走足；足之三阴，从足走腹。
+          </p>
+        </li>
+        <li>
+          <span class="source-work">十二经纳地支歌 · 《针灸篇》p.19</span>
+          <p class="source-quote">
+            肺寅大卯胃辰宫，脾巳心午小未中，申膀酉肾心包戌，亥焦子胆丑肝通。
+          </p>
+        </li>
+      </ol>
+
+      <p class="article-end">
+        本页为传统理论展示与学习整理，不构成医疗诊断、处方建议或针灸操作指南。最后更新：2026-10-28。
+      </p>
+    </section>
+  </div>
+</KnowledgeLayout>

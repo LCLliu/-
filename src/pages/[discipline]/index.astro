@@ -49,7 +49,7 @@ const isYi = discipline.slug === 'yi';
         <span class="discipline-side-label">当前状态</span>
         <StatusBadge status={discipline.status} />
         <p>
-          {isYi ? '藏象初稿已开放' : '界面骨架已建立'}
+          {isYi ? '藏象、十二经络、奇经八脉、络脉、任督穴位、井荥俞、气血津液初稿已开放' : '界面骨架已建立'}
           <br />
           {isYi ? '其余内容陆续接入' : '知识内容尚未接入'}
         </p>
@@ -67,7 +67,7 @@ const isYi = discipline.slug === 'yi';
           </h2>
           <p class="panel-lede">
             {isYi
-              ? '藏象初稿已开放；下一步补经络、诊法与经典选读。'
+              ? '藏象、十二经络、奇经八脉、络脉、任督穴位、井荥俞、气血津液初稿已开放；诊法另起，经典选读待补。'
               : '医的门类模板稳定后，这一门会按同样的页面结构接入，避免五套不同的实现。'}
           </p>
         </div>
@@ -84,13 +84,57 @@ const isYi = discipline.slug === 'yi';
       </div>
 
       {isYi && (
-        <a class="opened-card" href="/yi/zangxiang/">
-          <span>
-            <strong>藏象 · 初稿</strong>
-            <small>五脏、六腑、奇恒之府与外在征象</small>
-          </span>
-          <span>开始阅读 →</span>
-        </a>
+        <>
+          <a class="opened-card" href="/yi/zangxiang/">
+            <span>
+              <strong>藏象 · 初稿</strong>
+              <small>五脏、六腑、奇恒之府与外在征象</small>
+            </span>
+            <span>开始阅读 →</span>
+          </a>
+          <a class="opened-card" href="/yi/jingluo/">
+            <span>
+              <strong>十二经络 · 初稿</strong>
+              <small>十二正经、表里、走向与流注</small>
+            </span>
+            <span>开始阅读 →</span>
+          </a>
+          <a class="opened-card" href="/yi/qijing/">
+            <span>
+              <strong>奇经八脉 · 初稿</strong>
+              <small>任督冲带、阴阳跷维与调节层</small>
+            </span>
+            <span>开始阅读 →</span>
+          </a>
+          <a class="opened-card" href="/yi/luomai/">
+            <span>
+              <strong>络脉 · 初稿</strong>
+              <small>十五别络、络穴与表里网络</small>
+            </span>
+            <span>开始阅读 →</span>
+          </a>
+          <a class="opened-card" href="/yi/rendu-xuewei/">
+            <span>
+              <strong>任督穴位 · 初稿</strong>
+              <small>任脉 24 穴、督脉 28 穴与前后正中线</small>
+            </span>
+            <span>开始阅读 →</span>
+          </a>
+          <a class="opened-card" href="/yi/jingxing-shu/">
+            <span>
+              <strong>井荥俞原经合 · 初稿</strong>
+              <small>十二经五输表与单经示例</small>
+            </span>
+            <span>开始阅读 →</span>
+          </a>
+          <a class="opened-card" href="/yi/qixue-jinye/">
+            <span>
+              <strong>气血津液 · 初稿</strong>
+              <small>同源、互根、同行</small>
+            </span>
+            <span>开始阅读 →</span>
+          </a>
+        </>
       )}
 
       <div class="template-stack">

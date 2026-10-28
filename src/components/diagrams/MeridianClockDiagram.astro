@@ -1,0 +1,69 @@
+---
+interface MeridianNode {
+  branch: string;
+  name: string;
+  yin: boolean;
+  x: number;
+  y: number;
+}
+
+const nodes: MeridianNode[] = [
+  { branch: '寅', name: '肺', yin: true, x: 300, y: 90 },
+  { branch: '卯', name: '大肠', yin: false, x: 405, y: 118.1 },
+  { branch: '辰', name: '胃', yin: false, x: 481.9, y: 195 },
+  { branch: '巳', name: '脾', yin: true, x: 510, y: 300 },
+  { branch: '午', name: '心', yin: true, x: 481.9, y: 405 },
+  { branch: '未', name: '小肠', yin: false, x: 405, y: 481.9 },
+  { branch: '申', name: '膀胱', yin: false, x: 300, y: 510 },
+  { branch: '酉', name: '肾', yin: true, x: 195, y: 481.9 },
+  { branch: '戌', name: '心包', yin: true, x: 118.1, y: 405 },
+  { branch: '亥', name: '三焦', yin: false, x: 90, y: 300 },
+  { branch: '子', name: '胆', yin: false, x: 118.1, y: 195 },
+  { branch: '丑', name: '肝', yin: true, x: 195, y: 118.1 },
+];
+---
+
+<svg
+  class="meridian-clock-svg"
+  viewBox="0 0 600 600"
+  role="img"
+  aria-label="十二经流注时辰图"
+>
+  <title>十二经流注时辰图</title>
+  <desc>
+    十二经脉按十二地支顺序围成一圈，从寅时肺经开始顺时针流注，节点颜色区分阴经和阳经。
+  </desc>
+
+  <circle class="mc-orbit" cx="300" cy="300" r="210"></circle>
+  <circle class="mc-center" cx="300" cy="300" r="84"></circle>
+  <text
+    class="mc-center-title"
+    x="300"
+    y="294"
+    text-anchor="middle"
+    dominant-baseline="middle"
+  >
+    十二经流注
+  </text>
+  <text class="mc-center-sub" x="300" y="322" text-anchor="middle">
+    如环无端 · 顺时针
+  </text>
+
+  {nodes.map((node) => (
+    <g class:list={['mc-node', node.yin ? 'mc-node--yin' : 'mc-node--yang']}>
+      <circle cx={node.x} cy={node.y} r="34"></circle>
+      <text
+        class="mc-branch"
+        x={node.x}
+        y={node.y - 3}
+        text-anchor="middle"
+        dominant-baseline="middle"
+      >
+        {node.branch}
+      </text>
+      <text class="mc-name" x={node.x} y={node.y + 18} text-anchor="middle">
+        {node.name}
+      </text>
+    </g>
+  ))}
+</svg>

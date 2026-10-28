@@ -1,0 +1,309 @@
+---
+import KnowledgeLayout from '../../layouts/KnowledgeLayout.astro';
+import FiveShuDiagram from '../../components/diagrams/FiveShuDiagram.astro';
+
+const toc = [
+  { id: 'wushu', label: '五输穴是什么' },
+  { id: 'yin', label: '阴经五输表' },
+  { id: 'yang', label: '阳经五输表' },
+  { id: 'rules', label: '取穴规律' },
+  { id: 'example', label: '单经示例' },
+  { id: 'wuqu', label: '常见误区' },
+  { id: 'jixu', label: '继续学习' },
+  { id: 'sources', label: '参考原典' },
+];
+---
+
+<KnowledgeLayout
+  title="井荥俞原经合"
+  eyebrow="Medical · 医 · 经络"
+  lead="十二经在肘膝以下各有一组井、荥、俞、经、合，再加原穴；这是单经穴位的骨架，不是全部穴位。"
+  status="初稿"
+  readingTime="第一部分 · 阅读约 12 分钟"
+  updated="2026-10-28"
+  toc={toc}
+  mark="五输"
+  parentLabel="医"
+  parentHref="/yi/"
+  asideNote="这一篇先做十二经五输穴总表与单经读法；具体定位、进针手法和主治处方后续再补，且只作专业学习参考。"
+>
+  <div class="article-prose">
+    <div class="summary-grid" aria-label="核心提要">
+      <article class="summary-card">
+        <span>01</span>
+        <h3>六类入口</h3>
+        <p>井、荥、俞、经、合为五输穴，再加原穴；都在肘膝以下。</p>
+      </article>
+      <article class="summary-card">
+        <span>02</span>
+        <h3>阴阳两套五行</h3>
+        <p>阴经井木、荥火、俞土、经金、合水；阳经井金、荥水、俞木、经火、合土。</p>
+      </article>
+      <article class="summary-card">
+        <span>03</span>
+        <h3>单经骨架</h3>
+        <p>五输穴是读一条经的骨架；不等于该经的全部穴位，也不是治疗处方。</p>
+      </article>
+    </div>
+
+    <section class="content-section" id="wushu">
+      <p class="section-label">01 · 五输</p>
+      <h2>井荥俞经合，再加原穴</h2>
+      <p class="lead-paragraph">
+        十二经在肘膝以下各有一组井、荥、俞、经、合五输穴，再加原穴，合称“井荥俞原经合”。传统上说：手不过肘，足不过膝。
+      </p>
+      <p>
+        五输穴是从肢体远端向近端排列的一组关键节点。阴经的原穴与俞穴同穴；阳经另有单独的原穴。所以“六类名称”不一定等于六个不同穴位。
+      </p>
+
+      <blockquote class="quote-block">
+        <p>所出为井，所溜为荥，所注为俞，所行为经，所入为合。</p>
+        <footer class="quote-source">《黄帝内经·灵枢·九针十二原》</footer>
+      </blockquote>
+
+      <figure class="figure-card">
+        <FiveShuDiagram />
+        <figcaption>
+          由远端向近端：井、荥、俞、原、经、合。原穴在阴经与俞穴同穴，阳经另设；位置为顺序示意，不是穴位定位。
+        </figcaption>
+      </figure>
+
+      <div class="note-card">
+        <strong>五输穴不是全部穴位。</strong>
+        单经穴位还包括络穴、郄穴、募穴、背俞穴等。五输穴只是最容易先建立起来的一条骨架，适合先记顺序和五行，不适合拿来自己针刺。
+      </div>
+    </section>
+
+    <section class="content-section" id="yin">
+      <p class="section-label">02 · 阴经</p>
+      <h2>阴经：井木、荥火、俞土、经金、合水</h2>
+      <p class="lead-paragraph">
+        六条阴经的五输穴如下；阴经的原穴与俞穴同穴，所以表中“原”列与“俞”列相同。
+      </p>
+
+      <p class="table-scroll-hint">左右滑动查看完整表格 →</p>
+
+      <div class="table-wrap">
+        <table class="wushu-table">
+          <caption>阴经五输穴与五行；据《针灸篇》p.22–23 表整理。</caption>
+          <thead>
+            <tr>
+              <th scope="col">阴经</th>
+              <th scope="col">井（木）</th>
+              <th scope="col">荥（火）</th>
+              <th scope="col">俞（土）</th>
+              <th scope="col">原</th>
+              <th scope="col">经（金）</th>
+              <th scope="col">合（水）</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>手太阴肺经</td><td>少商</td><td>鱼际</td><td>太渊</td><td>太渊</td><td>经渠</td><td>尺泽</td></tr>
+            <tr><td>手少阴心经</td><td>少冲</td><td>少府</td><td>神门</td><td>神门</td><td>灵道</td><td>少海</td></tr>
+            <tr><td>手厥阴心包经</td><td>中冲</td><td>劳宫</td><td>大陵</td><td>大陵</td><td>间使</td><td>曲泽</td></tr>
+            <tr><td>足太阴脾经</td><td>隐白</td><td>大都</td><td>太白</td><td>太白</td><td>商丘</td><td>阴陵泉</td></tr>
+            <tr><td>足少阴肾经</td><td>涌泉</td><td>然谷</td><td>太溪</td><td>太溪</td><td>复溜</td><td>阴谷</td></tr>
+            <tr><td>足厥阴肝经</td><td>大敦</td><td>行间</td><td>太冲</td><td>太冲</td><td>中封</td><td>曲泉</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="content-section" id="yang">
+      <p class="section-label">03 · 阳经</p>
+      <h2>阳经：井金、荥水、俞木、经火、合土</h2>
+      <p class="lead-paragraph">
+        六条阳经的五输穴如下；阳经另设原穴，所以“原”列通常与“俞”列不同。
+      </p>
+
+      <p class="table-scroll-hint">左右滑动查看完整表格 →</p>
+
+      <div class="table-wrap">
+        <table class="wushu-table">
+          <caption>阳经五输穴与五行；据《针灸篇》p.22–23 表整理。</caption>
+          <thead>
+            <tr>
+              <th scope="col">阳经</th>
+              <th scope="col">井（金）</th>
+              <th scope="col">荥（水）</th>
+              <th scope="col">俞（木）</th>
+              <th scope="col">原</th>
+              <th scope="col">经（火）</th>
+              <th scope="col">合（土）</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>手阳明大肠经</td><td>商阳</td><td>二间</td><td>三间</td><td>合谷</td><td>阳溪</td><td>曲池</td></tr>
+            <tr><td>手太阳小肠经</td><td>少泽</td><td>前谷</td><td>后溪</td><td>腕骨</td><td>阳谷</td><td>小海</td></tr>
+            <tr><td>手少阳三焦经</td><td>关冲</td><td>液门</td><td>中渚</td><td>阳池</td><td>支沟</td><td>天井</td></tr>
+            <tr><td>足阳明胃经</td><td>厉兑</td><td>内庭</td><td>陷谷</td><td>冲阳</td><td>解溪</td><td>足三里</td></tr>
+            <tr><td>足太阳膀胱经</td><td>至阴</td><td>通谷（足通谷）</td><td>束骨</td><td>京骨</td><td>昆仑</td><td>委中</td></tr>
+            <tr><td>足少阳胆经</td><td>足窍阴</td><td>侠溪</td><td>足临泣</td><td>丘墟</td><td>阳辅</td><td>阳陵泉</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="content-section" id="rules">
+      <p class="section-label">04 · 规律</p>
+      <h2>井脏、荥色、俞时、经音、合饮食、原不平衡</h2>
+      <p class="lead-paragraph">
+        讲义用六句口诀帮助记住五输穴的取穴思路。它们是传统教学语言，不是诊断标准或治疗处方。
+      </p>
+
+      <div class="pitfall-grid">
+        <article class="pitfall-card">
+          <span>井</span>
+          <h3>病在脏取井</h3>
+          <p>井穴在指/趾端，传统上用于“病在脏”的思路。</p>
+        </article>
+        <article class="pitfall-card">
+          <span>荥</span>
+          <h3>病变于色取荥</h3>
+          <p>面色、色泽变化，传统上归到荥穴的思路。</p>
+        </article>
+        <article class="pitfall-card">
+          <span>俞</span>
+          <h3>病在时间取俞</h3>
+          <p>按时间发作或加重，传统上归到俞穴的思路。</p>
+        </article>
+        <article class="pitfall-card">
+          <span>经</span>
+          <h3>病变于音取经</h3>
+          <p>声音变化，传统上归到经穴的思路。</p>
+        </article>
+        <article class="pitfall-card">
+          <span>合</span>
+          <h3>病起于饮食取合</h3>
+          <p>饮食不节、暴饮暴食，传统上归到合穴的思路。</p>
+        </article>
+        <article class="pitfall-card">
+          <span>原</span>
+          <h3>五脏不平衡取原</h3>
+          <p>五脏不平衡时，传统上取原穴；阳经另有原穴。</p>
+        </article>
+      </div>
+
+      <p class="small-note">
+        传统上还有井主冬、荥主春、俞主夏、经主长夏、合主秋的季节配属；不同文本表述不完全一致，本页只作学习提示。
+      </p>
+    </section>
+
+    <section class="content-section" id="example">
+      <p class="section-label">05 · 单经</p>
+      <h2>以肺经和大肠经为例</h2>
+      <p class="lead-paragraph">
+        单经穴位不需要一次背完。先用五输穴把一条经的远端到近端串起来，再看络穴、郄穴、募穴等。
+      </p>
+
+      <div class="cycle-steps">
+        <article class="cycle-card">
+          <h3>手太阴肺经（阴经）</h3>
+          <p class="cycle-sequence">少商 → 鱼际 → 太渊 → 经渠 → 尺泽</p>
+          <p>少商井、鱼际荥、太渊俞/原、经渠经、尺泽合；5 个不同穴位、6 个名称。</p>
+        </article>
+        <article class="cycle-card">
+          <h3>手阳明大肠经（阳经）</h3>
+          <p class="cycle-sequence">商阳 → 二间 → 三间 → 合谷 → 阳溪 → 曲池</p>
+          <p>商阳井、二间荥、三间俞、合谷原、阳溪经、曲池合；6 个不同穴位。</p>
+        </article>
+      </div>
+
+      <div class="note-card">
+        <strong>阴经原穴与俞穴同穴。</strong>
+        肺经的“太渊”同时是俞穴和原穴，所以是 5 个不同穴位、6 个名称；大肠经的原穴“合谷”与俞穴“三间”不同，所以是 6 个不同穴位。这个差别，是读五输表时最容易忽略的地方。
+      </div>
+    </section>
+
+    <section class="content-section" id="wuqu">
+      <p class="section-label">06 · 辨析</p>
+      <h2>四个常见误区</h2>
+      <div class="pitfall-grid">
+        <article class="pitfall-card">
+          <span>01</span>
+          <h3>五输穴不是全部穴位</h3>
+          <p>单经穴位还有络穴、郄穴、募穴、背俞穴等；五输只是骨架。</p>
+        </article>
+        <article class="pitfall-card">
+          <span>02</span>
+          <h3>取穴口诀不是诊断</h3>
+          <p>“井脏、荥色、俞时”是传统教学线索，不能拿来给自己下诊断。</p>
+        </article>
+        <article class="pitfall-card">
+          <span>03</span>
+          <h3>五行配属不是药理</h3>
+          <p>井木、荥火等是传统分类语言，不是现代药理或生理学结论。</p>
+        </article>
+        <article class="pitfall-card">
+          <span>04</span>
+          <h3>不自行针刺</h3>
+          <p>穴位定位、进针、补泻与消毒都需要专业训练，不能照表操作。</p>
+        </article>
+      </div>
+
+      <div class="note-card note-card--warn">
+        <strong>使用边界：</strong>
+        本站只做传统经络理论展示，不提供穴位定位、针刺、艾灸或放血操作指南。身体不适请咨询合格的医疗专业人员。
+      </div>
+    </section>
+
+    <section class="content-section" id="jixu">
+      <p class="section-label">07 · 继续</p>
+      <h2>下一步：单经穴位与穴位定位</h2>
+      <p class="lead-paragraph">
+        五输穴是单经穴位的骨架。后面可以接单经完整穴位页、原络募郄、穴位定位与针灸手法，再回到诊法与病例。
+      </p>
+
+      <div class="progress-panel">
+        <div>
+          <h3>本篇已完成</h3>
+          <ul class="progress-list progress-list--done">
+            <li>井荥俞原经合的结构</li>
+            <li>阴经、阳经两张五输穴表</li>
+            <li>取穴口诀与五行配属</li>
+            <li>肺经与大肠经的单经示例</li>
+            <li>穴位学习边界与常见误区</li>
+          </ul>
+        </div>
+        <div>
+          <h3>下一步待补</h3>
+          <ul class="progress-list progress-list--next">
+            <li>单经穴位完整页</li>
+            <li>络穴、郄穴、募穴、背俞穴</li>
+            <li>穴位定位的专业校对</li>
+            <li>针灸手法与诊法</li>
+            <li>病例与辨证练习</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="article-actions">
+        <a class="btn btn--primary" href="/yi/qixue-jinye/">继续读气血津液</a>
+        <a class="btn btn--ghost" href="/yi/">返回医的门类页</a>
+      </div>
+    </section>
+
+    <section class="content-section" id="sources">
+      <p class="section-label">附 · 原典</p>
+      <h2>参考原典</h2>
+      <p>
+        以下引文据通行本，标点从简；正文中的解释为学习整理，不等于原典的全部含义。
+      </p>
+
+      <ol class="source-list">
+        <li>
+          <span class="source-work">《黄帝内经·灵枢·九针十二原》</span>
+          <p class="source-quote">所出为井，所溜为荥，所注为俞，所行为经，所入为合。</p>
+        </li>
+        <li>
+          <span class="source-work">人纪·针灸篇 p.18–27</span>
+          <p class="source-quote">十二经纳干支、井荥俞原经合与取穴规律的讲读；本页只做穴位名称、顺序与学习边界整理。</p>
+        </li>
+      </ol>
+
+      <p class="article-end">
+        本页为传统理论展示与学习整理，不构成医疗诊断、处方建议或针灸操作指南。最后更新：2026-10-28。
+      </p>
+    </section>
+  </div>
+</KnowledgeLayout>
