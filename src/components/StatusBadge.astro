@@ -5,7 +5,7 @@ interface Props {
 
 const { status } = Astro.props;
 
-const activeStatuses = ['首期建设', '进行中', '骨架完成', '界面骨架'];
+const activeStatuses = ['首期建设', '进行中', '骨架完成', '界面骨架', '初稿'];
 const tone = activeStatuses.includes(status) ? 'active' : 'planned';
 ---
 

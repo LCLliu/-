@@ -1,0 +1,104 @@
+---
+import BaseLayout from './BaseLayout.astro';
+import StatusBadge from '../components/StatusBadge.astro';
+import '../styles/article.css';
+
+interface TocItem {
+  id: string;
+  label: string;
+}
+
+interface Props {
+  title: string;
+  eyebrow: string;
+  lead: string;
+  status?: string;
+  readingTime: string;
+  updated: string;
+  toc: TocItem[];
+  mark?: string;
+  asideNote?: string;
+  parentLabel?: string;
+  parentHref?: string;
+}
+
+const {
+  title,
+  eyebrow,
+  lead,
+  status,
+  readingTime,
+  updated,
+  toc,
+  mark,
+  asideNote,
+  parentLabel = '共通基础',
+  parentHref = '/foundations/',
+} = Astro.props;
+---
+
+<BaseLayout title={title} description={lead}>
+  <article class="knowledge-page">
+    <header class="article-hero">
+      {mark && <div class="article-mark" aria-hidden="true">{mark}</div>}
+
+      <div class="container article-hero-inner">
+        <nav class="breadcrumb" aria-label="面包屑">
+          <a href="/">五术总览</a>
+          <span>/</span>
+          <a href={parentHref}>{parentLabel}</a>
+          <span>/</span>
+          <span aria-current="page">{title}</span>
+        </nav>
+
+        <p class="eyebrow">{eyebrow}</p>
+
+        <div class="article-title-row">
+          <h1 class="article-title">{title}</h1>
+          {status && <StatusBadge status={status} />}
+        </div>
+
+        <p class="article-lead">{lead}</p>
+
+        <div class="article-meta">
+          <span>{readingTime}</span>
+          <span>更新于 {updated}</span>
+          <span>传统理论 · 非诊疗建议</span>
+        </div>
+      </div>
+    </header>
+
+    <div class="container article-layout">
+      <div class="article-main">
+        <slot />
+      </div>
+
+      <aside class="article-aside" aria-label="本篇导航">
+        <div class="toc-card">
+          <p class="aside-kicker">本篇目录</p>
+          <nav aria-label="本篇目录">
+            <ol>
+              {toc.map((item, index) => (
+                <li>
+                  <a href={`#${item.id}`}>
+                    <span>{String(index + 1).padStart(2, '0')}</span>
+                    {item.label}
+                  </a>
+                </li>
+              ))}
+            </ol>
+          </nav>
+        </div>
+
+        {asideNote && (
+          <div class="aside-card">
+            <p class="aside-kicker">阅读提示</p>
+            <p>{asideNote}</p>
+          </div>
+        )}
+
+        <a class="back-link" href={parentHref}>← 返回{parentLabel}</a>
+      </aside>
+    </div>
+  </article>
+</BaseLayout>

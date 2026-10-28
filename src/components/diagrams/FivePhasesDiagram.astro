@@ -1,0 +1,157 @@
+---
+interface PhaseNode {
+  name: string;
+  note: string;
+  x: number;
+  y: number;
+}
+
+const nodes: PhaseNode[] = [
+  { name: '木', note: '生发', x: 260, y: 100 },
+  { name: '火', note: '炎上', x: 412.2, y: 210.6 },
+  { name: '土', note: '承载', x: 354, y: 389.4 },
+  { name: '金', note: '肃降', x: 166, y: 389.4 },
+  { name: '水', note: '润下', x: 107.8, y: 210.6 },
+];
+
+const shengPairs: Array<[string, string]> = [
+  ['木', '火'],
+  ['火', '土'],
+  ['土', '金'],
+  ['金', '水'],
+  ['水', '木'],
+];
+
+const kePairs: Array<[string, string]> = [
+  ['木', '土'],
+  ['土', '水'],
+  ['水', '火'],
+  ['火', '金'],
+  ['金', '木'],
+];
+
+function findNode(name: string): PhaseNode {
+  const node = nodes.find((item) => item.name === name);
+
+  if (!node) {
+    throw new Error(`Unknown phase: ${name}`);
+  }
+
+  return node;
+}
+
+function makeLinks(pairs: Array<[string, string]>, startOffset: number, endOffset: number) {
+  return pairs.map(([from, to]) => {
+    const a = findNode(from);
+    const b = findNode(to);
+    const dx = b.x - a.x;
+    const dy = b.y - a.y;
+    const length = Math.hypot(dx, dy);
+    const ux = dx / length;
+    const uy = dy / length;
+
+    return {
+      x1: a.x + ux * startOffset,
+      y1: a.y + uy * startOffset,
+      x2: b.x - ux * endOffset,
+      y2: b.y - uy * endOffset,
+    };
+  });
+}
+
+const shengLinks = makeLinks(shengPairs, 46, 58);
+const keLinks = makeLinks(kePairs, 46, 58);
+---
+
+<svg
+  class="wuxing-svg"
+  viewBox="0 0 520 520"
+  role="img"
+  aria-label="五行相生相克关系图"
+>
+  <title>五行相生相克关系图</title>
+  <desc>
+    木、火、土、金、水依次围成一圈，实线箭头表示相生，虚线交叉箭头表示相克。
+  </desc>
+
+  <defs>
+    <marker
+      id="wuxing-arrow-sheng"
+      viewBox="0 0 10 10"
+      refX="9"
+      refY="5"
+      markerWidth="7"
+      markerHeight="7"
+      orient="auto"
+    >
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="var(--accent-shan)"></path>
+    </marker>
+    <marker
+      id="wuxing-arrow-ke"
+      viewBox="0 0 10 10"
+      refX="9"
+      refY="5"
+      markerWidth="7"
+      markerHeight="7"
+      orient="auto"
+    >
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="var(--cinnabar)"></path>
+    </marker>
+  </defs>
+
+  <circle class="wuxing-orbit" cx="260" cy="260" r="208"></circle>
+
+  {keLinks.map((link) => (
+    <line
+      class="wuxing-link wuxing-link--ke"
+      x1={link.x1}
+      y1={link.y1}
+      x2={link.x2}
+      y2={link.y2}
+      marker-end="url(#wuxing-arrow-ke)"
+    ></line>
+  ))}
+
+  {shengLinks.map((link) => (
+    <line
+      class="wuxing-link wuxing-link--sheng"
+      x1={link.x1}
+      y1={link.y1}
+      x2={link.x2}
+      y2={link.y2}
+      marker-end="url(#wuxing-arrow-sheng)"
+    ></line>
+  ))}
+
+  <circle class="wuxing-center" cx="260" cy="260" r="56"></circle>
+  <text
+    class="wuxing-center-title"
+    x="260"
+    y="255"
+    text-anchor="middle"
+    dominant-baseline="middle"
+  >
+    五行
+  </text>
+  <text class="wuxing-center-sub" x="260" y="280" text-anchor="middle">
+    相生 · 相克
+  </text>
+
+  {nodes.map((node) => (
+    <g class="wuxing-node">
+      <circle cx={node.x} cy={node.y} r="40"></circle>
+      <text
+        class="wuxing-node-name"
+        x={node.x}
+        y={node.y - 4}
+        text-anchor="middle"
+        dominant-baseline="middle"
+      >
+        {node.name}
+      </text>
+      <text class="wuxing-node-note" x={node.x} y={node.y + 20} text-anchor="middle">
+        {node.note}
+      </text>
+    </g>
+  ))}
+</svg>
