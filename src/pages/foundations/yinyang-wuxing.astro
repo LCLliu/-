@@ -18,13 +18,13 @@ const toc = [
   eyebrow="Foundations · 共通基础"
   lead="阴阳与五行不是两套并列的符号，而是一套描述关系、过程与分类的语言。先理解它们如何运作，再进入五术各门。"
   status="初稿"
-  readingTime="第一部分 · 阅读约 12 分钟"
+  readingTime="第一部分 · 阅读约 14 分钟"
   updated="2026-10-28"
   toc={toc}
   mark="阴阳"
   parentLabel="共通基础"
   parentHref="/foundations/"
-  asideNote="这是一篇结构初稿：先建立概念地图，具体配属、经典注读与练习题会在后续版本补齐。"
+  asideNote="这是一篇结构初稿：已补入《黄帝内经》相关篇章的医学读法；完整配属、藏象与练习题仍待展开。"
 >
   <div class="article-prose">
     <div class="summary-grid" aria-label="核心提要">
@@ -94,6 +94,30 @@ const toc = [
         <strong>不要把阴阳当成好与坏。</strong>
         阳不等于正面，阴也不等于负面；在医家语境里，阴阳更多是功能与物质、温煦与滋润、外显与内守等关系的总称。传统上也用“阳化气，阴成形”概括推动、温煦与凝聚、成形之间的关系。
       </div>
+
+      <h3>《阴阳应象大论》的医学读法</h3>
+      <p>
+        这篇大论把阴阳从哲学范畴推进到医学：它不满足于说“万物分阴阳”，而是把阴阳落到升降、表里、寒热、气味和治疗法则上。
+      </p>
+
+      <div class="note-card">
+        <strong>三组可以直接用的读法</strong>
+        <ul class="reading-list">
+          <li>
+            <strong>升降：</strong>“清阳出上窍，浊阴出下窍；清阳发腠理，浊阴走五脏；清阳实四肢，浊阴归六腑。”阴阳在身体里首先表现为清浊升降与表里出入。
+          </li>
+          <li>
+            <strong>气味：</strong>“味厚者为阴，薄为阴之阳；气厚者为阳，薄为阳之阴。”药食的气与味各有厚薄阴阳，辛甘多发散，酸苦多涌泄；这是本草与方剂的理论语言。
+          </li>
+          <li>
+            <strong>火候：</strong>“壮火食气，少火生气。”亢盛的火会耗气，温和的火能资生气。火不是越少越好，也不是越多越好。
+          </li>
+        </ul>
+      </div>
+
+      <p>
+        阴阳偏胜还会表现为寒热：“阴胜则阳病，阳胜则阴病；阳胜则热，阴胜则寒；重寒则热，重热则寒。”这里的寒热是模型中的关系，不是让你自行对号入座。
+      </p>
     </section>
 
     <section class="content-section" id="wuxing">
@@ -228,6 +252,14 @@ const toc = [
         配属是传统理论的常见说法，只作知识展示，不构成诊断或治疗建议。
       </p>
 
+      <h3>《六节藏象论》把五行落到人身上</h3>
+      <p>
+        《阴阳应象大论》讲的是阴阳五行的医学语言；《六节藏象论》进一步把五行配到五脏、五季、五气和五味。比如“天食人以五气，地食人以五味”，以及心通夏气、肺通秋气、肾通冬气、肝通春气。
+      </p>
+      <p>
+        这里的“通”是传统藏象的关系，不是现代生理学结论。五脏的“其华、其充、通于某季”属于藏象系统；本页只做五行配属的入口，具体脏腑功能会放到「藏象」页。
+      </p>
+
       <p>
         五行中的每一行还可以再分阴阳。命理里甲木为阳、乙木为阴，医家讲肝阴肝阳、肾阴肾阳，都是同一思路在不同门类里的展开；但具体含义要按各自体系解释，不能直接把命理的阴阳套到医的诊断上。
       </p>
@@ -274,6 +306,7 @@ const toc = [
             <li>阴阳的四种基本关系</li>
             <li>五行的取象、相生与相克</li>
             <li>阴阳与五行的合用方式</li>
+            <li>《阴阳应象大论》《六节藏象论》选读</li>
             <li>常见误区与阅读边界</li>
           </ul>
         </div>
@@ -281,7 +314,7 @@ const toc = [
           <h3>下一步待补</h3>
           <ul class="progress-list progress-list--next">
             <li>五行配属的完整表：五味、五色、五志等</li>
-            <li>阴阳在四诊、藏象中的具体用法</li>
+            <li>四诊、经络的完整页面</li>
             <li>与命理干支、风水方位的连接</li>
             <li>原典逐段注读与练习题</li>
           </ul>
@@ -289,8 +322,8 @@ const toc = [
       </div>
 
       <div class="article-actions">
-        <a class="btn btn--primary" href="/foundations/">返回共通基础</a>
-        <a class="btn btn--ghost" href="/yi/">进入医的门类页</a>
+        <a class="btn btn--primary" href="/yi/zangxiang/">继续读藏象</a>
+        <a class="btn btn--ghost" href="/foundations/">返回共通基础</a>
       </div>
     </section>
 
@@ -319,6 +352,12 @@ const toc = [
         <li>
           <span class="source-work">《黄帝内经·素问·六微旨大论》</span>
           <p class="source-quote">亢则害，承乃制，制则生化。</p>
+        </li>
+        <li>
+          <span class="source-work">《黄帝内经·素问·六节藏象论》</span>
+          <p class="source-quote">
+            天食人以五气，地食人以五味。心者，生之本，神之变也；其华在面，其充在血脉；为阳中之太阳，通于夏气。
+          </p>
         </li>
         <li>
           <span class="source-work">《尚书·洪范》</span>

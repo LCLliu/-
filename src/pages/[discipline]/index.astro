@@ -48,7 +48,11 @@ const isYi = discipline.slug === 'yi';
       <div class="discipline-side">
         <span class="discipline-side-label">当前状态</span>
         <StatusBadge status={discipline.status} />
-        <p>界面骨架已建立<br />知识内容尚未接入</p>
+        <p>
+          {isYi ? '藏象初稿已开放' : '界面骨架已建立'}
+          <br />
+          {isYi ? '其余内容陆续接入' : '知识内容尚未接入'}
+        </p>
       </div>
     </div>
   </section>
@@ -63,7 +67,7 @@ const isYi = discipline.slug === 'yi';
           </h2>
           <p class="panel-lede">
             {isYi
-              ? '先把知识页的阅读层级、术语互链、经典引用与测验结构定下来，再开始填内容。'
+              ? '藏象初稿已开放；下一步补经络、诊法与经典选读。'
               : '医的门类模板稳定后，这一门会按同样的页面结构接入，避免五套不同的实现。'}
           </p>
         </div>
@@ -78,6 +82,16 @@ const isYi = discipline.slug === 'yi';
             : '当前只保留结构占位，不提前编写缺乏来源核对的内容。'}
         </p>
       </div>
+
+      {isYi && (
+        <a class="opened-card" href="/yi/zangxiang/">
+          <span>
+            <strong>藏象 · 初稿</strong>
+            <small>五脏、六腑、奇恒之府与外在征象</small>
+          </span>
+          <span>开始阅读 →</span>
+        </a>
+      )}
 
       <div class="template-stack">
         <div class="template-layer">

@@ -1413,6 +1413,50 @@ ol {
   letter-spacing: 0.08em;
 }
 
+.opened-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-top: 24px;
+  padding: 16px 18px;
+  border: 1px solid rgba(93, 119, 72, 0.35);
+  border-radius: 12px;
+  background: rgba(93, 119, 72, 0.06);
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    transform 0.2s ease;
+}
+
+.opened-card:hover {
+  border-color: var(--accent-yi);
+  box-shadow: 0 12px 24px rgba(61, 48, 29, 0.06);
+  transform: translateY(-2px);
+}
+
+.opened-card strong {
+  display: block;
+  color: var(--ink);
+  font-family: var(--font-serif);
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.opened-card small {
+  display: block;
+  margin-top: 4px;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.opened-card > span:last-child {
+  flex: 0 0 auto;
+  color: var(--accent-yi);
+  font-size: 12px;
+}
+
 .side-foot {
   margin-top: 18px;
 }

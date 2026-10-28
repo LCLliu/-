@@ -1,0 +1,360 @@
+---
+import KnowledgeLayout from '../../layouts/KnowledgeLayout.astro';
+import ZangXiangDiagram from '../../components/diagrams/ZangXiangDiagram.astro';
+
+const toc = [
+  { id: 'cangxiang', label: '藏象是什么' },
+  { id: 'zangfu', label: '五脏' },
+  { id: 'liufu', label: '六腑与奇恒之府' },
+  { id: 'shierguan', label: '十二官' },
+  { id: 'dufa', label: '藏象怎么读' },
+  { id: 'jixu', label: '继续学习' },
+  { id: 'sources', label: '参考原典' },
+];
+---
+
+<KnowledgeLayout
+  title="藏象"
+  eyebrow="Medical · 医"
+  lead="藏象不是把五脏六腑画成零件图，而是把内在功能与外在征象放在同一张关系网里。先理解“藏”与“象”，再读五脏六腑。"
+  status="初稿"
+  readingTime="第一部分 · 阅读约 14 分钟"
+  updated="2026-10-28"
+  toc={toc}
+  mark="藏象"
+  parentLabel="医"
+  parentHref="/yi/"
+  asideNote="这是一篇藏象初稿：先建立五脏、六腑、奇恒之府与外在征象的框架；经络、诊法与病例仍待展开。"
+>
+  <div class="article-prose">
+    <div class="summary-grid" aria-label="核心提要">
+      <article class="summary-card">
+        <span>01</span>
+        <h3>藏于内</h3>
+        <p>五脏藏精气，六腑传化物，奇恒之府藏而不泻；三类的藏泻节奏不同。</p>
+      </article>
+      <article class="summary-card">
+        <span>02</span>
+        <h3>象于外</h3>
+        <p>华、充、窍、志、液、时，是阅读脏腑功能的入口，不是诊断标签。</p>
+      </article>
+      <article class="summary-card">
+        <span>03</span>
+        <h3>以象测藏</h3>
+        <p>由外察内是传统医学的方法，需要合参；不能凭一个征象自我诊断。</p>
+      </article>
+    </div>
+
+    <section class="content-section" id="cangxiang">
+      <p class="section-label">01 · 总览</p>
+      <h2>藏于内，象于外</h2>
+      <p class="lead-paragraph">
+        “藏”是藏于内，“象”是表现于外。古人通过面色、毛发、爪甲、血脉、情志、四时等可见线索，去理解不可直接看见的脏腑功能。
+      </p>
+      <p>
+        所以藏象不是器官解剖图，而是一套功能与关系网络。五脏、六腑、奇恒之府分别回答不同的问题：什么藏在里面，什么负责传化，什么只藏不泻。
+      </p>
+
+      <blockquote class="quote-block">
+        <p>五脏者，藏精气而不泻也，故满而不能实；六腑者，传化物而不藏，故实而不能满也。</p>
+        <footer class="quote-source">《黄帝内经·素问·五脏别论》</footer>
+      </blockquote>
+
+      <figure class="figure-card">
+        <ZangXiangDiagram />
+        <figcaption>
+          藏象的阅读方向：由内在脏腑功能出发，观察华、充、窍、志、液、时等外在征象；征象是入口，不是诊断结论。
+        </figcaption>
+      </figure>
+
+      <div class="note-card">
+        <strong>藏象不是解剖学。</strong>
+        “以象测藏”是传统医学的方法，不等于看到某个面色、毛发或脉象，就能直接判断某个脏腑生病。它需要和气血、经络、四诊及具体语境一起读。
+      </div>
+    </section>
+
+    <section class="content-section" id="zangfu">
+      <p class="section-label">02 · 五脏</p>
+      <h2>五脏：藏精气而不泻</h2>
+      <p class="lead-paragraph">
+        《六节藏象论》给五脏各列了“本、华、充、通”。这四组词，比单独背功能更重要。
+      </p>
+      <p>
+        它们是藏象的四个接口：本——功能根本；华——外在荣华；充——所充养的组织；通——相应的时气。把四者放在一起，才能看出“藏于内、象于外”的完整结构。
+      </p>
+
+      <p class="table-scroll-hint">左右滑动查看完整表格 →</p>
+
+      <div class="table-wrap">
+        <table class="zang-table">
+          <caption>据《素问·六节藏象论》整理；原文将脾与胃、大肠、小肠、三焦、膀胱并述。</caption>
+          <thead>
+            <tr>
+              <th scope="col">五脏</th>
+              <th scope="col">本 / 职</th>
+              <th scope="col">其华</th>
+              <th scope="col">其充</th>
+              <th scope="col">通于</th>
+              <th scope="col">阴阳位置</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>心</td>
+              <td>生之本，神之变</td>
+              <td>面</td>
+              <td>血脉</td>
+              <td>夏气</td>
+              <td>阳中之太阳</td>
+            </tr>
+            <tr>
+              <td>肺</td>
+              <td>气之本，魄之处</td>
+              <td>毛</td>
+              <td>皮</td>
+              <td>秋气</td>
+              <td>阳中之太阴</td>
+            </tr>
+            <tr>
+              <td>肝</td>
+              <td>罢极之本，魂之居</td>
+              <td>爪</td>
+              <td>筋</td>
+              <td>春气</td>
+              <td>阳中之少阳</td>
+            </tr>
+            <tr>
+              <td>脾</td>
+              <td>仓廪之本，营之居</td>
+              <td>唇四白</td>
+              <td>肌</td>
+              <td>土气</td>
+              <td>至阴之类</td>
+            </tr>
+            <tr>
+              <td>肾</td>
+              <td>主蛰，封藏之本，精之处</td>
+              <td>发</td>
+              <td>骨</td>
+              <td>冬气</td>
+              <td>阴中之少阴</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p class="small-note">
+        表中的“脾”行按后世常用藏象归纳；原文与胃、大肠、小肠、三焦、膀胱并述。“阳中之太阳”等是藏象的阴阳位置，不要直接等同于十二经脉的命名。
+      </p>
+
+      <div class="note-card">
+        <strong>读表提示：</strong>
+        这张表不是“看到面红就是心火”的对应表。它说明五脏功能与外在征象、四时之间存在传统理论上的联系；真正的判断还需要四诊合参。
+      </div>
+    </section>
+
+    <section class="content-section" id="liufu">
+      <p class="section-label">03 · 六腑</p>
+      <h2>六腑与奇恒之府</h2>
+      <p class="lead-paragraph">
+        五脏藏精气，六腑传化物；奇恒之府又另成一类。三者的关键差别，在“藏”与“泻”的节奏。
+      </p>
+
+      <div class="cycle-steps">
+        <article class="cycle-card">
+          <h3>六腑</h3>
+          <p class="cycle-sequence">胆 · 胃 · 小肠 · 大肠 · 膀胱 · 三焦</p>
+          <ul class="reading-list">
+            <li>胆：决断；又属奇恒之府。</li>
+            <li>胃：受纳、腐熟水谷。</li>
+            <li>小肠：受盛、化物。</li>
+            <li>大肠：传导、变化。</li>
+            <li>膀胱：贮尿、气化。</li>
+            <li>三焦：决渎、通调水道。</li>
+          </ul>
+        </article>
+        <article class="cycle-card">
+          <h3>奇恒之府</h3>
+          <p class="cycle-sequence">脑 · 髓 · 骨 · 脉 · 胆 · 女子胞</p>
+          <ul class="reading-list">
+            <li>形态似腑，功能似脏。</li>
+            <li>主“藏而不泻”。</li>
+            <li>胆同时出现在六腑与奇恒之府。</li>
+            <li>女子胞与月经、生殖相关，属传统理论表述。</li>
+          </ul>
+        </article>
+      </div>
+
+      <blockquote class="quote-block">
+        <p>脑、髓、骨、脉、胆、女子胞，此六者，地气之所生也，皆藏于阴而象于地，故藏而不泻，名曰奇恒之府。</p>
+        <footer class="quote-source">《黄帝内经·素问·五脏别论》</footer>
+      </blockquote>
+
+      <div class="note-card">
+        <strong>六腑不是六个“袋子”。</strong>
+        它们是一组传化通道。“实而不能满”强调通降与传化：该排出的要排出，该转输的要转输。这个“通”字，比逐个背器官名称更接近六腑的核心。
+      </div>
+    </section>
+
+    <section class="content-section" id="shierguan">
+      <p class="section-label">04 · 十二官</p>
+      <h2>官职是功能分工，不是等级</h2>
+      <p class="lead-paragraph">
+        《灵兰秘典论》用官职比喻脏腑，强调分工与协调，而不是谁比谁更重要。
+      </p>
+
+      <blockquote class="quote-block">
+        <p>心者，君主之官也，神明出焉。……凡此十二官者，不得相失也。</p>
+        <footer class="quote-source">《黄帝内经·素问·灵兰秘典论》</footer>
+      </blockquote>
+
+      <details class="fold-card">
+        <summary>展开《灵兰秘典论》十二官表</summary>
+        <p class="table-scroll-hint">左右滑动查看完整表格 →</p>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th scope="col">脏腑</th>
+                <th scope="col">官职</th>
+                <th scope="col">功能关键词</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>心</td><td>君主之官</td><td>神明</td></tr>
+              <tr><td>肺</td><td>相傅之官</td><td>治节</td></tr>
+              <tr><td>肝</td><td>将军之官</td><td>谋虑</td></tr>
+              <tr><td>胆</td><td>中正之官</td><td>决断</td></tr>
+              <tr><td>膻中</td><td>臣使之官</td><td>喜乐</td></tr>
+              <tr><td>脾胃</td><td>仓廪之官</td><td>五味</td></tr>
+              <tr><td>大肠</td><td>传道之官</td><td>变化</td></tr>
+              <tr><td>小肠</td><td>受盛之官</td><td>化物</td></tr>
+              <tr><td>肾</td><td>作强之官</td><td>伎巧</td></tr>
+              <tr><td>三焦</td><td>决渎之官</td><td>水道</td></tr>
+              <tr><td>膀胱</td><td>州都之官</td><td>津液，气化则能出</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </details>
+
+      <p class="small-note">
+        膻中常指心包；十二官不是十二个解剖器官，脾胃在原文中并称。官职比喻的重点是“不得相失”，即功能之间要协调。
+      </p>
+    </section>
+
+    <section class="content-section" id="dufa">
+      <p class="section-label">05 · 读法</p>
+      <h2>藏象怎么读</h2>
+      <p class="lead-paragraph">
+        读藏象时，先看功能，再看征象，最后放回关系与具体语境。
+      </p>
+
+      <div class="logic-flow" aria-label="藏象阅读顺序">
+        <span>内在功能</span>
+        <span aria-hidden="true">→</span>
+        <span>外在征象</span>
+        <span aria-hidden="true">→</span>
+        <span>关系网络</span>
+        <span aria-hidden="true">→</span>
+        <span>具体语境</span>
+      </div>
+
+      <div class="pitfall-grid">
+        <article class="pitfall-card">
+          <span>01</span>
+          <h3>五脏不是五个零件</h3>
+          <p>藏象关心的是功能、关系与外在征象，不是单独一块器官的形状。</p>
+        </article>
+        <article class="pitfall-card">
+          <span>02</span>
+          <h3>藏象不是解剖</h3>
+          <p>“其华在面”“通于夏气”属于传统藏象语言，不是现代生理学结论。</p>
+        </article>
+        <article class="pitfall-card">
+          <span>03</span>
+          <h3>一个征象不等于一个病</h3>
+          <p>面色、毛发、脉象都可能是多条线索之一，需要四诊合参。</p>
+        </article>
+        <article class="pitfall-card">
+          <span>04</span>
+          <h3>配属不是诊断</h3>
+          <p>五行、五季、五志的配属有体系差异，不能拿来给自己或他人下诊断。</p>
+        </article>
+      </div>
+
+      <div class="note-card note-card--warn">
+        <strong>使用边界：</strong>
+        本站展示的是传统藏象理论，不提供诊断、处方或治疗方案。出现身体不适时，请咨询合格的医疗专业人员。
+      </div>
+    </section>
+
+    <section class="content-section" id="jixu">
+      <p class="section-label">06 · 继续</p>
+      <h2>下一步：经络与诊法</h2>
+      <p class="lead-paragraph">
+        藏象是医门类的入口，后面要接经络、气血津液与望闻问切，才能理解五脏六腑如何被“看见”和“联系起来”。
+      </p>
+
+      <div class="progress-panel">
+        <div>
+          <h3>本篇已完成</h3>
+          <ul class="progress-list progress-list--done">
+            <li>藏象的定义与三类脏腑</li>
+            <li>五脏“本、华、充、通”表</li>
+            <li>六腑与奇恒之府</li>
+            <li>十二官的分工比喻</li>
+            <li>藏象的阅读边界与常见误区</li>
+          </ul>
+        </div>
+        <div>
+          <h3>下一步待补</h3>
+          <ul class="progress-list progress-list--next">
+            <li>经络与气血津液</li>
+            <li>望闻问切四诊</li>
+            <li>脏腑辨证与案例</li>
+            <li>《五脏生成》p.85–97</li>
+            <li>练习题与术语卡</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="article-actions">
+        <a class="btn btn--primary" href="/yi/">返回医的门类页</a>
+        <a class="btn btn--ghost" href="/foundations/yinyang-wuxing/">复习阴阳五行</a>
+      </div>
+    </section>
+
+    <section class="content-section" id="sources">
+      <p class="section-label">附 · 原典</p>
+      <h2>参考原典</h2>
+      <p>
+        以下引文据通行本，标点从简；正文中的解释为学习整理，不等于原典的全部含义。
+      </p>
+
+      <ol class="source-list">
+        <li>
+          <span class="source-work">《黄帝内经·素问·六节藏象论》</span>
+          <p class="source-quote">
+            心者，生之本，神之变也；其华在面，其充在血脉；为阳中之太阳，通于夏气。
+          </p>
+        </li>
+        <li>
+          <span class="source-work">《黄帝内经·素问·灵兰秘典论》</span>
+          <p class="source-quote">
+            心者，君主之官也，神明出焉。……凡此十二官者，不得相失也。
+          </p>
+        </li>
+        <li>
+          <span class="source-work">《黄帝内经·素问·五脏别论》</span>
+          <p class="source-quote">
+            五脏者，藏精气而不泻也，故满而不能实；六腑者，传化物而不藏，故实而不能满也。
+          </p>
+        </li>
+      </ol>
+
+      <p class="article-end">
+        本页为传统理论展示与学习整理，不构成医疗诊断、处方建议或疗效承诺。最后更新：2026-10-28。
+      </p>
+    </section>
+  </div>
+</KnowledgeLayout>

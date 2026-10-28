@@ -310,6 +310,62 @@
   margin-inline: auto;
 }
 
+.zangxiang-svg {
+  width: 100%;
+  max-width: 520px;
+  height: auto;
+  margin-inline: auto;
+}
+
+.zx-orbit {
+  fill: none;
+  stroke: var(--line);
+  stroke-dasharray: 2 8;
+}
+
+.zx-spoke {
+  stroke: var(--line);
+  stroke-dasharray: 3 7;
+}
+
+.zx-center {
+  fill: var(--paper-light);
+  stroke: var(--line-strong);
+}
+
+.zx-center-title {
+  fill: var(--cinnabar);
+  font-family: var(--font-serif);
+  font-size: 34px;
+  font-weight: 600;
+}
+
+.zx-center-sub {
+  fill: var(--muted);
+  font-family: var(--font-sans);
+  font-size: 9px;
+  letter-spacing: 0.08em;
+}
+
+.zx-node circle {
+  fill: var(--paper-light);
+  stroke: var(--line-strong);
+}
+
+.zx-node-title {
+  fill: var(--ink);
+  font-family: var(--font-serif);
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.zx-node-note {
+  fill: var(--muted);
+  font-family: var(--font-sans);
+  font-size: 8.5px;
+  letter-spacing: 0.02em;
+}
+
 .wuxing-orbit {
   fill: none;
   stroke: var(--line);
@@ -472,6 +528,22 @@
   background: rgba(163, 59, 43, 0.055);
 }
 
+.reading-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.reading-list li {
+  font-size: 12.5px;
+  line-height: 1.85;
+}
+
+.reading-list li strong {
+  color: var(--ink);
+}
+
 .cycle-steps {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -535,6 +607,48 @@
   margin-top: 8px;
 }
 
+.fold-card {
+  margin-top: 22px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: var(--paper-light);
+}
+
+.fold-card summary {
+  padding: 16px 18px;
+  cursor: pointer;
+  color: var(--ink-soft);
+  font-size: 13px;
+  list-style: none;
+}
+
+.fold-card summary::-webkit-details-marker {
+  display: none;
+}
+
+.fold-card summary::after {
+  content: "+";
+  float: right;
+  color: var(--cinnabar);
+  font-size: 16px;
+  line-height: 1;
+}
+
+.fold-card[open] summary::after {
+  content: "−";
+}
+
+.fold-card[open] summary {
+  border-bottom: 1px solid var(--line);
+}
+
+.fold-card .table-wrap {
+  margin-top: 0;
+  border: 0;
+  border-radius: 0;
+}
+
 .table-wrap {
   margin-top: 22px;
   overflow-x: auto;
@@ -547,6 +661,10 @@
   width: 100%;
   min-width: 640px;
   border-collapse: collapse;
+}
+
+.table-wrap .zang-table {
+  min-width: 720px;
 }
 
 .table-wrap caption {

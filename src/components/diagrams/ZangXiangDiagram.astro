@@ -1,0 +1,67 @@
+---
+interface ZangNode {
+  name: string;
+  note: string;
+  x: number;
+  y: number;
+}
+
+const nodes: ZangNode[] = [
+  { name: '华', note: '面色·毛发', x: 260, y: 80 },
+  { name: '充', note: '皮脉筋骨', x: 415.9, y: 170 },
+  { name: '窍', note: '舌鼻目耳口', x: 415.9, y: 350 },
+  { name: '志', note: '喜怒悲忧恐', x: 260, y: 440 },
+  { name: '液', note: '汗涕泪唾涎', x: 104.1, y: 350 },
+  { name: '时', note: '春夏秋冬', x: 104.1, y: 170 },
+];
+---
+
+<svg
+  class="zangxiang-svg"
+  viewBox="0 0 520 520"
+  role="img"
+  aria-label="藏象关系示意图"
+>
+  <title>藏象关系示意图</title>
+  <desc>
+    中心为藏于内的脏腑，外围为华、充、窍、志、液、时六类外在征象，表示由内向外、以象测藏的关系。
+  </desc>
+
+  <circle class="zx-orbit" cx="260" cy="260" r="200"></circle>
+
+  {nodes.map((node) => (
+    <line class="zx-spoke" x1="260" y1="260" x2={node.x} y2={node.y}></line>
+  ))}
+
+  <circle class="zx-center" cx="260" cy="260" r="72"></circle>
+  <text
+    class="zx-center-title"
+    x="260"
+    y="254"
+    text-anchor="middle"
+    dominant-baseline="middle"
+  >
+    藏
+  </text>
+  <text class="zx-center-sub" x="260" y="284" text-anchor="middle">
+    藏于内 · 象于外
+  </text>
+
+  {nodes.map((node) => (
+    <g class="zx-node">
+      <circle cx={node.x} cy={node.y} r="38"></circle>
+      <text
+        class="zx-node-title"
+        x={node.x}
+        y={node.y - 3}
+        text-anchor="middle"
+        dominant-baseline="middle"
+      >
+        {node.name}
+      </text>
+      <text class="zx-node-note" x={node.x} y={node.y + 20} text-anchor="middle">
+        {node.note}
+      </text>
+    </g>
+  ))}
+</svg>

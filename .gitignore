@@ -6,3 +6,9 @@ dist/
 .env.*
 !.env.example
 npm-debug.log*
+
+# 原始资料不入库
+materials/
+knowledge/**/*.pdf
+knowledge/**/*.docx
+knowledge/**/*.zip
