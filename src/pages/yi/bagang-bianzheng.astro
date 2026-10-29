@@ -1,0 +1,399 @@
+---
+import KnowledgeLayout from '../../layouts/KnowledgeLayout.astro';
+import BagangDiagram from '../../components/diagrams/BagangDiagram.astro';
+
+const toc = [
+  { id: 'zonggang', label: '八纲是什么' },
+  { id: 'biaoli', label: '表里：病位深浅' },
+  { id: 'hanre', label: '寒热：病性' },
+  { id: 'xushi', label: '虚实：正邪盛衰' },
+  { id: 'yinyang', label: '阴阳：总纲' },
+  { id: 'zuhe', label: '组合与夹杂' },
+  { id: 'anli', label: '虚构案例' },
+  { id: 'wuqu', label: '常见误区' },
+  { id: 'jixu', label: '继续学习' },
+  { id: 'sources', label: '参考原典' },
+];
+---
+
+<KnowledgeLayout
+  title="八纲辨证"
+  eyebrow="Medical · 医 · 辨证"
+  lead="八纲不是八种病名，而是四对坐标：表里定深浅，寒热定性质，虚实定盛衰，阴阳收总纲。先把坐标定清，再谈具体证候。"
+  status="初稿"
+  readingTime="第一部分 · 阅读约 12 分钟"
+  updated="2026-10-29"
+  toc={toc}
+  mark="八纲"
+  parentLabel="医"
+  parentHref="/yi/"
+  asideNote="八纲只做总方向；定位到脏腑、六经或卫气营血，需要另一层框架。本页不提供诊断、处方与针灸方案。"
+>
+  <div class="article-prose">
+    <div class="summary-grid" aria-label="核心提要">
+      <article class="summary-card">
+        <span>01</span>
+        <h3>四对坐标</h3>
+        <p>表里、寒热、虚实是三对具体坐标，阴阳在上收拢总方向。</p>
+      </article>
+      <article class="summary-card">
+        <span>02</span>
+        <h3>单纲不成证</h3>
+        <p>真实证候常是组合：表寒、里虚寒、虚实夹杂都比单标签常见。</p>
+      </article>
+      <article class="summary-card">
+        <span>03</span>
+        <h3>先证据，后判断</h3>
+        <p>舌、脉、症要合参；不能凭一个症状直接定寒热虚实。</p>
+      </article>
+    </div>
+
+    <section class="content-section" id="zonggang">
+      <p class="section-label">01 · 总纲</p>
+      <h2>八纲是坐标，不是八个抽屉</h2>
+      <p class="lead-paragraph">
+        八纲把四诊收集到的线索压缩成四对坐标：阴阳、表里、寒热、虚实。它先回答三个问题：病位在哪一层、病性偏寒还是偏热、正邪谁占上风。
+      </p>
+
+      <p>
+        “八纲”作为完整名称，是后世医家对经典辨证思路的归纳。《黄帝内经》提供了阴阳、寒热、虚实、表里的概念基础；《伤寒论》则用六经与表里传变，把这些概念放进临床框架。所以八纲不是《内经》里现成的一章，也不替代六经、脏腑等具体框架。
+      </p>
+
+      <blockquote class="quote-block">
+        <p>善诊者，察色按脉，先别阴阳。</p>
+        <footer class="quote-source">《黄帝内经·素问·阴阳应象大论》</footer>
+      </blockquote>
+
+      <figure class="figure-card">
+        <BagangDiagram />
+        <figcaption>
+          阴阳居中为总纲；表里、寒热、虚实三对坐标环绕。表里看深浅，寒热看性质，虚实看正邪盛衰；颜色只区分归类倾向，不是诊断标记。
+        </figcaption>
+      </figure>
+
+      <div class="note-card">
+        <strong>八纲回答“方向”，不回答“哪个脏腑”。</strong>
+        八纲定下病位深浅、病性与正邪关系后，还要用脏腑、六经、卫气营血等框架继续定位。跳过定位直接套方，就是把坐标当成了答案。
+      </div>
+    </section>
+
+    <section class="content-section" id="biaoli">
+      <p class="section-label">02 · 表里</p>
+      <h2>表里：病位在哪一层</h2>
+      <p class="lead-paragraph">
+        表指体表、肌肤与经络浅层，里指脏腑、气血深层。表里是相对深浅，不是一条可以拿刀切开的解剖边界。
+      </p>
+
+      <div class="note-card">
+        <ul class="reading-list">
+          <li><strong>表证：</strong>外感初起常见恶寒发热、头身疼痛、鼻塞、脉浮；起病通常较急。</li>
+          <li><strong>里证：</strong>表现范围很大，必须结合脏腑或其他框架定位；不能只凭“病程久”就判里。</li>
+          <li><strong>半表半里：</strong>邪不在表、也未完全入里；传统上以少阳病为代表，常见寒热往来、口苦、咽干、目眩、脉弦。</li>
+          <li><strong>表里同病：</strong>表邪未解而里已受伤，或里虚又兼外感，都很常见。</li>
+        </ul>
+      </div>
+
+      <blockquote class="quote-block">
+        <p>风雨之伤人也，先客于皮肤，传入于孙脉，孙脉满则传入于络脉，络脉满则输于大经脉。</p>
+        <footer class="quote-source">《黄帝内经·素问·调经论》</footer>
+      </blockquote>
+
+      <div class="logic-flow" aria-label="由表入里的传变模型">
+        <span>皮肤</span>
+        <span aria-hidden="true">→</span>
+        <span>孙脉</span>
+        <span aria-hidden="true">→</span>
+        <span>络脉</span>
+        <span aria-hidden="true">→</span>
+        <span>大经脉</span>
+        <span aria-hidden="true">→</span>
+        <span>脏腑</span>
+      </div>
+
+      <p class="small-note">
+        这是传统传变模型，用于理解“由浅入深”的思路；真实病情不一定按这个顺序发展。
+      </p>
+    </section>
+
+    <section class="content-section" id="hanre">
+      <p class="section-label">03 · 寒热</p>
+      <h2>寒热：病性偏哪一边</h2>
+      <p class="lead-paragraph">
+        寒热描述病性，不是体温计读数。体温高不一定属热，体温低也不一定属寒；要看寒热喜恶、口渴、二便、舌脉与整体状态。
+      </p>
+
+      <blockquote class="quote-block">
+        <p>阳虚则外寒，阴虚则内热；阳盛则外热，阴盛则内寒。</p>
+        <footer class="quote-source">《黄帝内经·素问·调经论》</footer>
+      </blockquote>
+
+      <p class="table-scroll-hint">左右滑动查看完整表格 →</p>
+
+      <div class="table-wrap">
+        <table>
+          <caption>寒证与热证的常见线索对照；只作学习参考，不能据此自我诊断。</caption>
+          <thead>
+            <tr>
+              <th scope="col">观察点</th>
+              <th scope="col">寒证常见</th>
+              <th scope="col">热证常见</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>寒热喜恶</td><td>畏寒喜暖，添衣得舒</td><td>发热喜凉，近冷得舒</td></tr>
+            <tr><td>口渴与饮</td><td>口不渴，或喜热饮</td><td>口渴，喜冷饮</td></tr>
+            <tr><td>二便</td><td>小便清长，大便稀溏</td><td>小便短赤，大便干结</td></tr>
+            <tr><td>舌象</td><td>舌淡，苔白</td><td>舌红，苔黄</td></tr>
+            <tr><td>脉象</td><td>脉迟或紧</td><td>脉数</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="note-card note-card--warn">
+        <strong>寒热会出现真假与错杂。</strong>
+        真寒假热、真热假寒都不靠单一症状判断；寒热错杂也很常见。把“怕冷”直接等同于寒证，或把“口苦”直接等同于热证，都会误判。
+      </div>
+    </section>
+
+    <section class="content-section" id="xushi">
+      <p class="section-label">04 · 虚实</p>
+      <h2>虚实：正邪谁更占上风</h2>
+      <p class="lead-paragraph">
+        实是邪气盛而正气尚未大伤，虚是正气不足。虚实描述力量对比，不是“病重”与“病轻”的同义词。
+      </p>
+
+      <blockquote class="quote-block">
+        <p>邪气盛则实，精气夺则虚。</p>
+        <footer class="quote-source">《黄帝内经·素问·通评虚实论》</footer>
+      </blockquote>
+
+      <p class="table-scroll-hint">左右滑动查看完整表格 →</p>
+
+      <div class="table-wrap">
+        <table>
+          <caption>虚证与实证的常见线索对照；病程长短只是线索之一，不能单独定性。</caption>
+          <thead>
+            <tr>
+              <th scope="col">观察点</th>
+              <th scope="col">虚证常见</th>
+              <th scope="col">实证常见</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>病程与状态</td><td>久病、乏力、声低、气短</td><td>新病、声高、气粗、烦躁</td></tr>
+            <tr><td>疼痛反应</td><td>隐痛喜按，按之舒服</td><td>胀痛拒按，按之加重</td></tr>
+            <tr><td>舌象</td><td>舌淡、舌体偏胖、少苔</td><td>舌苔厚腻、舌质偏暗或红</td></tr>
+            <tr><td>脉象</td><td>脉虚无力</td><td>脉实有力</td></tr>
+            <tr><td>正邪关系</td><td>正气不足为主</td><td>邪气盛为主</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="note-card">
+        <strong>虚实夹杂比“纯虚”“纯实”更常见。</strong>
+        久病的人可以同时有痰、瘀、积滞；新病的人也可能本来就体虚。识别虚实，是为了判断扶正与祛邪的方向，具体怎么攻补必须由专业判断，本站不提供方案。
+      </div>
+    </section>
+
+    <section class="content-section" id="yinyang">
+      <p class="section-label">05 · 阴阳</p>
+      <h2>阴阳：把三对坐标收成一个总方向</h2>
+      <p class="lead-paragraph">
+        阴阳是八纲的总纲。表、热、实一般偏阳；里、寒、虚一般偏阴。这是归类倾向，不是可以套用的算术公式。
+      </p>
+
+      <blockquote class="quote-block">
+        <p>阴胜则阳病，阳胜则阴病；阳胜则热，阴胜则寒。</p>
+        <footer class="quote-source">《黄帝内经·素问·阴阳应象大论》</footer>
+      </blockquote>
+
+      <div class="point-groups">
+        <article class="point-group">
+          <h3>偏阳的归类</h3>
+          <ul class="point-list">
+            <li class="point-chip point-chip--key">表</li>
+            <li class="point-chip point-chip--key">热</li>
+            <li class="point-chip point-chip--key">实</li>
+          </ul>
+        </article>
+        <article class="point-group">
+          <h3>偏阴的归类</h3>
+          <ul class="point-list">
+            <li class="point-chip">里</li>
+            <li class="point-chip">寒</li>
+            <li class="point-chip">虚</li>
+          </ul>
+        </article>
+      </div>
+
+      <div class="note-card note-card--warn">
+        <strong>不要机械二分。</strong>
+        表寒证同时有“表”与“寒”，不能因为“表属阳”就判成阳证；阴虚可以内热，阳虚可以外寒。阴阳要看整体证据，也会随病程转化。
+      </div>
+    </section>
+
+    <section class="content-section" id="zuhe">
+      <p class="section-label">06 · 组合</p>
+      <h2>真实证候多是组合</h2>
+      <p class="lead-paragraph">
+        八纲不是单选题。临床与课堂练习里，更常见的是表里同病、寒热错杂、虚实夹杂，以及两纲、三纲同时出现。
+      </p>
+
+      <p class="table-scroll-hint">左右滑动查看完整表格 →</p>
+
+      <div class="table-wrap">
+        <table>
+          <caption>几种常见组合；线索为教学示例，不构成诊断标准。</caption>
+          <thead>
+            <tr>
+              <th scope="col">组合</th>
+              <th scope="col">常见线索</th>
+              <th scope="col">读法</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>表寒</td><td>恶寒重、发热轻、无汗、头身痛、脉浮紧</td><td>病位在表，病性偏寒</td></tr>
+            <tr><td>表热</td><td>发热重、恶寒轻、口渴、咽痛、脉浮数</td><td>病位在表，病性偏热</td></tr>
+            <tr><td>里实热</td><td>高热、口渴、腹满痛拒按、便秘、舌红苔黄、脉数有力</td><td>邪盛于里，正未大虚</td></tr>
+            <tr><td>里虚寒</td><td>畏寒肢冷、腹痛喜按、便溏、舌淡、脉沉迟无力</td><td>阳气不足，病位在里</td></tr>
+            <tr><td>虚实夹杂</td><td>久病乏力，同时有痰、瘀、积滞等线索</td><td>正虚与邪实并存</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="note-card">
+        <strong>组合不是把标签相加。</strong>
+        “表寒”不是“表证 + 寒证”两张标签叠在一起，而是一个有内在联系的证候判断。组合之后仍要做鉴别，标出反证与待补信息。
+      </div>
+    </section>
+
+    <section class="content-section" id="anli">
+      <p class="section-label">07 · 案例</p>
+      <h2>用虚构案例走一遍八纲</h2>
+      <p class="lead-paragraph">
+        下面的人物与情节均为虚构，只用于练习“先定坐标、再做鉴别”的顺序，不给出证候结论以外的治疗内容。
+      </p>
+
+      <div class="note-card">
+        <ul class="reading-list">
+          <li><strong>情境：</strong>淋雨受凉后次日不适，起病较急。</li>
+          <li><strong>望：</strong>舌淡红，苔薄白。</li>
+          <li><strong>闻：</strong>语声略重，无特殊气味。</li>
+          <li><strong>问：</strong>恶寒重、发热轻、无汗、头身疼痛、鼻塞流清涕。</li>
+          <li><strong>切：</strong>脉浮紧。</li>
+          <li><strong>待补：</strong>体温、咽痛、咳嗽、既往病史、用药与过敏史。</li>
+        </ul>
+      </div>
+
+      <ol class="step-list">
+        <li><strong>定表里：</strong>起病急、恶寒发热、脉浮，先放在“表”。</li>
+        <li><strong>定寒热：</strong>恶寒重、清涕、苔薄白，偏寒。</li>
+        <li><strong>定虚实：</strong>无汗、脉浮紧，正气未见明显虚象，偏实。</li>
+        <li><strong>收阴阳：</strong>不硬判；先保留“表寒”这一具体结论，阴阳留待整体判断。</li>
+        <li><strong>做鉴别：</strong>若汗出、脉浮缓，要考虑表虚；若发热重、咽痛、脉浮数，要考虑表热；若高热、口渴、便秘、脉数有力，要警惕病邪入里。</li>
+      </ol>
+
+      <div class="note-card note-card--warn">
+        <strong>课堂示例，不是诊断。</strong>
+        同样的线索在不同人身上可能有不同解释；真实诊疗还需要现代医学检查与专业判断。本站不提供处方、剂量或针灸方案。
+      </div>
+    </section>
+
+    <section class="content-section" id="wuqu">
+      <p class="section-label">08 · 辨析</p>
+      <h2>四个常见误区</h2>
+      <div class="pitfall-grid">
+        <article class="pitfall-card">
+          <span>01</span>
+          <h3>八纲不是八种病</h3>
+          <p>八纲是坐标，不是疾病分类；同一个证候组合可以出现在不同疾病里。</p>
+        </article>
+        <article class="pitfall-card">
+          <span>02</span>
+          <h3>阴阳不是万能二分</h3>
+          <p>表寒、虚实夹杂都不能机械归入纯阴或纯阳。</p>
+        </article>
+        <article class="pitfall-card">
+          <span>03</span>
+          <h3>不能单症定纲</h3>
+          <p>口苦不一定是热，畏寒不一定是寒；舌脉症要合参。</p>
+        </article>
+        <article class="pitfall-card">
+          <span>04</span>
+          <h3>八纲不替代定位</h3>
+          <p>定完总方向，还要用脏腑、六经等框架继续定位。</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="content-section" id="jixu">
+      <p class="section-label">09 · 继续</p>
+      <h2>下一步：脏腑 · 六经</h2>
+      <p class="lead-paragraph">
+        八纲把总方向定下来，接下来要回答“在哪一脏腑、在哪一层”。这两条线分别接回藏象与《伤寒论》。
+      </p>
+
+      <div class="progress-panel">
+        <div>
+          <h3>本篇已完成</h3>
+          <ul class="progress-list progress-list--done">
+            <li>八纲作为四对坐标</li>
+            <li>表里、寒热、虚实与阴阳总纲</li>
+            <li>常见组合与夹杂</li>
+            <li>一个虚构案例的八纲读法</li>
+            <li>常见误区与边界</li>
+          </ul>
+        </div>
+        <div>
+          <h3>下一步待补</h3>
+          <ul class="progress-list progress-list--next">
+            <li><a href="/yi/zangfu-bianzheng/">脏腑辨证</a></li>
+            <li>六经辨证</li>
+            <li>更多八纲练习案例</li>
+            <li>方药与针灸（专业语境）</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="article-actions">
+        <a class="btn btn--primary" href="/yi/zangfu-bianzheng/">进入脏腑辨证</a>
+        <a class="btn btn--ghost" href="/yi/zangxiang/">回看藏象</a>
+      </div>
+    </section>
+
+    <section class="content-section" id="sources">
+      <p class="section-label">附 · 原典</p>
+      <h2>参考原典</h2>
+      <p>
+        以下引文据通行本，标点从简；正文中的解释为学习整理，不等于原典的全部含义。
+      </p>
+
+      <ol class="source-list">
+        <li>
+          <span class="source-work">《黄帝内经·素问·阴阳应象大论》</span>
+          <p class="source-quote">善诊者，察色按脉，先别阴阳。</p>
+          <p class="source-quote">阴胜则阳病，阳胜则阴病；阳胜则热，阴胜则寒。</p>
+        </li>
+        <li>
+          <span class="source-work">《黄帝内经·素问·调经论》</span>
+          <p class="source-quote">阳虚则外寒，阴虚则内热；阳盛则外热，阴盛则内寒。</p>
+          <p class="source-quote">
+            风雨之伤人也，先客于皮肤，传入于孙脉，孙脉满则传入于络脉，络脉满则输于大经脉。
+          </p>
+        </li>
+        <li>
+          <span class="source-work">《黄帝内经·素问·通评虚实论》</span>
+          <p class="source-quote">邪气盛则实，精气夺则虚。</p>
+        </li>
+        <li>
+          <span class="source-work">《伤寒论》</span>
+          <p class="source-quote">少阳之为病，口苦，咽干，目眩也。</p>
+        </li>
+      </ol>
+
+      <p class="article-end">
+        本页为传统理论展示与学习整理，不构成医疗诊断、处方建议或疗效承诺。最后更新：2026-10-29。
+      </p>
+    </section>
+  </div>
+</KnowledgeLayout>

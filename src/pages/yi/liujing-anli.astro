@@ -1,0 +1,402 @@
+---
+import KnowledgeLayout from '../../layouts/KnowledgeLayout.astro';
+
+const toc = [
+  { id: 'fangfa', label: '练习方法' },
+  { id: 'case1', label: '案例一：恶寒发热' },
+  { id: 'case2', label: '案例二：寒热往来' },
+  { id: 'case3', label: '案例三：高热腹满' },
+  { id: 'case4', label: '案例四：腹满便溏' },
+  { id: 'case5', label: '案例五：但欲寐' },
+  { id: 'case6', label: '案例六：寒热错杂' },
+  { id: 'fupan', label: '复盘清单' },
+  { id: 'jixu', label: '继续学习' },
+  { id: 'sources', label: '参考原典' },
+];
+---
+
+<KnowledgeLayout
+  title="六经辨证案例"
+  eyebrow="Medical · 医 · 案例"
+  lead="六个虚构案例，分别练太阳、少阳、阳明、太阴、少阴、厥阴。先写四诊线索，再展开答案；重点不是猜中，而是把推理过程写清楚。"
+  status="初稿"
+  readingTime="第一部分 · 阅读约 16 分钟"
+  updated="2026-10-29"
+  toc={toc}
+  mark="案例"
+  parentLabel="医"
+  parentHref="/yi/"
+  asideNote="六个案例均为虚构教学材料；不提供证候结论以外的处方、剂量或针灸方案，也不替代现代医学检查。"
+>
+  <div class="article-prose">
+    <div class="summary-grid" aria-label="核心提要">
+      <article class="summary-card">
+        <span>01</span>
+        <h3>先记录</h3>
+        <p>望、闻、问、切分别写下线索，不要一上来就写“某某经”。</p>
+      </article>
+      <article class="summary-card">
+        <span>02</span>
+        <h3>对提纲</h3>
+        <p>六经提纲是入口；找到最贴近的一句，再说明为什么不是其他经。</p>
+      </article>
+      <article class="summary-card">
+        <span>03</span>
+        <h3>标待补</h3>
+        <p>缺什么信息、要排除哪些现代医学问题，比给出答案更重要。</p>
+      </article>
+    </div>
+
+    <section class="content-section" id="fangfa">
+      <p class="section-label">01 · 方法</p>
+      <h2>案例练习的目标不是“猜中”</h2>
+      <p class="lead-paragraph">
+        六经案例练习是一种记录与推理训练：先把四类线索分开写清楚，再对提纲、定六经、过八纲、做鉴别，最后标出还需要补什么。
+      </p>
+
+      <p class="table-scroll-hint">左右滑动查看完整表格 →</p>
+
+      <div class="table-wrap">
+        <table>
+          <caption>六经案例记录模板；每个案例都按这个结构练习。</caption>
+          <thead>
+            <tr>
+              <th scope="col">步骤</th>
+              <th scope="col">写什么</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>四诊</td><td>望、闻、问、切分别记录，不先写结论</td></tr>
+            <tr><td>提纲</td><td>哪一句提纲最贴近主证</td></tr>
+            <tr><td>六经</td><td>太阳 / 阳明 / 少阳 / 太阴 / 少阴 / 厥阴</td></tr>
+            <tr><td>八纲</td><td>表里、寒热、虚实</td></tr>
+            <tr><td>鉴别</td><td>支持证据、反证、相似证候</td></tr>
+            <tr><td>待补</td><td>缺失信息与现代医学检查</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="logic-flow" aria-label="六经案例练习顺序">
+        <span>四诊</span>
+        <span aria-hidden="true">→</span>
+        <span>提纲</span>
+        <span aria-hidden="true">→</span>
+        <span>六经</span>
+        <span aria-hidden="true">→</span>
+        <span>八纲</span>
+        <span aria-hidden="true">→</span>
+        <span>鉴别</span>
+        <span aria-hidden="true">→</span>
+        <span>待补</span>
+      </div>
+
+      <div class="note-card">
+        <strong>答案折叠，先自己写。</strong>
+        每个案例下方都有“展开读法”。先写四诊线索、提纲和待补，再展开对照；不要只看答案。
+      </div>
+    </section>
+
+    <section class="content-section" id="case1">
+      <p class="section-label">02 · 案例一</p>
+      <h2>恶寒发热（虚构）</h2>
+
+      <div class="note-card">
+        <ul class="reading-list">
+          <li><strong>情境：</strong>24 岁，淋雨受凉后次日不适，起病较急。</li>
+          <li><strong>望：</strong>舌淡红，苔薄白。</li>
+          <li><strong>闻：</strong>语声略重，无特殊气味。</li>
+          <li><strong>问：</strong>恶寒重、发热轻、无汗、头身疼痛、鼻塞流清涕。</li>
+          <li><strong>切：</strong>脉浮紧。</li>
+        </ul>
+      </div>
+
+      <p><strong>先自己写：</strong>最贴近哪条提纲？六经与八纲怎么定？还要补什么？</p>
+
+      <details class="case-details">
+        <summary>展开读法</summary>
+        <div class="case-details-body">
+          <ul class="reading-list">
+            <li><strong>六经：</strong>太阳。</li>
+            <li><strong>八纲：</strong>表、寒、实。</li>
+            <li><strong>提纲：</strong>“脉浮，头项强痛而恶寒。”</li>
+            <li><strong>鉴别：</strong>太阳中风可见汗出、脉浮缓；少阳多见寒热往来、口苦、咽干；阳明多见但热不寒、口渴、便秘。</li>
+            <li><strong>待补：</strong>体温、咽痛、咳嗽、病程、基础病与用药。</li>
+          </ul>
+          <p class="small-note">虚构教学案例，不作诊断。</p>
+        </div>
+      </details>
+    </section>
+
+    <section class="content-section" id="case2">
+      <p class="section-label">03 · 案例二</p>
+      <h2>寒热往来（虚构）</h2>
+
+      <div class="note-card">
+        <ul class="reading-list">
+          <li><strong>情境：</strong>36 岁，反复寒热 3 天。</li>
+          <li><strong>望：</strong>舌边偏红，苔薄白。</li>
+          <li><strong>闻：</strong>语声正常，无特殊气味。</li>
+          <li><strong>问：</strong>寒热往来、口苦、咽干、目眩、胸胁苦满、默默不欲饮食、心烦。</li>
+          <li><strong>切：</strong>脉弦。</li>
+        </ul>
+      </div>
+
+      <p><strong>先自己写：</strong>这是表证、里证，还是半表半里？哪条提纲最贴近？</p>
+
+      <details class="case-details">
+        <summary>展开读法</summary>
+        <div class="case-details-body">
+          <ul class="reading-list">
+            <li><strong>六经：</strong>少阳。</li>
+            <li><strong>八纲：</strong>半表半里、偏热；虚实需再辨。</li>
+            <li><strong>提纲：</strong>“口苦，咽干，目眩也。”</li>
+            <li><strong>鉴别：</strong>太阳以恶寒发热、脉浮为主；阳明以但热不寒、腹满便秘为主；太阴以腹满吐利、脉弱为主。</li>
+            <li><strong>待补：</strong>体温曲线、黄疸、二便、肝胆与胃肠相关检查。</li>
+          </ul>
+          <p class="small-note">虚构教学案例，不作诊断。</p>
+        </div>
+      </details>
+    </section>
+
+    <section class="content-section" id="case3">
+      <p class="section-label">04 · 案例三</p>
+      <h2>高热腹满（虚构）</h2>
+
+      <div class="note-card">
+        <ul class="reading-list">
+          <li><strong>情境：</strong>40 岁，高热 3 天。</li>
+          <li><strong>望：</strong>面红，舌红，苔黄燥。</li>
+          <li><strong>闻：</strong>声高气粗。</li>
+          <li><strong>问：</strong>不恶寒反恶热、大汗出、口渴喜冷饮、腹满痛拒按、便秘。</li>
+          <li><strong>切：</strong>脉洪大有力。</li>
+        </ul>
+      </div>
+
+      <p><strong>先自己写：</strong>病位在表还是里？病性偏寒还是热？正邪关系如何？</p>
+
+      <details class="case-details">
+        <summary>展开读法</summary>
+        <div class="case-details-body">
+          <ul class="reading-list">
+            <li><strong>六经：</strong>阳明。</li>
+            <li><strong>八纲：</strong>里、热、实。</li>
+            <li><strong>提纲：</strong>“阳明之为病，胃家实是也。”</li>
+            <li><strong>鉴别：</strong>太阳可见恶寒、脉浮；少阳多见寒热往来、脉弦；少阴热化多见脉细数、心烦不得卧，一般无腹满便秘。</li>
+            <li><strong>待补：</strong>脱水程度、感染指标、急腹症鉴别；高热伴腹满痛需及时现代医学评估。</li>
+          </ul>
+          <p class="small-note">虚构教学案例，不作诊断。</p>
+        </div>
+      </details>
+
+      <div class="note-card note-card--warn">
+        <strong>高热伴腹满痛，先排除急症。</strong>
+        这类表现需要及时现代医学评估；课堂上的六经读法不能替代检查，更不能成为延误就诊的理由。
+      </div>
+    </section>
+
+    <section class="content-section" id="case4">
+      <p class="section-label">05 · 案例四</p>
+      <h2>腹满便溏（虚构）</h2>
+
+      <div class="note-card">
+        <ul class="reading-list">
+          <li><strong>情境：</strong>52 岁，反复腹满、食少 3 个月。</li>
+          <li><strong>望：</strong>舌淡胖，苔白腻。</li>
+          <li><strong>闻：</strong>语声偏低，无特殊气味。</li>
+          <li><strong>问：</strong>腹满、食不下、大便稀溏、时腹自痛、乏力、畏寒。</li>
+          <li><strong>切：</strong>脉弱。</li>
+        </ul>
+      </div>
+
+      <p><strong>先自己写：</strong>这是实证还是虚证？病位在太阴、少阴，还是阳明？</p>
+
+      <details class="case-details">
+        <summary>展开读法</summary>
+        <div class="case-details-body">
+          <ul class="reading-list">
+            <li><strong>六经：</strong>太阴。</li>
+            <li><strong>八纲：</strong>里、虚寒，兼湿盛。</li>
+            <li><strong>提纲：</strong>“腹满而吐，食不下，自利益甚，时腹自痛。”</li>
+            <li><strong>鉴别：</strong>阳明腹满多痛而拒按、便秘、苔黄；少阴多见脉微细、但欲寐、四肢冷；厥阴多见寒热错杂。</li>
+            <li><strong>待补：</strong>体重变化、饮食、二便、电解质、甲状腺功能与胃肠检查。</li>
+          </ul>
+          <p class="small-note">虚构教学案例，不作诊断。</p>
+        </div>
+      </details>
+    </section>
+
+    <section class="content-section" id="case5">
+      <p class="section-label">06 · 案例五</p>
+      <h2>但欲寐（虚构）</h2>
+
+      <div class="note-card">
+        <ul class="reading-list">
+          <li><strong>情境：</strong>68 岁，畏寒、精神差 2 天。</li>
+          <li><strong>望：</strong>舌淡，苔白滑。</li>
+          <li><strong>闻：</strong>语声低微，无特殊气味。</li>
+          <li><strong>问：</strong>畏寒蜷卧、四肢冷、但欲寐、下利清谷、小便清长。</li>
+          <li><strong>切：</strong>脉微细。</li>
+        </ul>
+      </div>
+
+      <p><strong>先自己写：</strong>三阴中哪一经最贴近？是寒化还是热化？</p>
+
+      <details class="case-details">
+        <summary>展开读法</summary>
+        <div class="case-details-body">
+          <ul class="reading-list">
+            <li><strong>六经：</strong>少阴（寒化）。</li>
+            <li><strong>八纲：</strong>里、虚、寒。</li>
+            <li><strong>提纲：</strong>“脉微细，但欲寐也。”</li>
+            <li><strong>鉴别：</strong>太阴以腹满吐利、脉弱为主；少阴更见心肾虚衰、脉微细、但欲寐、四肢冷；厥阴多见寒热错杂。若心烦不得卧、咽干、脉细数，则考虑少阴热化。</li>
+            <li><strong>待补：</strong>血压、体温、感染指标、电解质、肾功能、甲状腺功能、心电图；老年患者出现脉微细、下利、精神萎靡需及时现代医学评估。</li>
+          </ul>
+          <p class="small-note">虚构教学案例，不作诊断。</p>
+        </div>
+      </details>
+
+      <div class="note-card note-card--warn">
+        <strong>脉微细、但欲寐、下利清谷，需要及时评估。</strong>
+        这类表现不能只在家观察或自行用药；课堂辨证不能替代急诊与必要的检查。
+      </div>
+    </section>
+
+    <section class="content-section" id="case6">
+      <p class="section-label">07 · 案例六</p>
+      <h2>寒热错杂（虚构）</h2>
+
+      <div class="note-card">
+        <ul class="reading-list">
+          <li><strong>情境：</strong>55 岁，反复手足冷、心中疼热、饥不欲食 1 个月。</li>
+          <li><strong>望：</strong>舌淡红，苔白黄相兼。</li>
+          <li><strong>闻：</strong>语声偏低，无特殊气味。</li>
+          <li><strong>问：</strong>手足冷、口渴多饮、气上撞心、心中疼热、饥不欲食、食后恶心，大便时干时稀。</li>
+          <li><strong>切：</strong>脉弦细。</li>
+        </ul>
+      </div>
+
+      <p><strong>先自己写：</strong>这是纯寒、纯热，还是寒热错杂？哪一经最贴近？</p>
+
+      <details class="case-details">
+        <summary>展开读法</summary>
+        <div class="case-details-body">
+          <ul class="reading-list">
+            <li><strong>六经：</strong>厥阴。</li>
+            <li><strong>八纲：</strong>里、寒热错杂、虚实夹杂。</li>
+            <li><strong>提纲：</strong>“消渴，气上撞心，心中疼热，饥而不欲食。”</li>
+            <li><strong>鉴别：</strong>少阳多寒热往来、口苦、胸胁苦满、脉弦；太阴多腹满吐利、脉弱；少阴多脉微细、但欲寐；厥阴的关键是寒热并见。</li>
+            <li><strong>待补：</strong>呕吐物、二便、血糖、肝胆胃肠与心血管评估；“消渴、胸中疼热、呕吐”需现代医学评估。</li>
+          </ul>
+          <p class="small-note">虚构教学案例，不作诊断。</p>
+        </div>
+      </details>
+
+      <div class="note-card note-card--warn">
+        <strong>消渴、胸中疼热、呕吐并见，先排除代谢与心肺急症。</strong>
+        厥阴病的寒热错杂是传统辨证语言，不能替代现代医学检查，更不能作为自行用药的依据。
+      </div>
+    </section>
+
+    <section class="content-section" id="fupan">
+      <p class="section-label">08 · 复盘</p>
+      <h2>做完六个案例，检查这六件事</h2>
+      <p class="lead-paragraph">
+        能说出“为什么不是另一个经”，比说出一个经名更重要。复盘时把支持证据、反证与待补信息都写出来。
+      </p>
+
+      <div class="note-card">
+        <ul class="reading-list">
+          <li>我是否先写四诊线索，再写结论？</li>
+          <li>我是否找到最贴近的六经提纲？</li>
+          <li>我是否用八纲说明了表里、寒热、虚实？</li>
+          <li>我是否列出了支持证据、反证与相似证候？</li>
+          <li>我是否标出了需要现代医学检查的部分？</li>
+          <li>我是否避免了从证候直接跳到方药或针灸？</li>
+        </ul>
+      </div>
+
+      <div class="note-card note-card--warn">
+        <strong>案例只是练习。</strong>
+        六个案例均为虚构，不能据此给自己或他人下结论；真实诊疗需要专业判断与现代医学检查。
+      </div>
+    </section>
+
+    <section class="content-section" id="jixu">
+      <p class="section-label">09 · 继续</p>
+      <h2>下一步：温病框架与方证</h2>
+      <p class="lead-paragraph">
+        六个案例覆盖太阳、少阳、阳明、太阴、少阴、厥阴。六经框架熟悉之后，再进入卫气营血/三焦、方证与医案。
+      </p>
+
+      <div class="progress-panel">
+        <div>
+          <h3>本篇已完成</h3>
+          <ul class="progress-list progress-list--done">
+            <li>太阳表寒案例</li>
+            <li>少阳半表半里案例</li>
+            <li>阳明里实热案例</li>
+            <li>太阴里虚寒案例</li>
+            <li>少阴寒化案例</li>
+            <li>厥阴寒热错杂案例</li>
+            <li>复盘清单</li>
+          </ul>
+        </div>
+        <div>
+          <h3>下一步待补</h3>
+          <ul class="progress-list progress-list--next">
+            <li>卫气营血 / 三焦辨证</li>
+            <li>六经方证（专业语境）</li>
+            <li>更多医案案例</li>
+            <li>方药与针灸（专业语境）</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="article-actions">
+        <a class="btn btn--primary" href="/yi/liujing-bianzheng/">回看六经辨证</a>
+        <a class="btn btn--ghost" href="/yi/sizhen-hecan/">回看四诊合参案例</a>
+      </div>
+    </section>
+
+    <section class="content-section" id="sources">
+      <p class="section-label">附 · 原典</p>
+      <h2>参考原典</h2>
+      <p>
+        六经提纲据《伤寒论》通行本，标点从简；条文编号与讲义页码见「六经辨证」页。
+      </p>
+
+      <ol class="source-list">
+        <li>
+          <span class="source-work">《伤寒论·辨太阳病脉证并治》</span>
+          <p class="source-quote">太阳之为病，脉浮，头项强痛而恶寒。</p>
+        </li>
+        <li>
+          <span class="source-work">《伤寒论·辨阳明病脉证并治》</span>
+          <p class="source-quote">阳明之为病，胃家实是也。</p>
+        </li>
+        <li>
+          <span class="source-work">《伤寒论·辨少阳病脉证并治》</span>
+          <p class="source-quote">少阳之为病，口苦，咽干，目眩也。</p>
+        </li>
+        <li>
+          <span class="source-work">《伤寒论·辨太阴病脉证并治》</span>
+          <p class="source-quote">太阴之为病，腹满而吐，食不下，自利益甚，时腹自痛。</p>
+        </li>
+        <li>
+          <span class="source-work">《伤寒论·辨少阴病脉证并治》</span>
+          <p class="source-quote">少阴之为病，脉微细，但欲寐也。</p>
+        </li>
+        <li>
+          <span class="source-work">《伤寒论·辨厥阴病脉证并治》</span>
+          <p class="source-quote">
+            厥阴之为病，消渴，气上撞心，心中疼热，饥而不欲食，食则吐蛔，下之利不止。
+          </p>
+        </li>
+      </ol>
+
+      <p class="article-end">
+        本页为传统理论展示与学习整理，不构成医疗诊断、处方建议或疗效承诺。最后更新：2026-10-29。
+      </p>
+    </section>
+  </div>
+</KnowledgeLayout>

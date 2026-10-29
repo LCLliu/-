@@ -1,0 +1,488 @@
+---
+import KnowledgeLayout from '../../layouts/KnowledgeLayout.astro';
+
+const toc = [
+  { id: 'dingwei', label: '六经辨证是什么' },
+  { id: 'sanyang', label: '三阳：太阳、阳明、少阳' },
+  { id: 'sanyin', label: '三阴：太阴、少阴、厥阴' },
+  { id: 'chuanbian', label: '传变、合病与并病' },
+  { id: 'duibi', label: '与八纲、脏腑的关系' },
+  { id: 'anli', label: '虚构案例' },
+  { id: 'wuqu', label: '常见误区' },
+  { id: 'jixu', label: '继续学习' },
+  { id: 'sources', label: '参考原典' },
+];
+---
+
+<KnowledgeLayout
+  title="六经辨证"
+  eyebrow="Medical · 医 · 辨证"
+  lead="六经辨证用太阳、阳明、少阳、太阴、少阴、厥阴六个阶段，描述外感病中病位、病性与正邪的变化。它不是十二经络循行图，也不是固定不变的传变路线。"
+  status="初稿"
+  readingTime="第一部分 · 阅读约 14 分钟"
+  updated="2026-10-29"
+  toc={toc}
+  mark="六经"
+  parentLabel="医"
+  parentHref="/yi/"
+  asideNote="这一篇做《伤寒论》六经框架的总览：提纲、三阳三阴、传变与鉴别。不展开方剂、剂量、针灸方案，也不把六经证候等同于现代疾病诊断。"
+>
+  <div class="article-prose">
+    <div class="summary-grid" aria-label="核心提要">
+      <article class="summary-card">
+        <span>01</span>
+        <h3>六个阶段</h3>
+        <p>三阳多偏表、热、实；三阴多偏里虚寒或寒热错杂，但并非绝对。</p>
+      </article>
+      <article class="summary-card">
+        <span>02</span>
+        <h3>提纲是入口</h3>
+        <p>六经提纲抓的是代表性主证，不是完整的诊断标准。</p>
+      </article>
+      <article class="summary-card">
+        <span>03</span>
+        <h3>传变不固定</h3>
+        <p>可循经、越经、直中，也可合病、并病；不能只背一条顺序。</p>
+      </article>
+    </div>
+
+    <section class="content-section" id="dingwei">
+      <p class="section-label">01 · 定位</p>
+      <h2>六经不是十二条经络</h2>
+      <p class="lead-paragraph">
+        六经辨证出自《伤寒论》，主要描述外感病过程中的病位、病性与正邪变化。六经名称借用了经络名，但它不是针灸经络的循行图。
+      </p>
+
+      <p>
+        《伤寒杂病论》后来分为《伤寒论》与《金匮要略》。六经辨证是《伤寒论》的核心临床框架；它把复杂的病程压缩成六个可讨论的阶段，再在每个阶段里辨别具体的证候与传变。
+      </p>
+
+      <div class="six-board" role="group" aria-label="六经分组示意">
+        <div class="six-group six-group--yang">
+          <div class="six-group-head">
+            <span class="six-group-label">三阳</span>
+            <p>太阳 · 阳明 · 少阳 · 多偏表、热、实</p>
+          </div>
+          <div class="six-row">
+            <article class="six-card six-card--yang">
+              <span class="six-num">01</span>
+              <strong>太阳</strong>
+              <em>表</em>
+              <small>脉浮，头项强痛而恶寒</small>
+            </article>
+            <article class="six-card six-card--yang">
+              <span class="six-num">02</span>
+              <strong>阳明</strong>
+              <em>里实热</em>
+              <small>胃家实；但热不寒、腹满便秘</small>
+            </article>
+            <article class="six-card six-card--yang">
+              <span class="six-num">03</span>
+              <strong>少阳</strong>
+              <em>半表半里</em>
+              <small>口苦、咽干、目眩；寒热往来</small>
+            </article>
+          </div>
+        </div>
+
+        <div class="six-transition">
+          <span>由阳入阴</span>
+          <small>常见传变方向，不是固定路线</small>
+        </div>
+
+        <div class="six-group six-group--yin">
+          <div class="six-group-head">
+            <span class="six-group-label">三阴</span>
+            <p>太阴 · 少阴 · 厥阴 · 多偏里虚寒或寒热错杂</p>
+          </div>
+          <div class="six-row">
+            <article class="six-card six-card--yin">
+              <span class="six-num">04</span>
+              <strong>太阴</strong>
+              <em>里虚寒</em>
+              <small>腹满而吐、食不下、自利、时腹自痛</small>
+            </article>
+            <article class="six-card six-card--yin">
+              <span class="six-num">05</span>
+              <strong>少阴</strong>
+              <em>心肾虚衰</em>
+              <small>脉微细，但欲寐；有寒化、热化</small>
+            </article>
+            <article class="six-card six-card--yin">
+              <span class="six-num">06</span>
+              <strong>厥阴</strong>
+              <em>寒热错杂</em>
+              <small>消渴、气上撞心、心中疼热</small>
+            </article>
+          </div>
+        </div>
+      </div>
+
+      <p class="small-note">
+        六经名称借自经络，但六经辨证主要看病程阶段与证候，不等同于十二经络的循行路线。
+      </p>
+
+      <blockquote class="quote-block">
+        <p>太阳之为病，脉浮，头项强痛而恶寒。</p>
+        <footer class="quote-source">《伤寒论·辨太阳病脉证并治》</footer>
+      </blockquote>
+
+      <div class="note-card">
+        <strong>六经与八纲不是两套互相排斥的体系。</strong>
+        八纲先定表里、寒热、虚实；六经再把外感病的病程阶段与传变讲清楚。两者可以叠加使用。
+      </div>
+    </section>
+
+    <section class="content-section" id="sanyang">
+      <p class="section-label">02 · 三阳</p>
+      <h2>太阳、阳明、少阳</h2>
+      <p class="lead-paragraph">
+        三阳多与表、热、实相关，但每一经都有自己的边界。太阳不只有表热，阳明不等于所有胃病，少阳也不能简单归为表证或里证。
+      </p>
+
+      <p class="table-scroll-hint">左右滑动查看完整表格 →</p>
+
+      <div class="table-wrap">
+        <table>
+          <caption>三阳提纲与读法；提纲只是入口，不能替代完整辨证。</caption>
+          <thead>
+            <tr>
+              <th scope="col">经</th>
+              <th scope="col">提纲</th>
+              <th scope="col">病位 / 病性</th>
+              <th scope="col">常见读法</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>太阳</td>
+              <td>脉浮，头项强痛而恶寒</td>
+              <td>表；多偏寒或表实</td>
+              <td>外感初起，邪在表；可见发热、无汗或汗出</td>
+            </tr>
+            <tr>
+              <td>阳明</td>
+              <td>胃家实是也</td>
+              <td>里；实热</td>
+              <td>“胃家”泛指胃肠；可见但热不寒、腹满、便秘、口渴、脉有力</td>
+            </tr>
+            <tr>
+              <td>少阳</td>
+              <td>口苦，咽干，目眩</td>
+              <td>半表半里；枢机不利</td>
+              <td>常见寒热往来、胸胁苦满、口苦、咽干、目眩、脉弦</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="note-card">
+        <strong>太阳病不只有“伤寒”。</strong>
+        太阳病篇还讨论中风、温病等不同表现；“脉浮，头项强痛而恶寒”是提纲，不是唯一症状组合。
+      </div>
+    </section>
+
+    <section class="content-section" id="sanyin">
+      <p class="section-label">03 · 三阴</p>
+      <h2>太阴、少阴、厥阴</h2>
+      <p class="lead-paragraph">
+        三阴多属里证，但并非一律虚寒。少阴有寒化与热化两端，厥阴常见寒热错杂；读三阴要特别小心“纯寒”“纯虚”的简化。
+      </p>
+
+      <p class="table-scroll-hint">左右滑动查看完整表格 →</p>
+
+      <div class="table-wrap">
+        <table>
+          <caption>三阴提纲与读法；少阴、厥阴尤其不能用一个标签概括。</caption>
+          <thead>
+            <tr>
+              <th scope="col">经</th>
+              <th scope="col">提纲</th>
+              <th scope="col">病位 / 病性</th>
+              <th scope="col">常见读法</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>太阴</td>
+              <td>腹满而吐，食不下，自利益甚，时腹自痛</td>
+              <td>里；脾虚寒、湿盛</td>
+              <td>以脾胃虚寒、运化失司为主；脉多弱</td>
+            </tr>
+            <tr>
+              <td>少阴</td>
+              <td>脉微细，但欲寐</td>
+              <td>里；心肾虚衰</td>
+              <td>寒化见畏寒、四肢冷、下利清谷；热化见心烦、不得卧、咽干</td>
+            </tr>
+            <tr>
+              <td>厥阴</td>
+              <td>消渴，气上撞心，心中疼热，饥而不欲食，食则吐蛔，下之利不止</td>
+              <td>里；寒热错杂、阴尽阳生</td>
+              <td>六经最后阶段，病情复杂，寒热并见；“吐蛔”是古代语境</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <blockquote class="quote-block">
+        <p>少阴之为病，脉微细，但欲寐也。</p>
+        <footer class="quote-source">《伤寒论·辨少阴病脉证并治》</footer>
+      </blockquote>
+
+      <div class="note-card note-card--warn">
+        <strong>“但欲寐”不是普通困倦。</strong>
+        它描述的是精神萎靡、似睡非睡的状态。少阴病也不全是寒证；热化时可见心烦、不得卧、咽干、脉细数。
+      </div>
+    </section>
+
+    <section class="content-section" id="chuanbian">
+      <p class="section-label">04 · 传变</p>
+      <h2>传变不是一条单线</h2>
+      <p class="lead-paragraph">
+        六经的常见顺序是太阳→阳明或少阳→三阴，但真实病程可以分叉、跳跃，也可以两经同时出现。背顺序不如看动态变化。
+      </p>
+
+      <p class="table-scroll-hint">左右滑动查看完整表格 →</p>
+
+      <div class="table-wrap">
+        <table>
+          <caption>几种传变形式；判断时要结合症状、舌脉、病程与治疗经过。</caption>
+          <thead>
+            <tr>
+              <th scope="col">形式</th>
+              <th scope="col">含义</th>
+              <th scope="col">例子</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>循经传</td><td>按常见顺序传入下一经</td><td>太阳病未解，转见阳明或少阳</td></tr>
+            <tr><td>越经传</td><td>跳过某经，直接传入后面的经</td><td>太阳病直接出现三阴证</td></tr>
+            <tr><td>直中</td><td>外邪直接进入三阴，起病即见三阴证</td><td>起病即见太阴或少阴虚寒</td></tr>
+            <tr><td>合病</td><td>两经或三经同时发病</td><td>太阳阳明合病</td></tr>
+            <tr><td>并病</td><td>一经未罢，另一经又起</td><td>太阳少阳并病</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p>
+        《伤寒论》讲义提到太阳传经的两种可能：一是太阳→少阳→太阴→少阴→厥阴；二是太阳直接传阳明，到阳明为止。这说明传变可以分叉，不能画成一条固定单线。
+      </p>
+
+      <div class="note-card">
+        <strong>看传变，要看“变化”。</strong>
+        恶寒是否消失、发热是否升高、口渴与二便如何变化、舌脉是否转实或转虚，这些动态信息比背顺序更重要。
+      </div>
+    </section>
+
+    <section class="content-section" id="duibi">
+      <p class="section-label">05 · 对比</p>
+      <h2>六经、八纲、脏腑怎么配合</h2>
+      <p class="lead-paragraph">
+        六经不是唯一的辨证框架。八纲是总纲，脏腑辨证偏内伤杂病，卫气营血/三焦辨证用于温病；同一病例可以同时用多套框架描述。
+      </p>
+
+      <p class="table-scroll-hint">左右滑动查看完整表格 →</p>
+
+      <div class="table-wrap">
+        <table>
+          <caption>四套常用框架的定位；不是互斥关系。</caption>
+          <thead>
+            <tr>
+              <th scope="col">框架</th>
+              <th scope="col">看什么</th>
+              <th scope="col">适用</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>八纲</td><td>表里、寒热、虚实、阴阳</td><td>总纲，任何辨证都可先过一遍</td></tr>
+            <tr><td>六经</td><td>外感病中的病位、病性、病程阶段</td><td>《伤寒论》的临床框架</td></tr>
+            <tr><td>脏腑</td><td>脏腑功能、表里与关系</td><td>内伤杂病与脏腑定位</td></tr>
+            <tr><td>卫气营血 / 三焦</td><td>温病的层次与传变</td><td>温病学框架</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="note-card">
+        <strong>框架可以叠加，但不能混用。</strong>
+        先用八纲定方向，再用六经看阶段；需要脏腑定位时，再进入脏腑辨证。每一步都要说明自己在回答什么问题。
+      </div>
+    </section>
+
+    <section class="content-section" id="anli">
+      <p class="section-label">06 · 案例</p>
+      <h2>用虚构案例看一次传变</h2>
+      <p class="lead-paragraph">
+        下面的人物与情节均为虚构，只练习“提纲 → 八纲 → 传变 → 鉴别”的读法，不给出治疗方案。
+      </p>
+
+      <div class="note-card">
+        <ul class="reading-list">
+          <li><strong>第一阶段：</strong>28 岁，淋雨受凉后恶寒重、发热轻、无汗、头身疼痛、鼻塞流清涕；舌淡红、苔薄白，脉浮紧。</li>
+          <li><strong>第二阶段（教学推演）：</strong>若表证不解，数日后出现高热、不恶寒反恶热、口渴、腹满痛拒按、便秘、舌红苔黄、脉数有力。</li>
+          <li><strong>待补：</strong>体温、病程、出汗、二便、口渴、舌脉变化，以及必要的现代医学检查。</li>
+        </ul>
+      </div>
+
+      <p class="table-scroll-hint">左右滑动查看完整表格 →</p>
+
+      <div class="table-wrap">
+        <table>
+          <caption>案例的两阶段读法；第二阶段是教学推演，不是病情预测。</caption>
+          <thead>
+            <tr>
+              <th scope="col">阶段</th>
+              <th scope="col">六经</th>
+              <th scope="col">八纲</th>
+              <th scope="col">关键线索</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>第一阶段</td>
+              <td>太阳</td>
+              <td>表、寒、实</td>
+              <td>恶寒重、无汗、头身痛、脉浮紧</td>
+            </tr>
+            <tr>
+              <td>第二阶段</td>
+              <td>阳明</td>
+              <td>里、热、实</td>
+              <td>不恶寒反恶热、口渴、腹满痛拒按、便秘、脉数有力</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <ol class="step-list">
+        <li><strong>先对提纲：</strong>第一阶段符合“脉浮，头项强痛而恶寒”的太阳提纲；第二阶段符合“胃家实”的阳明提纲。</li>
+        <li><strong>再过八纲：</strong>第一阶段是表寒实；第二阶段是里实热。表里与寒热都发生了转变。</li>
+        <li><strong>再看传变：</strong>这是从太阳向阳明传变的教学示例；真实病情可能自愈、停留、分叉，或直接出现其他证候。</li>
+        <li><strong>做鉴别：</strong>少阳病常见寒热往来、口苦、咽干、目眩、胸胁苦满、脉弦；三阴病多见虚寒或寒热错杂，不能只凭发热高低判断。</li>
+        <li><strong>留边界：</strong>课堂推演不构成诊断；发热、腹痛、便秘等情况需要现代医学评估。</li>
+      </ol>
+
+      <div class="note-card note-card--warn">
+        <strong>课堂示例，不是诊断。</strong>
+        同样的线索在不同人身上可能有不同解释；真实诊疗还需要现代医学检查与专业判断。本站不提供处方、剂量或针灸方案。
+      </div>
+
+      <p>
+        想多练几个案例，可以继续做<a href="/yi/liujing-anli/">六经辨证案例</a>：六经各一案，答案折叠。
+      </p>
+    </section>
+
+    <section class="content-section" id="wuqu">
+      <p class="section-label">07 · 辨析</p>
+      <h2>六个常见误区</h2>
+      <div class="pitfall-grid">
+        <article class="pitfall-card">
+          <span>01</span>
+          <h3>六经等于十二经络</h3>
+          <p>六经借用了经络名，但六经辨证看的是病程阶段与证候，不是针灸循行路线。</p>
+        </article>
+        <article class="pitfall-card">
+          <span>02</span>
+          <h3>传变是固定顺序</h3>
+          <p>可以越经、直中、合病、并病；真实病程常常分叉。</p>
+        </article>
+        <article class="pitfall-card">
+          <span>03</span>
+          <h3>三阳皆热、三阴皆寒</h3>
+          <p>太阳可见表寒，少阴有热化，厥阴常见寒热错杂。</p>
+        </article>
+        <article class="pitfall-card">
+          <span>04</span>
+          <h3>提纲就是诊断标准</h3>
+          <p>提纲是入口，不是全部症状清单，也不能脱离舌脉与病程。</p>
+        </article>
+        <article class="pitfall-card">
+          <span>05</span>
+          <h3>见发热就归阳明</h3>
+          <p>还要看恶寒、汗、口渴、腹证、舌脉与病程，不能只看体温。</p>
+        </article>
+        <article class="pitfall-card">
+          <span>06</span>
+          <h3>替代现代医学检查</h3>
+          <p>传统辨证不能替代必要的现代诊断与检验。</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="content-section" id="jixu">
+      <p class="section-label">08 · 继续</p>
+      <h2>下一步：温病框架与方证</h2>
+      <p class="lead-paragraph">
+        六经辨证解决《伤寒论》的病程框架；温病学再用卫气营血、三焦描述另一类外感病。再往后才是方证、医案与具体治疗。
+      </p>
+
+      <div class="progress-panel">
+        <div>
+          <h3>本篇已完成</h3>
+          <ul class="progress-list progress-list--done">
+            <li>六经辨证的定位</li>
+            <li>三阳与三阴的提纲和读法</li>
+            <li>传变、越经、直中、合病、并病</li>
+            <li>与八纲、脏腑、温病框架的对比</li>
+            <li>一个两阶段虚构案例</li>
+          </ul>
+        </div>
+        <div>
+          <h3>下一步待补</h3>
+          <ul class="progress-list progress-list--next">
+            <li>卫气营血 / 三焦辨证</li>
+            <li>更多医案案例</li>
+            <li><a href="/yi/liujing-anli/">六经案例练习</a></li>
+            <li>方药与针灸（专业语境）</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="article-actions">
+        <a class="btn btn--primary" href="/yi/liujing-anli/">做六经案例练习</a>
+        <a class="btn btn--ghost" href="/yi/bagang-bianzheng/">回看八纲辨证</a>
+      </div>
+    </section>
+
+    <section class="content-section" id="sources">
+      <p class="section-label">附 · 原典</p>
+      <h2>参考原典</h2>
+      <p>
+        以下为六经提纲，据通行本，标点从简；条文编号与讲义页码见整理稿。
+      </p>
+
+      <ol class="source-list">
+        <li>
+          <span class="source-work">《伤寒论·辨太阳病脉证并治》</span>
+          <p class="source-quote">太阳之为病，脉浮，头项强痛而恶寒。</p>
+        </li>
+        <li>
+          <span class="source-work">《伤寒论·辨阳明病脉证并治》</span>
+          <p class="source-quote">阳明之为病，胃家实是也。</p>
+        </li>
+        <li>
+          <span class="source-work">《伤寒论·辨少阳病脉证并治》</span>
+          <p class="source-quote">少阳之为病，口苦，咽干，目眩也。</p>
+        </li>
+        <li>
+          <span class="source-work">《伤寒论·辨太阴病脉证并治》</span>
+          <p class="source-quote">太阴之为病，腹满而吐，食不下，自利益甚，时腹自痛。</p>
+        </li>
+        <li>
+          <span class="source-work">《伤寒论·辨少阴病脉证并治》</span>
+          <p class="source-quote">少阴之为病，脉微细，但欲寐也。</p>
+        </li>
+        <li>
+          <span class="source-work">《伤寒论·辨厥阴病脉证并治》</span>
+          <p class="source-quote">
+            厥阴之为病，消渴，气上撞心，心中疼热，饥而不欲食，食则吐蛔，下之利不止。
+          </p>
+        </li>
+      </ol>
+
+      <p class="article-end">
+        讲义定位：上册 p.7；下册 p.57、p.118、p.126、p.132、p.162。本页为传统理论展示与学习整理，不构成医疗诊断、处方建议或疗效承诺。最后更新：2026-10-29。
+      </p>
+    </section>
+  </div>
+</KnowledgeLayout>

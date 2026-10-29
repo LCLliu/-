@@ -116,5 +116,9 @@
 - [x] 把诊法、望诊整理稿回填到 `/yi/zhenfa/` 与 `/yi/wangzhen/`
 - [x] 整理并回填闻诊、问诊、切诊到 `/yi/wenzhen/`、`/yi/wenzhen-ask/`、`/yi/qiezhen/`
 - [x] 写四诊合参案例与辨证、治法两页
-- [ ] 做八纲辨证、脏腑辨证与更多案例
+- [x] 读《调经论》《通评虚实论》，整理 `knowledge/医/八纲辨证.md` 并回填 `/yi/bagang-bianzheng/`
+- [x] 读《藏气法时论》《宣明五气》《五脏别论》与《金匮》首篇，整理 `knowledge/医/脏腑辨证.md` 并回填 `/yi/zangfu-bianzheng/`
+- [x] 读《伤寒论》六经提纲，整理 `knowledge/医/六经辨证.md` 并回填 `/yi/liujing-bianzheng/`
+- [x] 写 `knowledge/医/六经辨证案例.md`，回填 `/yi/liujing-anli/`
+- [ ] 做卫气营血/三焦辨证、六经方证与更多医案
 - [ ] 补单经穴位完整页、原络募郄与十五络脉歌

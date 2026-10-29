@@ -49,9 +49,9 @@ const isYi = discipline.slug === 'yi';
         <span class="discipline-side-label">当前状态</span>
         <StatusBadge status={discipline.status} />
         <p>
-          {isYi ? '藏象到气血津液、四诊与辨证初稿已开放' : '界面骨架已建立'}
+          {isYi ? '藏象、经络、四诊与辨证初稿已开放' : '界面骨架已建立'}
           <br />
-          {isYi ? '方药与经典选读待补' : '知识内容尚未接入'}
+          {isYi ? '温病框架与方药待补' : '知识内容尚未接入'}
         </p>
       </div>
     </div>
@@ -67,7 +67,7 @@ const isYi = discipline.slug === 'yi';
           </h2>
           <p class="panel-lede">
             {isYi
-              ? '藏象、经络、气血津液、四诊与辨证初稿已开放；方药与经典选读待补。'
+              ? '藏象、经络、气血津液、四诊、八纲、脏腑与六经辨证初稿已开放；温病框架、方药与经典选读待补。'
               : '医的门类模板稳定后，这一门会按同样的页面结构接入，避免五套不同的实现。'}
           </p>
         </div>
@@ -159,6 +159,34 @@ const isYi = discipline.slug === 'yi';
             <span>
               <strong>辨证与治法 · 初稿</strong>
               <small>从证据到方向，不写方剂</small>
+            </span>
+            <span>开始阅读 →</span>
+          </a>
+          <a class="opened-card" href="/yi/bagang-bianzheng/">
+            <span>
+              <strong>八纲辨证 · 初稿</strong>
+              <small>表里、寒热、虚实与阴阳总纲</small>
+            </span>
+            <span>开始阅读 →</span>
+          </a>
+          <a class="opened-card" href="/yi/zangfu-bianzheng/">
+            <span>
+              <strong>脏腑辨证 · 初稿</strong>
+              <small>五脏六腑、表里配对与关系思维</small>
+            </span>
+            <span>开始阅读 →</span>
+          </a>
+          <a class="opened-card" href="/yi/liujing-bianzheng/">
+            <span>
+              <strong>六经辨证 · 初稿</strong>
+              <small>伤寒六经提纲、传变与鉴别</small>
+            </span>
+            <span>开始阅读 →</span>
+          </a>
+          <a class="opened-card" href="/yi/liujing-anli/">
+            <span>
+              <strong>六经辨证案例 · 初稿</strong>
+              <small>六经各一案，答案折叠</small>
             </span>
             <span>开始阅读 →</span>
           </a>

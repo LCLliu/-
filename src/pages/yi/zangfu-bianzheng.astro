@@ -1,0 +1,434 @@
+---
+import KnowledgeLayout from '../../layouts/KnowledgeLayout.astro';
+import ZangfuPairDiagram from '../../components/diagrams/ZangfuPairDiagram.astro';
+
+const toc = [
+  { id: 'dingwei', label: '从八纲到脏腑' },
+  { id: 'wuzang', label: '五脏：功能与病证' },
+  { id: 'liufu', label: '六腑：传化与通降' },
+  { id: 'biaoli', label: '表里配对' },
+  { id: 'guanxi', label: '脏腑关系' },
+  { id: 'anli', label: '虚构案例' },
+  { id: 'wuqu', label: '常见误区' },
+  { id: 'jixu', label: '继续学习' },
+  { id: 'sources', label: '参考原典' },
+];
+---
+
+<KnowledgeLayout
+  title="脏腑辨证"
+  eyebrow="Medical · 医 · 辨证"
+  lead="八纲定方向，脏腑辨证定位置：把表里、寒热、虚实落到具体脏腑与脏腑关系上。它依据的是藏象功能模型，不是给器官贴病名。"
+  status="初稿"
+  readingTime="第一部分 · 阅读约 14 分钟"
+  updated="2026-10-29"
+  toc={toc}
+  mark="脏腑"
+  parentLabel="医"
+  parentHref="/yi/"
+  asideNote="这一篇做脏腑辨证的总览：五脏、六腑、表里配对与关系思维。不展开方剂、剂量、针灸方案，也不把证候等同于现代疾病诊断。"
+>
+  <div class="article-prose">
+    <div class="summary-grid" aria-label="核心提要">
+      <article class="summary-card">
+        <span>01</span>
+        <h3>先定位，再定性</h3>
+        <p>八纲给总方向，脏腑辨证回答“在哪一脏、哪一腑、哪些脏腑同病”。</p>
+      </article>
+      <article class="summary-card">
+        <span>02</span>
+        <h3>功能模型</h3>
+        <p>藏象是功能与关系网络；脏腑不等于解剖器官，更不等于器官病名。</p>
+      </article>
+      <article class="summary-card">
+        <span>03</span>
+        <h3>关系比单脏重要</h3>
+        <p>表里、生克、升降、水液运行，往往决定病证如何传变与同病。</p>
+      </article>
+    </div>
+
+    <section class="content-section" id="dingwei">
+      <p class="section-label">01 · 定位</p>
+      <h2>八纲给方向，脏腑给位置</h2>
+      <p class="lead-paragraph">
+        八纲先把病位深浅、病性和正邪关系定下来；脏腑辨证再往下走一步，把“里”具体到脏腑，把“虚实寒热”落到脏腑功能与关系上。
+      </p>
+
+      <div class="logic-flow" aria-label="从四诊到脏腑辨证的步骤">
+        <span>四诊</span>
+        <span aria-hidden="true">→</span>
+        <span>八纲</span>
+        <span aria-hidden="true">→</span>
+        <span>脏腑定位</span>
+        <span aria-hidden="true">→</span>
+        <span>关系 / 传变</span>
+        <span aria-hidden="true">→</span>
+        <span>证候假设</span>
+      </div>
+
+      <p>
+        脏腑辨证的系统化主要在后世完成。《黄帝内经》提供了藏象与病证描述，《金匮要略》等提供了杂病与传变思路；现代中医诊断学再把常见证候整理成体系。它和六经辨证、卫气营血/三焦辨证是并列框架，不能互相替代。
+      </p>
+
+      <blockquote class="quote-block">
+        <p>凡此十二官者，不得相失也。</p>
+        <footer class="quote-source">《黄帝内经·素问·灵兰秘典论》</footer>
+      </blockquote>
+
+      <div class="note-card">
+        <strong>脏腑辨证不是“一个症状对一个脏”。</strong>
+        胁痛不一定只是肝，咳嗽不一定只是肺，腹泻也不一定只是脾。要先看主症组合、病程、舌脉与诱因，再看脏腑关系，最后才形成证候假设。
+      </div>
+    </section>
+
+    <section class="content-section" id="wuzang">
+      <p class="section-label">02 · 五脏</p>
+      <h2>五脏：功能线索与原典病证</h2>
+      <p class="lead-paragraph">
+        五脏是藏精气、主功能的功能系统。读脏腑辨证，先把每脏的“功能线索”与原典病证描述放在一起，而不是背一张症状对照表。
+      </p>
+
+      <p class="table-scroll-hint">左右滑动查看完整表格 →</p>
+
+      <div class="table-wrap">
+        <table>
+          <caption>五脏功能线索与《素问·藏气法时论》病证摘述；摘述为学习概括，不是诊断标准。</caption>
+          <thead>
+            <tr>
+              <th scope="col">脏</th>
+              <th scope="col">藏象功能线索</th>
+              <th scope="col">原典病证摘述</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>肝</td>
+              <td>主疏泄、藏血；在志为怒，在液为泪，开窍于目；主筋</td>
+              <td>胁下痛引少腹、易怒；虚则目耳不聪、易恐</td>
+            </tr>
+            <tr>
+              <td>心</td>
+              <td>主血脉、藏神；在志为喜，在液为汗，开窍于舌</td>
+              <td>胸中痛、胁支满、肩背臂内痛；虚则胸腹大、腰胁相引痛</td>
+            </tr>
+            <tr>
+              <td>脾</td>
+              <td>主运化、统血；在志为思，在液为涎，开窍于口；主肌肉四肢</td>
+              <td>身重、肌肉痿、足不收、抽搐、脚下痛；虚则腹满肠鸣、飧泄食不化</td>
+            </tr>
+            <tr>
+              <td>肺</td>
+              <td>主气、司呼吸，宣发肃降，通调水道；在志为悲，在液为涕，开窍于鼻；主皮毛</td>
+              <td>喘咳逆气、肩背痛、汗出；虚则少气不足以息、耳聋嗌干</td>
+            </tr>
+            <tr>
+              <td>肾</td>
+              <td>藏精、主水、纳气；在志为恐，在液为唾，开窍于耳及二阴；主骨生髓</td>
+              <td>腹大胫肿、喘咳身重、寝汗出、恶风；虚则胸腹痛、清厥、意不乐</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="note-card note-card--warn">
+        <strong>原典病证不是现代疾病诊断标准。</strong>
+        这些描述来自传统医学的功能模型，同一个表现可能对应多种解释；不能按单个症状给自己或他人“对号入座”。
+      </div>
+
+      <blockquote class="quote-block">
+        <p>五脏所藏：心藏神，肺藏魄，肝藏魂，脾藏意，肾藏志。</p>
+        <footer class="quote-source">《黄帝内经·素问·宣明五气》</footer>
+      </blockquote>
+
+      <p>
+        常见证候名称如肝气郁结、脾气虚、肾阳虚等，只是进入脏腑辨证的词汇入口。本页不展开每个证候的诊断标准，也不提供治疗建议。
+      </p>
+    </section>
+
+    <section class="content-section" id="liufu">
+      <p class="section-label">03 · 六腑</p>
+      <h2>六腑：传化物而不藏</h2>
+      <p class="lead-paragraph">
+        六腑以传化水谷、通降为特点。脏腑辨证不只看五脏；胃、胆、大肠、膀胱等腑的病证，常常与脏同病或互相影响。
+      </p>
+
+      <blockquote class="quote-block">
+        <p>六腑者，传化物而不藏，故实而不能满也。</p>
+        <footer class="quote-source">《黄帝内经·素问·五脏别论》</footer>
+      </blockquote>
+
+      <p class="table-scroll-hint">左右滑动查看完整表格 →</p>
+
+      <div class="table-wrap">
+        <table>
+          <caption>六腑功能与辨证线索方向；三焦另属温病辨证框架，不宜简单等同。</caption>
+          <thead>
+            <tr>
+              <th scope="col">腑</th>
+              <th scope="col">功能要点</th>
+              <th scope="col">辨证线索方向</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>胆</td><td>贮藏排泄胆汁，主决断</td><td>口苦、惊怯、胁胀；常与肝同论</td></tr>
+            <tr><td>胃</td><td>受纳腐熟，以降为和</td><td>胃脘胀痛、嗳气、恶心、食欲异常</td></tr>
+            <tr><td>小肠</td><td>受盛化物，泌别清浊</td><td>腹胀、腹痛、二便异常；多与脾胃、大肠同论</td></tr>
+            <tr><td>大肠</td><td>传化糟粕</td><td>便秘、泄泻、腹痛</td></tr>
+            <tr><td>膀胱</td><td>贮尿排尿</td><td>尿频、尿急、尿痛、排尿困难</td></tr>
+            <tr><td>三焦</td><td>通行元气、运行水液</td><td>水液代谢与气化；三焦辨证另属温病框架</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="note-card">
+        <strong>“通”不等于自行用泻法。</strong>
+        六腑病证常与通降失常有关，但具体该温、该清、该补、该通，必须由专业判断。本站只做概念说明，不提供操作方案。
+      </div>
+    </section>
+
+    <section class="content-section" id="biaoli">
+      <p class="section-label">04 · 表里</p>
+      <h2>六组表里配对</h2>
+      <p class="lead-paragraph">
+        十二经与脏腑相配，形成六组表里关系。表里讲的是功能配合与病邪传变，不是解剖上的直接相连。
+      </p>
+
+      <figure class="figure-card">
+        <ZangfuPairDiagram />
+        <figcaption>
+          六组表里：肺—大肠、心—小肠、脾—胃、肝—胆、肾—膀胱、心包—三焦。配对用于理解功能配合，不是器官连接图。
+        </figcaption>
+      </figure>
+
+      <div class="concept-grid">
+        <article class="concept-card">
+          <span class="concept-num">01 · 肺与大肠</span>
+          <h3>宣降与传导</h3>
+          <p>肺气肃降与大肠传导相互影响；传统上常把咳喘与大便异常放在一起考虑。</p>
+        </article>
+        <article class="concept-card">
+          <span class="concept-num">02 · 心与小肠</span>
+          <h3>血脉与分清</h3>
+          <p>心主血脉、小肠泌别清浊；功能上相互关联，不能按解剖位置直接对应。</p>
+        </article>
+        <article class="concept-card">
+          <span class="concept-num">03 · 脾与胃</span>
+          <h3>纳运与升降</h3>
+          <p>胃主受纳、脾主运化；脾升胃降，燥湿相济，常被合称“脾胃”。</p>
+        </article>
+        <article class="concept-card">
+          <span class="concept-num">04 · 肝与胆</span>
+          <h3>疏泄与胆汁</h3>
+          <p>肝主疏泄，胆贮藏排泄胆汁；情志、胁肋与消化线索常需一起看。</p>
+        </article>
+        <article class="concept-card">
+          <span class="concept-num">05 · 肾与膀胱</span>
+          <h3>水液与气化</h3>
+          <p>肾主水，膀胱贮尿排尿；水液代谢与排尿异常常需两脏同看。</p>
+        </article>
+        <article class="concept-card">
+          <span class="concept-num">06 · 心包与三焦</span>
+          <h3>护心与通道</h3>
+          <p>心包常与三焦相配，作为六脏六腑表里体系的一部分；辨证核心仍是五脏六腑。</p>
+        </article>
+      </div>
+
+      <div class="note-card">
+        <strong>表里同病很常见。</strong>
+        脏病可以及腑，腑病也可以影响脏。看到便秘不要只想到大肠，看到咳嗽也不要只想到肺；要回到整体关系。
+      </div>
+    </section>
+
+    <section class="content-section" id="guanxi">
+      <p class="section-label">05 · 关系</p>
+      <h2>脏腑之间：生克、升降与水液</h2>
+      <p class="lead-paragraph">
+        脏腑辨证不只是给每个脏单独下结论，还要解释“为什么这几个症状同时出现”。关系思维是脏腑辨证的核心。
+      </p>
+
+      <p class="table-scroll-hint">左右滑动查看完整表格 →</p>
+
+      <div class="table-wrap">
+        <table>
+          <caption>五组常见脏腑关系；用于理解传变与同病，不是自行推演用药的依据。</caption>
+          <thead>
+            <tr>
+              <th scope="col">关系</th>
+              <th scope="col">功能联系</th>
+              <th scope="col">辨证提示</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>肝—脾</td><td>疏泄与运化；木克土</td><td>情志与饮食相互影响，肝郁可影响脾运</td></tr>
+            <tr><td>心—肾</td><td>水火既济、精血互生</td><td>心悸失眠与腰膝酸软可同见，需合参</td></tr>
+            <tr><td>肺—脾—肾</td><td>水液代谢：肺通调、脾运化、肾主水</td><td>水肿、痰饮等问题常需三脏同看</td></tr>
+            <tr><td>肝—肺</td><td>气机升降：肝升肺降</td><td>气滞与咳嗽可相互影响</td></tr>
+            <tr><td>脾—胃</td><td>纳运相合、升降相因、燥湿相济</td><td>脾胃常同病，不能只盯一个</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <blockquote class="quote-block">
+        <p>夫治未病者，见肝之病，知肝传脾，当先实脾。</p>
+        <footer class="quote-source">《金匮要略·脏腑经络先后病脉证第一》</footer>
+      </blockquote>
+
+      <div class="note-card">
+        <strong>传变思维不是套方理由。</strong>
+        这句话讲的是“见微知著、先安未受邪之地”的思路，不是可以自行套用的处方原则。具体治则与方药必须由专业判断。
+      </div>
+    </section>
+
+    <section class="content-section" id="anli">
+      <p class="section-label">06 · 案例</p>
+      <h2>用虚构案例走一遍定位</h2>
+      <p class="lead-paragraph">
+        下面的人物与情节均为虚构，只练习“八纲 → 脏腑 → 关系 → 鉴别”的顺序，不给出治疗方案。
+      </p>
+
+      <div class="note-card">
+        <ul class="reading-list">
+          <li><strong>情境：</strong>35 岁，工作压力大，近半年胃脘胀满、嗳气、食少、便溏、乏力；情绪紧张时加重。</li>
+          <li><strong>望：</strong>舌淡红，苔薄白。</li>
+          <li><strong>闻：</strong>语声偏低，无特殊气味。</li>
+          <li><strong>问：</strong>食欲一般，大便偏溏，睡眠浅，压力大。</li>
+          <li><strong>切：</strong>脉弦细。</li>
+          <li><strong>待补：</strong>病程、饮食、二便、睡眠、既往病史、用药，以及胃镜、幽门螺杆菌等现代检查。</li>
+        </ul>
+      </div>
+
+      <div class="logic-flow" aria-label="案例的辨证路径">
+        <span>里</span>
+        <span aria-hidden="true">→</span>
+        <span>虚实夹杂</span>
+        <span aria-hidden="true">→</span>
+        <span>脾 + 肝</span>
+        <span aria-hidden="true">→</span>
+        <span>肝郁脾虚（假设）</span>
+      </div>
+
+      <ol class="step-list">
+        <li><strong>八纲：</strong>病位在里；虚实夹杂，以脾气虚为本、气滞为标；寒热不显。</li>
+        <li><strong>脏腑：</strong>食少、便溏、乏力指向脾；脉弦、情绪紧张时加重指向肝。</li>
+        <li><strong>关系：</strong>肝疏泄与脾运化相互影响，因此考虑肝与脾同病，而不是只定一个脏。</li>
+        <li><strong>鉴别：</strong>单纯脾气虚多无明显弦脉与情志诱因；湿滞脾胃多见苔腻、口黏、脘腹痞满；胃热多见口臭、苔黄、脉数、喜冷饮。</li>
+        <li><strong>结论：</strong>“肝郁脾虚”只是课堂讨论中的证候假设，仍需补充信息并与现代医学问题鉴别。</li>
+      </ol>
+
+      <div class="note-card note-card--warn">
+        <strong>课堂示例，不是诊断。</strong>
+        同样的线索在不同人身上可能有不同解释；真实诊疗还需要现代医学检查与专业判断。本站不提供处方、剂量或针灸方案。
+      </div>
+    </section>
+
+    <section class="content-section" id="wuqu">
+      <p class="section-label">07 · 辨析</p>
+      <h2>六个常见误区</h2>
+      <div class="pitfall-grid">
+        <article class="pitfall-card">
+          <span>01</span>
+          <h3>一脏对一症状</h3>
+          <p>胁痛不一定只是肝，咳嗽不一定只是肺；要看组合与语境。</p>
+        </article>
+        <article class="pitfall-card">
+          <span>02</span>
+          <h3>脏腑等于器官</h3>
+          <p>藏象是功能网络，不是解剖器官病名，也不是现代检验指标。</p>
+        </article>
+        <article class="pitfall-card">
+          <span>03</span>
+          <h3>只看脏不看腑</h3>
+          <p>脾胃、肝胆、肺大肠等表里关系常需同看。</p>
+        </article>
+        <article class="pitfall-card">
+          <span>04</span>
+          <h3>忽略脏腑关系</h3>
+          <p>只给每个脏单独下结论，会漏掉传变、同病与整体解释。</p>
+        </article>
+        <article class="pitfall-card">
+          <span>05</span>
+          <h3>跳过八纲直接定位</h3>
+          <p>没有表里寒热虚实的总方向，脏腑定位容易失去边界。</p>
+        </article>
+        <article class="pitfall-card">
+          <span>06</span>
+          <h3>替代现代医学检查</h3>
+          <p>传统辨证不能替代必要的现代诊断与检验。</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="content-section" id="jixu">
+      <p class="section-label">08 · 继续</p>
+      <h2>下一步：六经与温病框架</h2>
+      <p class="lead-paragraph">
+        八纲与脏腑辨证解决“方向”和“位置”；六经辨证、卫气营血/三焦辨证则提供另一套病程与层次框架。三者可以互相参照，但不能混为一谈。
+      </p>
+
+      <div class="progress-panel">
+        <div>
+          <h3>本篇已完成</h3>
+          <ul class="progress-list progress-list--done">
+            <li>八纲到脏腑的定位顺序</li>
+            <li>五脏功能线索与原典病证摘述</li>
+            <li>六腑传化与表里配对</li>
+            <li>脏腑关系与传变思维</li>
+            <li>一个虚构案例的定位与鉴别</li>
+          </ul>
+        </div>
+        <div>
+          <h3>下一步待补</h3>
+          <ul class="progress-list progress-list--next">
+            <li><a href="/yi/liujing-bianzheng/">六经辨证</a></li>
+            <li>卫气营血 / 三焦辨证</li>
+            <li>更多脏腑辨证案例</li>
+            <li>方药与针灸（专业语境）</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="article-actions">
+        <a class="btn btn--primary" href="/yi/liujing-bianzheng/">进入六经辨证</a>
+        <a class="btn btn--ghost" href="/yi/bagang-bianzheng/">回看八纲辨证</a>
+      </div>
+    </section>
+
+    <section class="content-section" id="sources">
+      <p class="section-label">附 · 原典</p>
+      <h2>参考原典</h2>
+      <p>
+        以下引文据通行本，标点从简；正文中的解释为学习整理，不等于原典的全部含义。
+      </p>
+
+      <ol class="source-list">
+        <li>
+          <span class="source-work">《黄帝内经·素问·灵兰秘典论》</span>
+          <p class="source-quote">凡此十二官者，不得相失也。</p>
+        </li>
+        <li>
+          <span class="source-work">《黄帝内经·素问·藏气法时论》</span>
+          <p class="source-quote">肝病者，两胁下痛引少腹，令人善怒。</p>
+          <p class="source-quote">
+            五脏病证原文见中册 p.36–38；本页表格为摘述，不替代原文。
+          </p>
+        </li>
+        <li>
+          <span class="source-work">《黄帝内经·素问·宣明五气》</span>
+          <p class="source-quote">五脏所藏：心藏神，肺藏魄，肝藏魂，脾藏意，肾藏志。</p>
+        </li>
+        <li>
+          <span class="source-work">《黄帝内经·素问·五脏别论》</span>
+          <p class="source-quote">六腑者，传化物而不藏，故实而不能满也。</p>
+        </li>
+        <li>
+          <span class="source-work">《金匮要略·脏腑经络先后病脉证第一》</span>
+          <p class="source-quote">夫治未病者，见肝之病，知肝传脾，当先实脾。</p>
+        </li>
+      </ol>
+
+      <p class="article-end">
+        本页为传统理论展示与学习整理，不构成医疗诊断、处方建议或疗效承诺。最后更新：2026-10-29。
+      </p>
+    </section>
+  </div>
+</KnowledgeLayout>
